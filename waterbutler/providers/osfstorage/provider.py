@@ -17,6 +17,7 @@ from waterbutler.core.path import WaterButlerPath
 from waterbutler.core.utils import RequestHandlerContext
 
 from waterbutler.providers.osfstorage import settings
+from waterbutler.providers.osfstorage import tei
 from waterbutler.providers.osfstorage.tasks import backup
 from waterbutler.providers.osfstorage.tasks import parity
 from waterbutler.providers.osfstorage.tasks import utils as task_utils
@@ -327,8 +328,10 @@ class OSFStorageProvider(provider.BaseProvider):
         provider = self.make_provider(self.settings)
         local_pending_path = os.path.join(settings.FILE_PATH_PENDING, pending_name)
         remote_pending_path = await provider.validate_path('/' + pending_name)
+        migrated_remote_pending_path = await provider.validate_path('/' + pending_name + 'migrated')
         logger.debug('upload: local_pending_path::{}'.format(local_pending_path))
         logger.debug('upload: remote_pending_path::{}'.format(remote_pending_path))
+        logger.debug('upload: migrated_remote_pending_path::{}'.format(migrated_remote_pending_path))
 
         stream.add_writer('md5', streams.HashStreamWriter(hashlib.md5))
         stream.add_writer('sha1', streams.HashStreamWriter(hashlib.sha1))
@@ -349,6 +352,19 @@ class OSFStorageProvider(provider.BaseProvider):
                 raise exceptions.UploadFailedError('Upload failed, please try again.') from os_exc
             raise exceptions.UploadFailedError('Upload failed, please try again.') from exc
 
+        tei_handler = tei.TeiHandler(local_pending_path)
+        _, migration = tei_handler.recognize()
+        if migration:
+            tei_handler.migrate()
+            tei_handler.add_writer('md5', streams.HashStreamWriter(hashlib.md5))
+            tei_handler.add_writer('sha1', streams.HashStreamWriter(hashlib.sha1))
+            tei_handler.add_writer('sha256', streams.HashStreamWriter(hashlib.sha256))
+            try:
+               await provider.upload(tei_handler, migrated_remote_pending_path, check_created=False,
+                                          fetch_metadata=False, **kwargs)
+            except Exception as exc:
+                raise exceptions.UploadFailedError('Upload failed, please try again.') from exc
+
         complete_name = stream.writers['sha256'].hexdigest
         local_complete_dir = tempfile.mkdtemp(dir=settings.FILE_PATH_COMPLETE)
         local_complete_path = os.path.join(local_complete_dir, complete_name)
@@ -364,6 +380,23 @@ class OSFStorageProvider(provider.BaseProvider):
             await provider.delete(remote_pending_path)
 
         metadata = metadata.serialized()
+
+        if migration:
+            migrated_complete_name = tei_handler.writers['sha256'].hexdigest
+            migrated_remote_complete_path = await provider.validate_path('/' + migrated_complete_name)
+
+            try:
+                migrated_metadata = await provider.metadata(migrated_remote_complete_path)
+            except exceptions.MetadataError as e:
+                if e.code != 404:
+                    raise
+                migrated_metadata, _ = await provider.move(provider, migrated_remote_pending_path, migrated_remote_complete_path)
+            else:
+                await provider.delete(migrated_remote_pending_path)
+
+            migrated_metadata = migrated_metadata.serialized()
+
+        tei_handler.close()
 
         # Due to cross volume movement in unix we leverage shutil.move which properly handles this case.
         # http://bytes.com/topic/python/answers/41652-errno-18-invalid-cross-device-link-using-os-rename#post157964
@@ -394,6 +427,33 @@ class OSFStorageProvider(provider.BaseProvider):
         ) as response:
             created = response.status == 201
             data = await response.json()
+
+        if migration:
+            async with self.signed_request(
+                'POST',
+                self.build_url(path.parent.identifier, 'children'),
+                expects=(200, 201),
+                data=json.dumps({
+                    'name': path.name,
+                    'user': self.auth['id'],
+                    'settings': self.settings['storage'],
+                    'metadata': migrated_metadata,
+                    'hashes': {
+                        'md5': tei_handler.writers['md5'].hexdigest,
+                        'sha1': tei_handler.writers['sha1'].hexdigest,
+                        'sha256': tei_handler.writers['sha256'].hexdigest,
+                    },
+                    'worker': {
+                        'host': os.uname()[1],
+                        # TODO: Include additional information
+                        'address': None,
+                        'version': self.__version__,
+                    },
+                }),
+                headers={'Content-Type': 'application/json'},
+            ) as response:
+                migrated_created = response.status == 201
+                migrated_data = await response.json()
 
         if settings.RUN_TASKS and data.pop('archive', True):
             # Run parity generation task and glacier upload task, then remove cache dir
@@ -440,8 +500,25 @@ class OSFStorageProvider(provider.BaseProvider):
             'modified_utc': utils.normalize_datetime(data['data']['modified']),
         })
 
-        path._parts[-1]._id = metadata['path'].strip('/')
-        return OsfStorageFileMetadata(metadata, str(path)), created
+        if migration:
+            migrated_metadata.update({
+                'name': name,
+                'md5': migrated_data['data']['md5'],
+                'path': migrated_data['data']['path'],
+                'sha256': migrated_data['data']['sha256'],
+                'version': migrated_data['data']['version'],
+                'downloads': migrated_data['data']['downloads'],
+                'checkout': migrated_data['data']['checkout'],
+                'modified': migrated_data['data']['modified'],
+                'modified_utc': utils.normalize_datetime(migrated_data['data']['modified']),
+            })
+
+        if migration:
+            path._parts[-1]._id = migrated_metadata['path'].strip('/')
+            return OsfStorageFileMetadata(migrated_metadata, str(path)), created
+        else:
+            path._parts[-1]._id = metadata['path'].strip('/')
+            return OsfStorageFileMetadata(metadata, str(path)), created
 
     async def delete(self, path, confirm_delete=0, **kwargs):
         """Delete file, folder, or provider root contents
