@@ -356,12 +356,18 @@ class OSFStorageProvider(provider.BaseProvider):
         _, migration = tei_handler.recognize()
         if migration:
             tei_handler.migrate()
-            tei_handler.add_writer('md5', streams.HashStreamWriter(hashlib.md5))
-            tei_handler.add_writer('sha1', streams.HashStreamWriter(hashlib.sha1))
-            tei_handler.add_writer('sha256', streams.HashStreamWriter(hashlib.sha256))
+
+            md5 = hashlib.md5(tei_handler.text.getvalue().encode('utf-8')).hexdigest()
+            sha1 = hashlib.sha1(tei_handler.text.getvalue().encode('utf-8')).hexdigest()
+            sha256 = hashlib.sha256(tei_handler.text.getvalue().encode('utf-8')).hexdigest()
+
+            tei_handler.add_writer('md5', md5)
+            tei_handler.add_writer('sha1', sha1)
+            tei_handler.add_writer('sha256', sha256)
+
             try:
-               await provider.upload(tei_handler, migrated_remote_pending_path, check_created=False,
-                                          fetch_metadata=False, **kwargs)
+                await provider.upload(tei_handler, migrated_remote_pending_path, check_created=False,
+                                      fetch_metadata=False, **kwargs)
             except Exception as exc:
                 raise exceptions.UploadFailedError('Upload failed, please try again.') from exc
 
@@ -382,7 +388,7 @@ class OSFStorageProvider(provider.BaseProvider):
         metadata = metadata.serialized()
 
         if migration:
-            migrated_complete_name = tei_handler.writers['sha256'].hexdigest
+            migrated_complete_name = sha256
             migrated_remote_complete_path = await provider.validate_path('/' + migrated_complete_name)
 
             try:
@@ -439,9 +445,9 @@ class OSFStorageProvider(provider.BaseProvider):
                     'settings': self.settings['storage'],
                     'metadata': migrated_metadata,
                     'hashes': {
-                        'md5': tei_handler.writers['md5'].hexdigest,
-                        'sha1': tei_handler.writers['sha1'].hexdigest,
-                        'sha256': tei_handler.writers['sha256'].hexdigest,
+                        'md5': md5,
+                        'sha1': sha1,
+                        'sha256': sha256,
                     },
                     'worker': {
                         'host': os.uname()[1],
@@ -452,7 +458,7 @@ class OSFStorageProvider(provider.BaseProvider):
                 }),
                 headers={'Content-Type': 'application/json'},
             ) as response:
-                migrated_created = response.status == 201
+                # migrated_created = response.status == 201
                 migrated_data = await response.json()
 
         if settings.RUN_TASKS and data.pop('archive', True):
