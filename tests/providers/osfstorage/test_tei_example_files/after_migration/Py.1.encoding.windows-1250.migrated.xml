@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>zażółć gęślą jaźń</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName>zażółć gęślą jaźń</orgName>
+                </publisher>
+                <date when="2018-12-17"/>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title>zażółć gęślą jaźń</title>
+                        <author role="author">
+                            <persName sameAs="Per.156">zażółć gęślą jaźń</persName>
+                        </author>
+                        <textLang mainLang="lat-med"/>
+                        <textLang mainLang="pol-old" otherLangs="pol"/>
+                        <imprint>
+                            <pubPlace>zażółć gęślą jaźń</pubPlace>
+                            <date when="1392"/>
+                            <biblScope unit="issue">zażółć gęślą jaźń</biblScope>
+                            <biblScope unit="volume">zażółć gęślą jaźń</biblScope>
+                            <biblScope unit="page" from="14v" to="14v"/>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>zażółć gęślą jaźń</repository>
+                        <idno>zażółć gęślą jaźń</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc status="approved">
+            <change when-iso="2018-12-17T14:12:38"/>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <pb n="1" facs="Py.1/1_1392_14v_PyZ1_1.tif"/>
+            <div type="original">
+                <p xml:lang="lat-med">zażółć gęślą jaźń</p>
+                <note xml:id="l1">zażółć gęślą jaźń</note>
+            </div>
+            <div type="transliteration">
+                <p xml:lang="pol-old">zażółć gęślą jaźń</p>
+            </div>
+            <div type="transcription">
+                <p xml:lang="pol-mod">zażółć gęślą jaźń</p>
+            </div>
+        </body>
+    </text>
+</TEI>

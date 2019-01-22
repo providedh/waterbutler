@@ -1,0 +1,58 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <tei:teiHeader
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title>Rota 1, Księga Ziemska 1, Karta 14v, Pyzdry</tei:title>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:publisher>
+                    <tei:orgName>ROThA</tei:orgName>
+                </tei:publisher>
+                <tei:date when="2018-12-17"/>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:biblStruct>
+                    <tei:monogr>
+                        <tei:title>Rota 1, Księga Ziemska 1, Karta 14v, Pyzdry</tei:title>
+                        <tei:author role="author">
+                            <tei:persName sameAs="Per.156">PISARZ 1</tei:persName>
+                        </tei:author>
+                        <tei:textLang mainLang="lat-med"/>
+                        <tei:textLang mainLang="pol-old" otherLangs="pol"/>
+                        <tei:imprint>
+                            <tei:pubPlace>Pyzdry</tei:pubPlace>
+                            <tei:date when="1392"/>
+                            <tei:biblScope unit="issue">1</tei:biblScope>
+                            <tei:biblScope unit="volume">PyZ1</tei:biblScope>
+                            <tei:biblScope unit="page" from="14v" to="14v"/>
+                        </tei:imprint>
+                    </tei:monogr>
+                </tei:biblStruct>
+                <tei:msDesc>
+                    <tei:msIdentifier>
+                        <tei:repository>ROThA</tei:repository>
+                        <tei:idno>Py.1</tei:idno>
+                    </tei:msIdentifier>
+                </tei:msDesc>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+        <tei:revisionDesc status="approved">
+            <tei:change when-iso="2018-12-17T14:12:38"/>
+        </tei:revisionDesc>
+    </tei:teiHeader>
+    <tei:text>
+        <tei:body>
+            <tei:pb n="1" facs="Py.1/1_1392_14v_PyZ1_1.tif"/>
+            <tei:div type="original">
+                <tei:p xml:lang="lat-med">Sandiuogius Mocronoski recepit ad dominum Vincencium Nakelski:</tei:p>
+                <tei:note xml:id="l1">L. 235.</tei:note>
+            </tei:div>
+            <tei:div type="transliteration">
+                <tei:p xml:lang="pol-old">poweczſzczi o gwalt a opoweſzcczi </tei:p>
+            </tei:div>
+            <tei:div type="transcription">
+                <tei:p xml:lang="pol-mod">powieści o gwałt a opowieści.</tei:p>
+            </tei:div>
+        </tei:body>
+    </tei:text>
+</tei:TEI>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <tei:teiHeader>
+      <tei:fileDesc>
+         <tei:titleStmt>
+            <tei:title>Rota 2, Księga Ziemska 1, Poznań</tei:title>
+         </tei:titleStmt>
+         <tei:publicationStmt>
+            <tei:publisher>
+               <tei:orgName>ROThA</tei:orgName>	
+            </tei:publisher>
+         </tei:publicationStmt>
+         <tei:sourceDesc>
+            <tei:biblStruct> 
+               <tei:monogr>		
+                  <tei:title>Rota 2, Księga Ziemska 1, Poznań</tei:title>
+                  <tei:author role="author">
+                     <tei:persName sameAs="Per.27">PISARZ 1</tei:persName>
+                  </tei:author>
+                  <tei:textLang mainLang="lat-med"/>
+                  <tei:textLang mainLang="pol-old" otherLangs="pol"/>
+                  <tei:imprint>
+                     <tei:date when="1386"/>
+                     <tei:pubPlace>Poznań</tei:pubPlace>
+                     <tei:biblScope unit="issue">2</tei:biblScope>
+                     <tei:biblScope unit="volume">PoZ1</tei:biblScope>
+                     <tei:biblScope unit="page" from="@pageNoBegin" to="@pageNoEnd"/>
+                  </tei:imprint>
+               </tei:monogr>
+            </tei:biblStruct>
+            <tei:msDesc>
+               <tei:msIdentifier>
+                  <tei:repository>ROThA</tei:repository>
+                  <tei:idno>Pn.2</tei:idno>
+               </tei:msIdentifier>
+            </tei:msDesc>
+         </tei:sourceDesc>
+      </tei:fileDesc>
+   </tei:teiHeader>
+   <tei:text>
+      <tei:body>
+         <tei:div type="original">
+            <tei:p xml:lang="lat-med">Domina abbatissa ducit testes contra Stanislaum, kmethonem de Clem<tei:unclear>..</tei:unclear> primus dominus Thoma plebanus de Splawe, secundus Janussius Barkowsky, Johannes Glineczsky, Jacussius Chfalanczsky, quintus Jacussius Holsziczsky, Ubislaus Colaczsky. <tei:foreign xml:lang="lat-med" source="independent-trigger">Sic iurabunt ad testimonium:</tei:foreign></tei:p>
+         </tei:div>
+         <tei:div type="transliteration">
+            <tei:p xml:lang="pol-old">Jaco to ſwatczø Jaco Staſſzek ſzedl <tei:lb/> precz neucziniw kſzeneẏ upraviſnẏ</tei:p>
+         </tei:div>
+         <tei:div type="transcription">
+            <tei:p xml:lang="pol-mod">Jako to świadczę, jako Staszek<tei:ref target="#f1">¹</tei:ref> szedł | precz nie uczyniw ksieniej uprawizny.</tei:p>
+            <tei:note xml:id="f1">Nehring IV 178: Stasiek. L. 67.</tei:note>
+         </tei:div>
+      </tei:body>
+   </tei:text>
+</tei:TEI>

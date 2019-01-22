@@ -1,21 +1,13 @@
 import io
-import copy
-from enum import Enum
-# from waterbutler.providers.osfstorage
-from .tei_p5_normalizator import Tei5Normalizator
+
+from .migrator_tei import MigratorTEI
+from .migrator_csv import MigratorCSV
+from .migrator_tsv import MigratorTSV
+from .recognized_types import FileType, XMLType
+from .xml_type_finder import XMLTypeFinder
+from .encoding_finder import EncodingFinder
+from .file_type_finder import FileTypeFinder
 from waterbutler.core.streams.base import BaseStream
-
-import logging
-logger = logging.getLogger(__name__)
-
-
-class FileType(Enum):
-    TEI_P5 = 1
-    PREFIXED_TEI_P5 = 2
-    TEI_P4 = 3
-    PREFIXED_TEI_P4 = 4
-    CSV = 5
-    OTHER = 6
 
 
 class TeiHandler(BaseStream):
@@ -23,73 +15,139 @@ class TeiHandler(BaseStream):
 
     def __init__(self, file_path, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.file_path = file_path
-        self.encoding = None
+        self.__file_path = file_path
+        self.__encoding = None
         self.text = io.StringIO()
-        self.type = None
-        self.error = None
 
-    def _parse_encoding(self):
-        encoding = 'utf-8'
-        file = open(self.file_path, "r")
-        # line = file.readline()
-        # TODO read encoding from line: <?xml ... encoding="xxx" ... ?>
-        file.close()
-        return encoding
+        self.__text_binary = None
+        self.__text_utf_8 = ""
+
+        self.__file_type = FileType.OTHER
+        self.__xml_type = XMLType.OTHER
+        self.__prefixed = False
+
+        self.__recognized = False
+        self.__migrate = False
+        self.__message = ""
 
     def recognize(self):
+        self.__load_text_binary()
+
         try:
-            self.encoding = self._parse_encoding()
-            file = open(self.file_path, "r", encoding=self.encoding)
-            chunk = file.read()
-            while chunk:
-                self.text.write(chunk)
+            encoding_finder = EncodingFinder()
+
+            self.__encoding = encoding_finder.find_encoding(self.__text_binary)
+
+        except Exception as ex:
+            self.__message = ex
+
+            return self.__migrate
+
+        else:
+            self.__text_utf_8 = self.__convert_to_utf_8(self.__text_binary, self.__encoding)
+
+            file_type_detector = FileTypeFinder()
+            self.__file_type = file_type_detector.check_if_xml(self.__text_binary)
+
+            if self.__file_type == FileType.OTHER:
+                self.__file_type = file_type_detector.check_if_csv_or_tsv(self.__text_utf_8)
+
+            if self.__file_type == FileType.XML:
+                encoding_read_from_xml = encoding_finder.read_encoding_from_xml(self.__text_utf_8)
+
+                if encoding_read_from_xml != self.__encoding:
+                    self.__text_utf_8 = self.__convert_to_utf_8(self.__text_binary, encoding_read_from_xml)
+                    self.__encoding = "utf-8"
+
+                xml_type_detector = XMLTypeFinder()
+                self.__xml_type, self.__prefixed = xml_type_detector.find_xml_type(self.__text_utf_8)
+
+            self.__text_utf_8 = self.__standardize_new_line_symbol(self.__text_utf_8)
+
+            self.__migrate = self.__make_decision()
+            self.__recognized = True
+
+            return self.__migrate
+
+    def __load_text_binary(self):
+        try:
+            with open(self.__file_path, 'rb') as file:
                 chunk = file.read()
-            file.close()
-            self.text.seek(io.SEEK_SET)
+
+                temp = io.BytesIO()
+
+                while chunk:
+                    temp.write(chunk)
+                    chunk = file.read()
+
+                self.__text_binary = temp.getvalue()
+
         except Exception as exc:
             self.error = exc
             return FileType.OTHER
-        # TODO file type recognition
-        self.type = FileType.TEI_P5
-        # self.type = FileType.PREFIXED_TEI_P5
-        self.text.seek(io.SEEK_SET)
-        if (self.type == FileType.PREFIXED_TEI_P5 or self.type == FileType.TEI_P4 or
-                self.type == FileType.PREFIXED_TEI_P4 or self.type == FileType.CSV):
-            return self.type, True
+
+    def __convert_to_utf_8(self, binary, encoding):
+        text_in_unicode = binary.decode(encoding)
+
+        return text_in_unicode
+
+    def __standardize_new_line_symbol(self, text):
+        text_standardized = text.replace('\r\n', '\n')
+
+        return text_standardized
+
+    def __make_decision(self):
+        if (self.__file_type == FileType.XML and self.__xml_type == XMLType.TEI_P5 and
+                self.__encoding != 'utf-8'):
+            return True
+        elif self.__file_type == FileType.XML and self.__xml_type == XMLType.TEI_P5 and self.__prefixed:
+            return True
+        elif self.__file_type == FileType.XML and self.__xml_type == XMLType.TEI_P4:
+            return True
+        elif self.__file_type == FileType.CSV:
+            return True
+        elif self.__file_type == FileType.TSV:
+            return True
         else:
-            return self.type, False
+            return False
 
     def migrate(self):
-        if self.type == FileType.TEI_P4:
-            self.text
-            # TODO delegate to specific class
-        if self.type == FileType.CSV:
-            self.text
-            # TODO delegate to specific class
-        # TEI P5 normalization (?)
-        if self.type == FileType.PREFIXED_TEI_P5:
-            old_text = copy.deepcopy(self.text)
-            try:
-                normalizator = Tei5Normalizator()
-                xml_text_raw = self.text.getvalue()
-                xml_text_normalized = normalizator.remove_default_tei5_namespace(xml_text_raw)
-                self.text.truncate(0)
-                self.text.seek(io.SEEK_SET)
-                self.text.write(xml_text_normalized)
+        if not self.__recognized:
+            raise Exception("File recognition needed. Use recognize() method first.")
 
-            except Exception as ex:
-                print(ex)
-                self.text = old_text
+        elif not self.__migrate:
+            raise Exception("No migration needed.")
+
+        if self.__file_type == FileType.XML:
+            migrator_tei = MigratorTEI()
+            migrated_text = migrator_tei.migrate(self.__text_utf_8, self.__xml_type)
+            self.text.write(migrated_text)
+
+        elif self.__file_type == FileType.CSV:
+            migrator_csv = MigratorCSV()
+            migrated_text = migrator_csv.migrate(self.__text_utf_8)
+            self.text.write(migrated_text)
+
+        elif self.__file_type == FileType.TSV:
+            migrator_tsv = MigratorTSV()
+            migrated_text = migrator_tsv.migrate(self.__text_utf_8)
+            self.text.write(migrated_text)
 
         self.text.seek(io.SEEK_SET)
+        self.__prepare_message()
+
+    def __prepare_message(self):
+        message = "Successful migration."
+
+        self.__message = message
 
     def close(self):
         self.text.close()
 
     async def read(self, size=-1):
         chunk = self.text.read(size)
-        return bytes(chunk, self.encoding)
+
+        return bytes(chunk, "utf-8")
 
     async def _read(self, size):
         pass

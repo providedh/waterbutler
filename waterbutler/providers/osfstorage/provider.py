@@ -353,7 +353,8 @@ class OSFStorageProvider(provider.BaseProvider):
             raise exceptions.UploadFailedError('Upload failed, please try again.') from exc
 
         tei_handler = tei.TeiHandler(local_pending_path)
-        _, migration = tei_handler.recognize()
+        migration = tei_handler.recognize()
+
         if migration:
             tei_handler.migrate()
 

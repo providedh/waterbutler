@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <tei:teiHeader>
+      <tei:fileDesc>
+         <tei:titleStmt>
+            <tei:title>Rota 1, Księga Ziemska 1, Poznań</tei:title>
+         </tei:titleStmt>
+         <tei:publicationStmt>
+            <tei:publisher>
+               <tei:orgName>ROThA</tei:orgName>	
+            </tei:publisher>
+         </tei:publicationStmt>
+         <tei:sourceDesc>
+            <tei:biblStruct> 
+               <tei:monogr>		
+                  <tei:title>Rota 1, Księga Ziemska 1, Poznań</tei:title>
+                  <tei:author role="author">
+                     <tei:persName sameAs="Per.27">PISARZ 1</tei:persName>
+                  </tei:author>
+                  <tei:textLang mainLang="lat-med"/>
+                  <tei:textLang mainLang="pol-old" otherLangs="pol"/>
+                  <tei:imprint>
+                     <tei:date when="1386"/>
+                     <tei:pubPlace>Poznań</tei:pubPlace>
+                     <tei:biblScope unit="issue">1</tei:biblScope>
+                     <tei:biblScope unit="volume">PoZ1</tei:biblScope>
+                     <tei:biblScope unit="page" from="@pageNoBegin" to="@pageNoEnd"/>
+                  </tei:imprint>
+               </tei:monogr>
+            </tei:biblStruct>
+            <tei:msDesc>
+               <tei:msIdentifier>
+                  <tei:repository>ROThA</tei:repository>
+                  <tei:idno>Pn.1</tei:idno>
+               </tei:msIdentifier>
+            </tei:msDesc>
+         </tei:sourceDesc>
+      </tei:fileDesc>
+   </tei:teiHeader>
+   <tei:text>
+      <tei:body>
+         <tei:div type="original">
+            <tei:p xml:lang="lat-med">Sequitur rota ad testimonium:</tei:p>
+         </tei:div>
+         <tei:div type="transliteration">
+            <tei:p xml:lang="pol-old">Jacoſm przitem bil gdze Sandziwo<tei:unclear>y</tei:unclear><tei:ref target="#f1">¹</tei:ref> <tei:lb/> vmouil ſyeſſztem yſe mal vpominacz p<tei:unclear>..</tei:unclear>kego<tei:ref target="#f2">²</tei:ref> o ten dlug gdze bi go nevipomi<tei:unclear>nal</tei:unclear><tei:ref target="#f1">¹</tei:ref> mu mal dacz <tei:del>ſwich cobil</tei:del> czſo lepſzi zrze<tei:unclear>biec</tei:unclear><tei:ref target="#f1">¹</tei:ref></tei:p>
+            <tei:note xml:id="f1">L. 26: Sandzẏwoy, neupomi<tei:unclear>nal</tei:unclear>, zrze[bca].</tei:note>
+            <tei:note xml:id="f2">Karta uszkodzona.</tei:note>
+         </tei:div>
+         <tei:div type="transcription">
+            <tei:p xml:lang="pol-mod">Jakośḿ przy tem był, gdzie Sędziwoj | umowił sie s tem, iże miał upominać P..kiego o ten dług, gdzie by go nie wypominał | mu miał dać  cso lepszy źrzebiec.</tei:p>
+         </tei:div>
+      </tei:body>
+   </tei:text>
+</tei:TEI>

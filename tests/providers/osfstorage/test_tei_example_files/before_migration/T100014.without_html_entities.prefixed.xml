@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE TEI.2 SYSTEM "/dtds/tei/p4x/teicelt.dtd" [
+<!ENTITY % TEIbase "TEI.prose">
+]>
+<tei:TEI.2 id="T100014" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<tei:teiHeader creator="Beatrix Färber" status="update" date.created="2001-01-12" date.updated="2010-03-23">
+<tei:fileDesc>
+<tei:titleStmt>
+<tei:title type="uniform">Mac Carthaigh's Book</tei:title>
+<tei:title type="extended">Miscellaneous Irish Annals (A.D. 1114–1437)</tei:title>
+<tei:title type="extended">Fragment II</tei:title>
+<tei:title type="extended">[Rawlinson B 488, fos. 27, 28]</tei:title>
+<tei:title type="gmd">An electronic edition</tei:title>
+<tei:respStmt>
+<tei:resp>Translated by</tei:resp>
+<tei:name>Séamus Ó hInnse </tei:name>
+<tei:resp>Electronic edition compiled by</tei:resp>
+<tei:name>Pádraig Bambury</tei:name>
+<tei:name>Stephen Beechinor</tei:name>
+</tei:respStmt>
+<tei:funder>University College Cork</tei:funder>
+<tei:funder>Professor Marianne McDonald via the CELT Project</tei:funder>
+</tei:titleStmt>
+<tei:editionStmt>
+<tei:edition n="2">Second draft, revised and corrected.</tei:edition>
+</tei:editionStmt>
+<tei:extent><tei:measure type="words">5600</tei:measure></tei:extent>
+<tei:publicationStmt>
+<tei:publisher>CELT: Corpus of Electronic Texts: a project of University College, Cork</tei:publisher>
+<tei:address>
+<tei:addrLine>College Road, Cork, Ireland—http://www.ucc.ie/celt</tei:addrLine>
+</tei:address>
+<tei:date>2001</tei:date>
+<tei:date>2010</tei:date>
+<tei:distributor>CELT online at University College, Cork, Ireland.</tei:distributor>
+<tei:idno type="celt">T100014</tei:idno>
+<tei:availability status="restricted">
+<tei:p>Available with prior consent of the CELT programme for purposes of academic research and teaching only.</tei:p>
+</tei:availability>
+<tei:availability status="restricted">
+<tei:p>Hardcopy copyright lies with the School of Celtic Studies (Dublin Institute for Advanced Studies).</tei:p>
+</tei:availability>
+</tei:publicationStmt>
+<tei:sourceDesc>
+<tei:listBibl>
+<tei:head>Manuscript sources</tei:head>
+<tei:bibl n="1">Oxford, Bodleian Library, Rawlinson B 488, fos. 27, 28.</tei:bibl>
+</tei:listBibl>
+<tei:listBibl>
+<tei:head>Editions</tei:head>
+<tei:bibl n="1">Séamus Ó hInnse (ed.), Miscellaneous Irish Annals (A.D. 1114–1437). Dublin: DIAS, 1947, xix + pp. pls (MS facss.): Fragment 1 (1114–1437) (Mac Carthaigh's book); from MSS NLI  G 6 and G 5. Fragments 2 and 3 (1237–1314, 1392–1407), from MS Rawlinson B 488. English translation, indexes. Appendix on the spelling of fragments 1 and 3 throwing light on the pronunciation of the scribes.</tei:bibl>
+</tei:listBibl>
+<tei:listBibl>
+<tei:head>Translations</tei:head>
+<tei:bibl n="1">Séamus Ó hInnse (ed.), Miscellaneous Irish Annals (A.D. 1114–1437). Dublin: DIAS, 1947, xix + 222 pp. pls. (MS facss.): Fragment 1 (1114–1437) (Mac Carthaigh's book); from MSS NLI G 6 and G 5. Fragments 2 and 3 (1237–1314, 1392–1407), from MS Rawlinson B 488. Indexes.</tei:bibl>
+</tei:listBibl>
+<tei:listBibl>
+<tei:head>Literature</tei:head>
+<tei:bibl n="1">Gerard Murphy, <tei:hi>in</tei:hi> Éigse 6, 1948/52, (pt. 1), pp. 80–82.</tei:bibl>
+<tei:bibl n="2">John T. Collins: A McCarthy miscellany. <tei:hi>In</tei:hi> Journal of the Cork Historical and Archaeological Society 53, 1948, pp. 95–103. Miscellaneous Irish Annals, fragment 1.</tei:bibl>
+<tei:bibl n="3">Canice Mooney, <tei:hi>in</tei:hi> Irish Historical Studies 7, 1950/51 (1951), pp. 292–295.</tei:bibl>
+<tei:bibl n="4">Tomás Ó Fiaich: The contents of 'Mac Carthaigh's book'. <tei:hi>In</tei:hi> The Irish ecclesiastical record 5th series 74, 1950, pp. 30–39. Miscellaneous Irish Annals, fragment 1.</tei:bibl>
+<tei:bibl n="5">Brian Ó Cuív, 'Miscellanea, I: An entry in the 'Mac Carthaigh book of annals'. <tei:hi>In</tei:hi> Éigse 8, 1956/57, pp. 96–98. Ad annum 1117.2.</tei:bibl>
+<tei:bibl n="6">Gearóid Mac Niocaill, The medieval Irish annals (Dublin 1975), 26–27, 30.</tei:bibl>
+<tei:bibl n="7">Diarmuid Ó Murchadha, 'A reconsideration of some place-names from Miscellaneous Irish Annals', Ainm 4 (1989–90), 180–193.</tei:bibl>
+<tei:bibl n="8">Daniel P. Mc Carthy, on his website at http://www.cs.tcd.ie/misc/kronos/chronology/synchronisms/annals-chron.htm offers comprehensive information on two traditions of dating used in the Irish Annals, together with two ancillary articles, 'Chronological synchronisation of the Irish annals', and 'Collation of the Irish regnal canon'.</tei:bibl>
+<tei:bibl n="9">Daniel P. Mc Carthy, The Irish Annals: their genesis, evolution and history (Dublin 2008).</tei:bibl>
+</tei:listBibl>
+<tei:listBibl>
+<tei:head>The edition used in the digital edition</tei:head>
+<tei:biblFull>
+<tei:titleStmt>
+<tei:title level="m">Miscellaneous Irish Annals (A.D. 1114–1437)</tei:title>
+<tei:author id="SOI">Séamus Ó hInnse</tei:author>
+</tei:titleStmt>
+<tei:editionStmt>
+<tei:edition>First edition</tei:edition>
+</tei:editionStmt>
+<tei:extent>xix + 222 pp. pls. (MS facss.)</tei:extent>
+<tei:publicationStmt>
+<tei:publisher>Dublin Institute for Advanced Studies</tei:publisher>
+<tei:pubPlace>Dublin</tei:pubPlace>
+<tei:date>1947</tei:date>
+</tei:publicationStmt>
+</tei:biblFull>
+</tei:listBibl>
+</tei:sourceDesc>
+</tei:fileDesc>
+<tei:encodingDesc>
+<tei:projectDesc>
+<tei:p>CELT: Corpus of Electronic Texts</tei:p>
+</tei:projectDesc>
+<tei:samplingDecl>
+<tei:p>The present text represents odd pages 117–143 of the volume, being the years  A.D. 1237–1314 in the chronology of the compiler(s). All editorial introduction, notes and indexes have been omitted. Editorial corrigenda are integrated into the electronic edition. Explanatory text supplied by the editor appears in square brackets.</tei:p>
+</tei:samplingDecl>
+<tei:editorialDecl>
+<tei:correction status="medium">
+<tei:p>Text has been checked and proofread twice. All corrections and supplied text are tagged.</tei:p>
+</tei:correction>
+<tei:normalization>
+<tei:p>The electronic text represents the edited text.</tei:p>
+</tei:normalization>
+<tei:segmentation>
+<tei:p><tei:emph>div0</tei:emph>=the body of annals; <tei:emph>div1</tei:emph>=the individual annal, i.e. the annalistic matter gathered under one year; <tei:emph>div2</tei:emph>=the annalistic entry. Paragraphs are marked; page-breaks are marked <tei:emph>pb n=""</tei:emph>.</tei:p>
+</tei:segmentation>
+<tei:stdVals>
+<tei:p>Dates occuring in running text are tagged in ISO form.</tei:p>
+</tei:stdVals>
+</tei:editorialDecl>
+<tei:refsDecl>
+<tei:state gi="div1" freq="10" label="Annal" unit="Year"/>
+<tei:state gi="div2" attr="n" label="Event" unit="Entry"/>
+</tei:refsDecl>
+</tei:encodingDesc>
+<tei:profileDesc>
+<tei:creation>Translation by S. Ó hInnse; for Irish original see file G100014.
+<tei:date>c.1946</tei:date></tei:creation>
+<tei:langUsage>
+<tei:language id="en">The text is in English.</tei:language>
+<tei:language id="ga">Some words are in Irish.</tei:language>
+</tei:langUsage>
+<tei:textClass>
+<tei:keywords>
+<tei:term>histor</tei:term>
+<tei:term>prose</tei:term>
+<tei:term>annals</tei:term>
+<tei:term>medieval</tei:term>
+<tei:term>translation</tei:term>
+</tei:keywords>
+</tei:textClass>
+</tei:profileDesc>
+<tei:revisionDesc>
+<tei:change>
+<tei:date>2010-03-23</tei:date>
+<tei:respStmt>
+<tei:name>Beatrix Färber</tei:name>
+<tei:resp>ed.</tei:resp>
+</tei:respStmt>
+<tei:item>Additions to bibliography and minor additions to header made, new wordcount made; file parsed.</tei:item>
+</tei:change>
+<tei:change>
+<tei:date>2008-10-19</tei:date>
+<tei:respStmt>
+<tei:name>Beatrix Färber</tei:name>
+<tei:resp>ed.</tei:resp>
+</tei:respStmt>
+<tei:item>Keywords added, additions and modifications to header, file validated.</tei:item>
+</tei:change>
+<tei:change>
+<tei:date>2005-08-25</tei:date>
+<tei:respStmt>
+<tei:name>Julianne Nyhan</tei:name>
+<tei:resp>ed.</tei:resp>
+</tei:respStmt>
+<tei:item>Normalised language codes and edited langUsage for XML conversion</tei:item>
+</tei:change>
+<tei:change>
+<tei:date>2005-08-04T16:33:59+0100</tei:date>
+<tei:respStmt>
+<tei:name>Peter Flynn</tei:name>
+<tei:resp>conversion</tei:resp>
+</tei:respStmt>
+<tei:item>Converted to XML</tei:item>
+</tei:change>
+<tei:change>
+<tei:date>2001-03-21</tei:date>
+<tei:respStmt>
+<tei:name>Beatrix Färber</tei:name>
+<tei:resp>ed.</tei:resp>
+</tei:respStmt>
+<tei:item>Second proofing and re-parsing of text; creation of HTML file</tei:item>
+</tei:change>
+<tei:change>
+<tei:date>2001-01-12</tei:date>
+<tei:respStmt>
+<tei:name>Stephen Beechinor</tei:name>
+<tei:resp>ed.</tei:resp>
+</tei:respStmt>
+<tei:item>File parsed using GNU Emacs.</tei:item>
+</tei:change>
+<tei:change>
+<tei:date>2001-01-11</tei:date>
+<tei:respStmt>
+<tei:name>Stephen Beechinor</tei:name>
+<tei:resp>ed.</tei:resp>
+</tei:respStmt>
+<tei:item>Structural mark-up and date values supplied.</tei:item>
+</tei:change>
+<tei:change>
+<tei:date>2000-12-05</tei:date>
+<tei:respStmt>
+<tei:name>Pádraig Bambury</tei:name>
+<tei:resp>ed.</tei:resp>
+</tei:respStmt>
+<tei:item>Text capture.</tei:item>
+</tei:change>
+</tei:revisionDesc>
+</tei:teiHeader>
+<tei:text n="T100014">
+<tei:body>
+<tei:div0 type="annals" lang="en">
+<tei:pb n="117"/>
+<tei:head><tei:sup resp="SOI">Miscellaneous Irish Annals Fragment Two</tei:sup></tei:head>
+<tei:head><tei:sup resp="SOI">(Rawlinson B 488, fos. 27, 28)</tei:sup></tei:head>
+<tei:div1 n="MCB1237" type="annal">
+<tei:div2 n="MCB1237.1" type="entry">
+<tei:p>Tomás Ó Ruadháin, bishop of Luighne, rested.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1237.2">
+<tei:p>Ó Tórmaigh, bishop of Conmhaicne, rested.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1238">
+<tei:div2 n="MCB1238.1">
+<tei:p><tei:date value="1238-01-01">The first of January on Friday and the twelfth day of the moon.</tei:date></tei:p>
+</tei:div2>
+<tei:div2 n="MCB1238.2">
+<tei:p>Donnchadh Uaithneach son of Aodh son of Ruaidhrí [Ó Conchobhair] was killed by Tadhg son of Aodh son of Cathal Croibhdhearg [Ó Conchobhair].</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1238.3">
+<tei:p>Donnchadh son of Duarcán Ó hEaghra, king of Luighne, was captured by Tadhg son of Aodh son of Cathal Croibhdhearg, and when he was being taken into captivity the sons of Aodh Ó hEaghra killed him on the way.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1238.4">
+<tei:p>Maol Ruanaidh son of Donnchadh Ó Dubhda was killed by Maol Sheachlainn son of Conchobhar Ruadh son of Muircheartach Ó Conchobhair and Tighearnán son of Cathal
+Ó Conchobhair.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1238.5">
+<tei:p>Castles were built in Muinntear Mhurchadha, in Conmhaicne Cúile, and in Ceara.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1238.6">
+<tei:p>Ruaidhrí son of Aodh Ó Flaithbheartaigh was captured by Galls.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1238.7">
+<tei:p>The round tower of Eanach Dúin was built.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1238.8">
+<tei:p>A great hosting by the Galls of Ireland against Mac Lochlainn, and he was banished from his country and his kingship, which was taken by Ó Neill's son.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1238.9">
+<tei:p>The bishop, i.e. the archbishop Ó Ruanadha, died.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1239">
+<tei:div2 n="MCB1239.1">
+<tei:p><tei:date value="1239">The first of January on Saturday and the twenty-third day of the moon.</tei:date></tei:p>
+</tei:div2>
+<tei:div2 n="MCB1239.2">
+<tei:p>Muircheartach son of Domhnall Ó Briain died this year.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1239.3">
+<tei:p>Toirdhealbhach son of Ruaidhrí Ó Conchobhair, king of Connacht, died.</tei:p>
+</tei:div2>
+<tei:pb n="119"/>
+<tei:div2 n="MCB1239.4">
+<tei:p>The battle of Carn tSiadhail was fought by Domhnall Mac Lochlainn, and in it Domnall Tamhnaighe Ó Néill, Mac Mathghamhna, nobles of Cinéal Moáin, and a number of others were killed. He had been deposed the year before, and he took the same kingship again after that great defeat which he inflicted.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1240">
+<tei:div2 n="MCB1240.1">
+<tei:p><tei:date value="1240">The first of January on Sunday; fourth day of the moon.</tei:date></tei:p>
+</tei:div2>
+<tei:div2 n="MCB1240.2">
+<tei:p>Aodh son of Giolla na Naomh Crom Ó Seachnasaigh was killed by Conchobhar son of Aodh son of Cathal Croibhdhearg [Ó Conchobhair] and by Fiachra Ó Floinn.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1240.3">
+<tei:p>Feidhlimidh son of Cathal Croibhdhearg [Ó Conchobhair], king of Connacht, went across to the king of England, and the journey resulted in great honour to him.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1240.4">
+<tei:p>Cormac son of Tomaltach [Mac Diarmada] was deposed.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1240.5">
+<tei:p>Fearghal son of Cú Chonnacht Ó Raighilligh was killed by Maol Ruanaidh son of Fearghal [Mac Diarmada] and Conchobhar son of Cormac [Mac Diarmada].</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1240.6">
+<tei:p>Donnchadh son of Muircheartach [Ó Conchobhair] took the kingship of Carraig [Locha Cé].</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1240.7">
+<tei:p>Giolla na Naomh Ó Dreáin, erenagh of Ard Carna, died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1240.8">
+<tei:p>Sadhbh, daughter of Ó Cinnéidigh, wife of Donnchadh Cairbreach Ó Briain, died.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1241">
+<tei:div2 n="MCB1241.1">
+<tei:p><tei:date value="1241">The first of January on Tuesday and the fifteenth day of the moon.</tei:date></tei:p>
+</tei:div2>
+<tei:div2 n="MCB1241.2">
+<tei:p>Domhnall Mac Lochlainn, king of Cinéal Eóghain, was killed with his kinsmen by Brian Ó Néill in the battle of Caméirghe.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1241.3">
+<tei:p>Domhnall Mór Ó Domhnaill, king of Cinéal Conaill and Fir Mhanach, died in bed after a victory over the devil and the world, and was buried in the monastery of Eas Ruaidh.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1241.4">
+<tei:p>Murchadh Ó Flaithbheartaigh, bishop of Eanach Dúin, died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1241.5">
+<tei:p>Diarmaid son of Maghnus son of Toirdhealbhach [Ó Conchobhair], a man celebrated for hospitality and valour, died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1241.6">
+<tei:p>Tadhg son of Ruaidhrí Ó Gadhra died.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1242">
+<tei:div2 n="MCB1242.1">
+<tei:p><tei:date value="1242">The first of January on Wednesday and the twenty-sixth day of the moon.</tei:date></tei:p>
+</tei:div2>
+<tei:pb n="121"/>
+<tei:div2 n="MCB1242.2">
+<tei:p>Donnchadh Cairbreach Ó Briain, king of Thomond, and his son, Toirdhealbhach, died side by side.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1242.3">
+<tei:p>An tAthchléireach [i.e. The Ex-Cleric] son of Aodh son of Ruaidhrí [Ó Conchobhair] was killed by Toirdhealbhach son of Aodh son of Cathal Croibhdhearg [Ó Conchobhair].</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1242.4">
+<tei:p>Brian Ó Dubhda, king of Uí Fhiachrach [Muaidhe] and Uí Amhalghadha, died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1242.5">
+<tei:p>A great hosting by the Justiciar and Feidhlimidh Ó Conchobhair into Tír Chonaill in pursuit of Tadhg Ó Conchobhair, and they took Ó Domhnaill's hostages on that occasion.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1242.6">
+<tei:p>Tadhg Ó Conchobhair was captured this year at the instigation of Feidhhmidh [Ó Conchobhair] by Cú Chonnacht Ó Raighilligh.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1242.7">
+<tei:p>Maghnus Ó Muireadhaigh was killed by Tomás Mac Murchadha.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1242.8">
+<tei:p>Niall son of Domhnall Múrach son of Ruaidhrí Ó Conchobhair was burned, together with three of the Uí Sheachnasaigh, in a house in Magh Eó na Saxan by Lewis, one of Mac Muiris [Fitzgerald]'s people.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1242.9">
+<tei:p>Toirdhealbhach son of Donnchadh Cairbreach [Ó Briain] died.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1243">
+<tei:div2 n="MCB1243.1">
+<tei:p><tei:date value="1243">The first of January on Thursday and the seventh day of the moon.</tei:date></tei:p>
+</tei:div2>
+<tei:div2 n="MCB1243.2">
+<tei:p>Tadhg son of Aodh son of Cathal Croibhdhearg [Ó Conchobhair] captured Cormac son of Tomaltach [Ó Raighilligh] and brought his own mother, who was the wife of Cormac son of Tomaltach L. and the daughter of Mac Carthaigh, with him into the monastery of Boyle, and gave her in marriage to Cú Chonnacht Ó Raighilligh.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1243.3">
+<tei:p>Tadhg went again to meet Cú Chonnacht with a small party. He was captured treacherously and his people slain, and Tadhg himself was blinded at the instigation of Gall and Gael by Cú Chonnacht Ó Raighilligh.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1243.4">
+<tei:p>A great hosting by the king of England against the king of France. A summons calling up the Galls of Ireland came from the king, and Richard son of William de Burgo was to be sent over, and Richard perished on that expedition.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1243.5">
+<tei:p>Ruaidhrí son of Aodh son of Cathal Croibhdhearg [Ó Conchobhair] was drowned on the Shannon at Áth Liag.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1243.6">
+<tei:p>Conchobhar son of Aodh son of Cathal Croibhdhearg [Ó Conchobhair], a man eligible for the kingship of Connacht, died.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:pb n="123"/>
+<tei:div1 n="MCB1244">
+<tei:div2 n="MCB1244.1">
+<tei:p><tei:date value="1244">The first of January on Friday and the eighteenth day of the moon.</tei:date></tei:p>
+</tei:div2>
+<tei:div2 n="MCB1244.2">
+<tei:p>A hosting by Feidhlimidh son of Cathal Croibhdhearg [Ó Conchobhair] into Bréifne to avenge his foster-son and kinsman, Tadhg Ó Conchobhair, on the Uí Raighilligh and the men of Bréifne. They plundered and killed all the cows and people they met, until they reached Áth na Cuire on the Geirgtheach at Loch Fionnmhuighe ; and the river was in a rough flood (?). There was a gabled house on the bank, and Maghnus son of Muircheartach [Ó Conchobhair] and Conchobhar son of Cormac [Mac Diarmada] went into the house. A gust of wind came and the house fell, a gable falling on top of the son of Muirchertach, breaking his head and neck, and killing him; and many a desperate situation had he come out of before he perished thus.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1244.3">
+<tei:p>Donnchadh Ó Dálaigh, a man renowned for poetry and for a guest-house, died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1244.4">
+<tei:p>Donnchadh son of Fínghin son of Maol Seachlainn son of Aodh son of Toirdhealbhach Ó Conchobhair, bishop of Síol Muireadhaigh [i.e. of Elphin], died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1244.5">
+<tei:p>Tuam was burned this year, including houses and churches.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1244.6">
+<tei:p>Cormac son of Tomaltach Mac Diarmada of Clann Mhaoil Ruanaidh, king of Magh Luirg, Airteach, Tír Thuathail, and many of the Fortuatha Connacht, died this year.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1244.7">
+<tei:p>Fearghal Mac Adáin was treacherously killed by Conchobhar Mac Tighearnáin in Inis Fraoich on Loch Gile.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1245">
+<tei:div2 n="MCB1245.1">
+<tei:p><tei:date value="1245">The first of January on Sunday and the twenty-ninth day of the moon.</tei:date></tei:p>
+</tei:div2>
+<tei:div2 n="MCB1245.2">
+<tei:p>Muircheartach son of Muirgheas son of Cathal Mac Diarmada of Clann Mhaoil Ruanaidh was killed by the men of Bréifne.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1245.3">
+<tei:p>Conchobhar Ruadh son of Muircheartach Muimhneach [Ó Conchobhair] was killed when separating his own people in Port na Lice. He was killed by Ó Tiomaith, his own steward, in consequence of an altercation, and Giolla Criost Ó Birn, son of Íomhar, killed the steward afterwards.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1245.4">
+<tei:p>The castle of Sligo was built by Mac Muiris [FitzGerald] this year, and Feidhlimidh [Ó Conchobhair] was ordered to build it at his own expense.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:pb n="125"/>
+<tei:div1 n="MCB1246">
+<tei:div2 n="MCB1246.1">
+<tei:p><tei:date value="1246">The first of January on Monday and the tenth day of the moon.</tei:date></tei:p>
+</tei:div2>
+<tei:div2 n="MCB1246.2">
+<tei:p>Fiachra Ó Floinn, chieftain of Síol Maoil Ruanaidh, died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1246.3">
+<tei:p>Letters from the king of England to Feidhlimidh Ó Conchobhair and the Galls reached Ireland, bidding them to go
+to meet the king of England in Wales, in order that he might
+take the kingship of Wales by consent or by force, and
+Feidhlimidh was offered lordship by the Galls of Ireland in
+return. Feidhlimidh and the Galls made this great hosting, and
+arrived in Wales to meet the king, and they ravaged the
+country. Feidhlimid was treated with great honour by the
+king of England, and he returned home from the king gratified.
+Cearbhall Buidhe Ó Dálaigh rested.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1247">
+<tei:div2 n="MCB1247.1">
+<tei:p><tei:date value="1247">The first of January on Tuesday and the twenty-first day of the moon.</tei:date></tei:p>
+</tei:div2>
+<tei:div2 n="MCB1247.2">
+<tei:p>A great hosting by Mac Muiris [Fitzgerald] and the Galls into Cinéal Conaill, and they reached Eas Ruaidh. Ó Domhnaill assembled Cinéal Conaill and Cinéal Eoghain, and these forces met and joined battle, and Ó Domhnaill was defeated. Maol Seachlainn Ó Domhnaill, king of Cinéal Conaill, was killed there, and Mac Somhairle, king of Oirer Gaedheal, Giolla Muinéalach Ó Baoighill, and chiefs of Cinéal Conaill were killed there by Mac Muiris Fitzgerald. All Cinéal Conaill was plundered and ravaged by them, and even the Galls there suffered great loss by that rout.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1247.3">
+<tei:p>William Brett, i.e. the sheriff of Connacht, his kinsman, a young knight; and the seneschal of Connacht, i.e. Mac Eliget, were killed by the son of Anmchadh Mac Giolla Phádraig of the Osraighe.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1247.4">
+<tei:p>Tadhg son of Conchobhar Ruadh [Ó Conchobhair] burned Inis Mór Claonlocha, and twenty-eight Galls were burned there.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1247.5">
+<tei:p>A hosting by the sons of the kings of Connacht; including Toirdhealbhach son of Aodh son of Cathal Croibhdhearg [Ó Conchobhair]. They came to Fiodh Ó nDiarmada and Muinntear Fhathaigh and killed people in these places. From there they came to the castle of Bun na Gaillmhe, and they burned the town and the castle, and a great many people were killed and destroyed. The Galls pursued them and gave them battle, and they killed a number of Galls, and departed in spite<tei:pb n="127"/>
+
+of them, and went into Ceara. But Jordan de Exeter, Clann Ádam, and the Galls of Ceara assembled.and went against Toirdhealbhach. Toirdhealbhach left the territory, as he had not sufficient forces to meet them.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1247.6">
+<tei:p>Buirgéis Cinn Tráchta was burned by Tadhg son of Conchobhar Ruadh [Ó Conchobhair] and Tadhg son of Tuathal [Ó Conchobhair].</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1247.7">
+<tei:p>Nevertheless, the Galls did not get such a terrorising for a long time as in that was of the kings' sons, for they did not leave a territory or a cantred in Connacht unpillaged in that year.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1247.8">
+<tei:p>A new Justiciar was sent to Ireland by the king of England
+this year, and his rule was good.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1248">
+<tei:div2 n="MCB1248.1">
+<tei:p><tei:date value="1248">The first of January on Wednesday and the second day of the moon.</tei:date></tei:p>
+</tei:div2>
+<tei:div2 n="MCB1248.2">
+<tei:p>A hosting by the sons of Maghnus [Ó Conchobhair] and the son of Conchobhar Ruadh [Ó Conchobhair] and they turned against the Galls and burned the castle of Mac Henry [Butler] and captured its constable, and they took the preys of the north of Umhall into Inse Modh. However, Jordan de Exeter, John Butler, Robin Lawless, and several people assembled and came to Baile Tobair Phádraig, and from there to Achadh Fabhair, and they plundered Umhall, north and south, on the following day. [Mac] Henry [Butler] also came with an army into Umhall, for it was his, and he was living there. Mac Henry, however, made a peace with Domhnall the son of Maghnus [Ó Conchobhair], and Domhnall promised him forces and vessels to attack his kinsmen. Ó Conchobhair's sons were on Inse Modh, and they heard that forces were going from [Mac] Henry to Domhnall for vessels. They went to ambush this band, and of them they killed Ouain son of the Englishwoman and John son of the English priest, and Diarmaid son of Maghnus [Ó Conchobhair] killed in that attack Sinnott Guiber and four of his people with him, and Diarmaid was killed there, and more was the pity.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1248.3">
+<tei:p>Tadhg son of Conchobhar Ruadh [Ó Conchobhair] was killed by Galls this year, and he was greatly feared and hated by the Galls up to his death.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1248.4">
+<tei:p>A hosting by Maurice Fitzgerald into Tír Chonaill. He took preys, plundered, banished Ó Canannáin from the country, and gave the lordship to Ó Domhnaill's son.<tei:pb n="129"/>
+
+</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1248.5">
+<tei:p>A hosting by the Justiciar of Ireland against Ó Néill and Cinéal Eóghain, who decided to give hostages to the Justiciar, since the sway of the Galls was over all Ireland.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1248.6">
+<tei:p>Ruaidhrí Ó Canannáin was killed by Gofraidh son of Domhnall Mór Ó Domhnaill, who took into himself the kingship.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1248.7">
+<tei:p>Muircheartach Cléireach Ó Dubhda was killed by Aodh son of Feidhhmidh Ó Conchobhair this year.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1248.8">
+<tei:p>John Tyrrell was killed with nobles of his people by Giolla na Naomh Ó Fearghail.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1248.9">
+<tei:p>Richard son of the people of William de Burgo died in England, and his body was brought to Ireland and buried in Áth Eiseal.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1248.10">
+<tei:p>Amlaoibh son of Cathal Riabhach Ó Ruairc was treacherously killed by Conchobhar Carrach Mac Donnchadha.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1249">
+<tei:div2 n="MCB1249.1">
+<tei:p><tei:date value="1249">The first of January on Friday and the thirteenth day of the moon.</tei:date></tei:p>
+</tei:div2>
+<tei:div2 n="MCB1249.2">
+<tei:p>A great hosting by the Justiciar of Ireland against Leinster to check the kings' sons who were creating havoc throughout Leinster, but they did not pay any heed to him, and he plundered the territory when he did not overtake them.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1249.3">
+<tei:p>Fínghin Mac Carthaigh made war and wrought great havoc on the Galls of Desmond this year.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1249.4">
+<tei:p>Adam Minniter was killed by the son of Giolla Mo Choinni Ó Cathail, and many along with him.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1249.5">
+<tei:p>Pierce Power, David Drew, and a mounted force of young men with them, advanced before Bermingham into Connacht to the castle of Sligo. The son of Feidhlimidh [Ó Conchobhair] heard of this, and he ambushed them, and there were killed by hum Pierce Power, David Drew, and five of the young men, and their bodies were taken to Eas Dara. As regards Feidhhmidh's son, he advanced into Tír Fhiachrach, and traversing Bermingham's territory, he plundered from the Muadh to Traigh; and Gearóidín [Bermingham] followed ...</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:pb n="131"/>
+<tei:div1 n="MCB1303">
+<tei:div2 n="MCB1303.1">
+<tei:p><tei:date value="1303">... the [Red] Earl, Galls, and many Irish went from Ireland with a large fleet, and gained sway over Scotland.</tei:date></tei:p>
+</tei:div2>
+<tei:div2 n="MCB1303.2">
+<tei:p>Teabóid de Burgo, brother of the Earl, died at Carrickfergus on Christmas Eve, after coming from that hosting.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1304">
+<tei:div2 n="MCB1304.1">
+<tei:p><tei:date value="1304">The first of January [- - - ]</tei:date>. Matha son of Giolla Íosa
+Ó Raighilligh, king of Bréifne, was killed, together with gallowglasses, at Achadh na Corra by the Teallach Dúnchadha. Mac
+Samhradháin and Mac Dorchaidh were wounded there.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1304.2">
+<tei:p>The Countess, wife of Richard de Burgo, Earl of Ulster, died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1304.3">
+<tei:p>Walter de Burgo, heir to the same Earl, died.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1305">
+<tei:div2 n="MCB1305.1">
+<tei:p><tei:date value="1305">The first of January [- - - -]</tei:date>. Muircheartach Ó Conchobhair Failghe, Maol Mórdha, his kinsman, i.e. An Calbhach Ó Conchobhair, and twenty-nine of the nobles of his people were treacherously killed by Sir Pierce Bermingham in Caisleán Feórais.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1305.2">
+<tei:p>The castle of Inis Eóghain was built by the Earl [of Ulster].</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1305.3">
+<tei:p>Aodh son of Cathal Ó Conchobhair and Clann Mhuircheartaigh inflected a defeat on Muinntear Raighilligh, in which Pilib Ó Raighilligh fell, together with the heir of Clann Shuibhne, Mac Buirrche, head of the gallowglasses, and one hundred and forty others.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1305.4">
+<tei:p>Toirdhealbhach son of Niall Ruadh Ó Briain rested in Christ.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1305.5">
+<tei:p>Matha Óg Ó Raighilligh was killed by the Teallach Dúnchadha.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1305.6">
+<tei:p>Aodh Óg Ó Fearghail rested in Christ.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1306">
+<tei:div2 n="MCB1306.1">
+<tei:p><tei:date value="1306">The first of January [- - - -]</tei:date>. Toirdhealbhach Ó Briain, king of Thomond, died. Donnchadh Ó Briain, his son, was made king in his place.</tei:p>
+</tei:div2>
+<tei:pb n="133"/>
+<tei:div2 n="MCB1306.2">
+<tei:p>Fearghal Mac Raghnaill, chieftain of Muinntear Eólais, was killed by his own kinsmen.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1306.3">
+<tei:p>Donnchadh son of Conchobhar an Chopáin [Mac Diarmada] and Flann Ó Floinn were killed by Aodh son of Eoghan Ó Conchobhair.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1306.4">
+<tei:p>A great war between Aodh son of Eoghan Ó Conchobhair, king of Connacht, together with the nobles of Síol Muireadhaigh, and Aodh son of Cathal Ó Conchobhair, with many sons of the kings and chieftains of Connacht, together with chieftains and nobles of Bréifne, along the Shannon for three or four months. A number of the kings' sons attached to Aodh son of Cathal [Ó Conchobhair] made an incursion into the Tuatha with a force and they took preys and spoils. Flann son of Fiachra Ó Floinn, who was eligible for the chieftainship of Síol Maoil Ruanaidh, Brian son of Donnchadh Riabhach Ó Conchobhair, and many others were killed in the pursuit of that prey.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1306.5">
+<tei:p>Donnchadh Ó Flaithbheartaigh, bishop of Killala, a man renowned for generosity and piety, rested in Christ.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1306.6">
+<tei:p>Robert Bruce, great steward of Carraig, took the kingship of Scotland by force, in opposition to the king of England.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1306.7">
+<tei:p>Domhnall Tuirtreach Ó Neill was killed through a mischance by the household of Ó Néill.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1306.8">
+<tei:p>Sir William Prendergast, a very valiant knight, died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1306.9">
+<tei:p>A great foray was made by Clann Mhuircheartaigh into Cairbre, in which Dáuíd Ó Caomháin and many others were killed.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1306.10">
+<tei:p>Brian Carrach Ó hEaghra was killed by Cormac Ó Flannagáin.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1307">
+<tei:div2 n="MCB1307.1">
+<tei:p><tei:date value="1307">The first of January [- - - -]</tei:date>. Donnchadh Muimhneach Ó Ceallaigh, king of Uí Mhaine, a man equally skilled in every good thing serviceable to man, rested in Christ.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1307.2">
+<tei:p>Domhnall son of Tadhg son of Brian son of Aindrias son of Brian Luighneach son of Toirdhealbhach Mór [Ó Conchobhair] was killed by Aodh Bréifnech son of Cathal Ruadh Ó Conchobhair.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1307.3">
+<tei:p>Tadhg son of Maol Sheachlainn son of Donnchadh son of Domhnall son of Maghnus son of Toirdhealbhach Mór was killed by Cathal son of Domhnall son of Tadhg [Ó Conchobhair].</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1307.4">
+<tei:p>Maol Sheachlainn Ó Gairmleadhaigh, chieftain of Cinéal Moáin, rested in Christ.</tei:p>
+</tei:div2>
+<tei:pb n="135"/>
+<tei:div2 n="MCB1307.5">
+<tei:p>Amhlaoibh son of Art son of Cathal Ó Ruairc, king of Bréifne, was killed by the son of Fearghal Garbh Mac Samhradháin.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1307.6">
+<tei:p>Conchobhar son of Fiachra Ó Floinn died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1307.7">
+<tei:p>Eachdhruim Ó Maine was burned by a number of the princes of Uí Mhaine.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1307.8">
+<tei:p>The Galls of all Roscommon were for the most part killed by Donnchadh Ó Ceallaigh, king of Uí Mhaine, at Áth Eascrach Cuan, where Philip Muinnter, John Muinnter and Matthew Drew fell, and others were killed or despoiled or captured. Diarmaid Gall Mac Diarmada and Cormac Mac Ceithearnaigh were captured there, and their forces were released subject to control, and the sheriff of Roscommon was also captured there. But they were released after a while, and they made peace [i.e. restitution] for the burning of the town by Edmund Butler.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1307.9">
+<tei:p>Donnchadh Ó Flannagáin, bishop of Elphin, rested in Christ.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1307.10">
+<tei:p>Young Edward, king of England, Wales, and Ireland, was crowned.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1307.11">
+<tei:p>Ailbhe, daughter of Tadhg Ó Conchobhair, died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1307.12">
+<tei:p>Clann Mhuircheartaigh came into Magh Cétne and burned the corn of Cairbre and much of the corn of Tír Oilealla and Corann; and it was on this expedition that Tadhg son of Maghnus [Ó Conchobhair] was killed.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1307.13">
+<tei:p>Cathal son of Maghnus [Ó Conchobhair] was killed by the same Cathal.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1307.14">
+<tei:p>Maghnus Mac Oireachtaigh died.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1308">
+<tei:div2 n="MCB1308.1">
+<tei:p><tei:date value="1308">The first of January [- - - -]</tei:date>. The two territories of Cairbre Droma Chabh were plundered by Ruaidhrí son of Cathal Ruadh Ó Conchobhair.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1308.2">
+<tei:p>Tighearnán Mac Tighearnán died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1308.3">
+<tei:p>A great raid was made by Maol Ruanaidh Mac Diarmada on the sons of Domhnall Ó Conchobhair in Cairbre. Another raid was made by Brian Ó Dubhda and the Galls of Luighne and Uí Fhiachrach on the same sons.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1308.4">
+<tei:p>Lightning struck the monastery of the friars in Roscommon and damaged it.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:pb n="137"/>
+<tei:div1 n="MCB1309">
+<tei:div2 n="MCB1309.1">
+<tei:p><tei:date value="1309">The first of January [- - - -]</tei:date>. Aodh son of Eóghan son of Ruaidhrí son of Aodh son of Cathal Croibhdhearg [Ó Conchobhair], king of Connacht and eligible for the kingship of Ireland, was killed by Aodh Bréifnech Ó Conchobhair in Coill an Chlacháin together with many of the nobles of his people. These nobles were: Conchobhar Mac Diarmada, Diarmaid Ruadh son of Tadhg Ó Conchobhair, Diarmaid son of [Cathal] Carrach son of Tadhg son of Maol Ruanaidh [Ó Conchobhair], Diarmaid Ó hÉilidhe, and Giolla na Naomh Mac Aodhagáin, an <tei:term lang="ga" type="ollav">ollamh</tei:term>. Aodh Bréifneach [Ó Conchobhair] came out of the district and the Trí Tuatha submitted to him.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1309.2">
+<tei:p>Maol Ruanaidh Mac Diarmada, and Síol Muireadhaigh, brought William de Burgo to Elphin.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1309.3">
+<tei:p>Aodh Bréifneach [Ó Conchobhair], who was in the Tuatha, went into Midhe to meet the Earl, and the Trí Tuatha turned against him when he was gone. Aodh, on coming out of Midhe, encamped in Uachtar Tíre, and taking a prey from Aodh Ó Flannagáin, he consumed it there.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1309.4">
+<tei:p>Conchobhar son of Donnchadh Ó Briain was treacherously killed by the Galls.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1309.5">
+<tei:p>Cathal son of An Liathánach [Ó Conchobhair], abbot of An Tríonóid, was elected to the bishopric of Elphin.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1309.6">
+<tei:p>Ruaidhrí son of Cathal [Ó Conchobhair] and Ó Floinn went into An Machaire with a troop of horse and killed Bermingham's son.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1309.7">
+<tei:p>William de Burgo and the Connachtmen had a meeting with the son of Cathal [Ó Conchobhair] at Áth Slisen. The meeting was broken up and a defeat inflicted on the son of Cathal there, and some of his people were killed.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1309.8">
+<tei:p>William de Burgo went to the monastery of Boyle, and Clann Mhuircheartaigh came into Tír Oilealla. They burned and destroyed much corn.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1309.9">
+<tei:p>MacWilliam came northwards to Coirrshliabh. Cathal's son was put out of his encampment by him, and Donnchadh Ó Fionnachta was killed by the van of MacWilliam's host, as well as others not set forth here.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:pb n="139"/>
+<tei:div1 n="MCB1310">
+<tei:div2 n="MCB1310.1">
+<tei:p><tei:date value="1310">The first of January [- - - -]</tei:date>. A great foray, called Creach an Tóiteáin [The Foray of the Burning], was made by Aodh Bréifneach [Ó Conchobhair] on Maol Ruanaidh Mac Diarmada in Clochar Ó Muirghile, and Donnchadh son of Donnchadh Mac Diarmada was captured, and his wife, the daughter of Ó Flannagáin, was killed there. Many women and children were burned there.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1310.2">
+<tei:p>William de Burgo and the Connachtmen pitched camp at Ceall Fhada. Aodh Bréifneach made a camp at Ceall Srianáin opposite him, and his own defensive kern, i.e. Seónag Mac Uighilín, killed him treacherously, i.e. for rewards.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1310.3">
+<tei:p>Feidhlimidh son of Aodh [Ó Conchobhair] was made king of Connacht.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1310.4">
+<tei:p>Cormac Ó Flannagáin, chieftain of Tuath Ratha, was killed by Muinntear Pheódhacháin.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1310.5">
+<tei:p>The castle of Sligo was built by the [Red] Earl.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1310.6">
+<tei:p>Twenty tuns of wine were washed ashore in Magh Cétne at this time.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1310.7">
+<tei:p>Mac Craith Mac Uidhir, <tei:term lang="ga" type="king-worthy">ríoghdhamhna</tei:term> of Fir Mhanach, and Donn Mac Giolla Mhíchil, chieftain of Clann Chonghaile, were destroyed and burned by Roalb Mac Mathghamhna.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1310.8">
+<tei:p>Fearghal Mac Dorchaidh died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1310.9">
+<tei:p>Úna daughter of Aodh son of Feidhlimidh [Ó Conchobhair] died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1310.10">
+<tei:p>A hosting by Seafraidh Ó Fearghail to Dún Uabhair where Domnall son of Aodh Óg Ó Fearghail, Aodh son of Maol Íosa [Ó Fearghail], and Gofraidh son of Muircheartach [Ó Fearghail] were killed.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1310.11">
+<tei:p>Great forays were made by William de Burgo, Maol Ruanaidh Mac Diarmada, and Clann Domhnaill in Cairbre on Clann Mhuircheartaigh. Monastic cells and churches were violated by them.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1311">
+<tei:div2 n="MCB1311.1">
+<tei:p><tei:date value="1311">The first of January [- - - -]</tei:date>. A great foray was made by Clann Mhuircheartaigh in Connacht, and there were killed there Giolla Críost son of Muirgheas son of Donnchadh Mac Diarmada, Aodh son of Cormac [Mac Diarmada], Uilliam Mac Giolla Arraith, Donnchadh son of Tomaltach [Mac Diarmada], and other nobles.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1311.2">
+<tei:p>Two sons of William <tei:hi rend="ital">Liath</tei:hi> de Burgo were killed by the Leinster princes.</tei:p>
+</tei:div2>
+<tei:pb n="141"/>
+<tei:div2 n="MCB1311.3">
+<tei:p>Tadhg Ó hAinlighe, chieftain of Cinéal Dobhtha, was killed by Jordan de Exeter.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1311.4">
+<tei:p>Domhnall son of Amhlaoibh son of Art Ó Ruairc, king of Bréifne, died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1311.5">
+<tei:p>Domhnall Ó Birn, chieftain of Tír Bhriúin, died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1311.6">
+<tei:p>A great hosting by William de Burgo into Munster against de Clare, and they gave battle to each other, and de Clare was defeated there. William de Burgo was captured at the rear of his people, as he followed up the rout, and although William was captured, it was he who inflicted the defeat.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1311.7">
+<tei:p>A great war in Thomond this year, and Donnchadh Mac Con Mara and his people, i.e. Tríocha Céad Ó gCaisín, gave battle to Ó Briain and all the men of Munster. Donnchadh Mac Con Mara, all the nobles of his people, and Domhnall Ó Grada, chieftain of Cinéal Dúnghaile, were killed there, and there was immense slaughter on both sides.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1311.8">
+<tei:p>Donnchadh Ó Briain, king of Thomond, a man well-qualified to be king of Ireland, was treacherously killed by Murchadh son of Mathghamhain Ó Briain.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1311.9">
+<tei:p>Lochlainn Riabhach Ó Deadhaidh was killed by Mathghamhain son of Domhnall Connachtach Ó Briain.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1311.10">
+<tei:p>Seónag Mac Uighilín killed An Gruelach in Baile Tobair Bhrighde, and he himself was killed there, and it was with the short axe with which he killed Aodh Bréifneach Ó Conchobhair that he himself was killed.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1311.11">
+<tei:p>Feidhlimidh Ó Conchobhair, king of Connacht, made a raid on Clann Mhuircheartaigh on the border of Magh Cétne, and Maol Sheachlainn son of Conchobhar Ruadh [Ó Conchobhair], who was known as Ceann an Mheithil, and others were killed there.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1311.12">
+<tei:p>Diarmaid Ó Briain, i.e. Cléireach, died. Muircheartach Ó Briain was made king in his stead.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1311.13">
+<tei:p>Giolla Íosa Ó Dálaigh, an <tei:term lang="ga" type="ollav">ollamh</tei:term> in poetry, died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1311.14">
+<tei:p>Giolla Críost Mac Donnchadha died.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1312">
+<tei:div2 n="MCB1312.1">
+<tei:p><tei:date value="1312">The first of January [- - - -]</tei:date>. William Bermingham, archbishop of Tuam, rested in Christ.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1312.2">
+<tei:p>Benedict Ó Bragáin, bishop of Luighne, rested in Christ.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1312.3">
+<tei:p>Malaici Mac Aodha, bishop of Elphin, was elected to the archbishopric of Tuam.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:pb n="143"/>
+<tei:div1 n="MCB1313">
+<tei:div2 n="MCB1313.1">
+<tei:p><tei:date value="1313">The first of January [- - - -]</tei:date>. Diarmaid Cléireach Ó Briain, king of Thomond, rested in Christ.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1313.2">
+<tei:p>Pope Clement died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1313.3">
+<tei:p>Giolla Íosa Mac Dorchaidh, chieftain of Cinéal Luacháin, [was killed].</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1313.4">
+<tei:p>The king of France died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1313.5">
+<tei:p>Tadhg son of Aindrias [Ó Conchobhair] died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1313.6">
+<tei:p>Cathal son of Murchadh Carrach Ó Fearghail died.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1313.7">
+<tei:p>Tighearnán son of Niall Ó Ruairc was killed.</tei:p>
+</tei:div2>
+</tei:div1>
+<tei:div1 n="MCB1314">
+<tei:div2 n="MCB1314.1">
+<tei:p><tei:date value="1314">The first of January [- - - -]</tei:date>. Niall Ó Domhnaill was killed.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1314.2">
+<tei:p>Muinntear Raighilligh were defeated at Druim Leathan by Ruaidhrí son of Cathal Ó Conchobhair.</tei:p>
+</tei:div2>
+<tei:div2 n="MCB1314.3">
+<tei:p>Niall son of Brian Ó Néill died.</tei:p>
+</tei:div2>
+</tei:div1>
+</tei:div0>
+</tei:body>
+</tei:text>
+</tei:TEI.2>

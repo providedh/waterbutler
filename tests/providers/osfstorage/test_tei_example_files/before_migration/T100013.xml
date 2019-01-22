@@ -1,0 +1,3107 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE TEI.2 SYSTEM "/dtds/tei/p4x/teicelt.dtd" [
+<!ENTITY % TEIbase "TEI.prose">
+]>
+<TEI.2 id="T100013">
+<teiHeader creator="Beatrix F&auml;rber" status="update" date.created="2001-02-07" date.updated="2010-03-23">
+<fileDesc>
+<titleStmt>
+<title type="uniform">Mac Carthaigh's Book</title>
+<title type="extended">Miscellaneous Irish Annals (A.D. 1114&ndash;1437)</title>
+<title type="extended">Fragment I</title>
+<title type="extended">[NLI MSS. 6, fos. 1a&ndash;12b; 5, fos.9a&ndash;24b]</title>
+<title type="gmd">An electronic edition</title>
+<respStmt>
+<resp>translated by</resp>
+<name>S&eacute;amus &Oacute; hInnse</name>
+<resp>Electronic edition compiled by</resp>
+<name id="BF">Beatrix F&auml;rber </name>
+<name id="PB">P&aacute;draig Bambury</name>
+</respStmt>
+<funder>University College, Cork</funder>
+<funder>Professor Marianne McDonald via the CELT Project</funder>
+</titleStmt>
+<editionStmt>
+<edition n="2">Second draft, revised and corrected.</edition>
+</editionStmt>
+<extent><measure type="words">20540</measure></extent>
+<publicationStmt>
+<publisher>CELT: Corpus of Electronic Texts: a project of University College, Cork</publisher>
+<address>
+<addrLine>College Road, Cork, Ireland&mdash;http://www.ucc.ie/celt</addrLine>
+</address>
+<date>2000</date>
+<date>2010</date>
+<distributor>CELT online at University College, Cork, Ireland.</distributor>
+<idno type="celt">T100013</idno>
+<availability status="restricted">
+<p>Available with prior consent of the CELT programme for purposes of academic research and teaching only.</p>
+</availability>
+</publicationStmt>
+<sourceDesc>
+<listBibl>
+<head>Manuscript sources</head>
+<bibl n="1">National Library of Ireland, MSS G 6 and G 5, olim Phillipps, 9195 and 9194; 15th century, two anonymous scribes.</bibl>
+</listBibl>
+<listBibl>
+<head>Editions</head>
+<bibl n="1">S&eacute;amus &Oacute; hInnse (ed.), Miscellaneous Irish Annals (A.D. 1114&ndash;1437). Dublin: DIAS, 1947, xix + pp. pls (MS facss.): Fragment 1 (1114&ndash;1437) (Mac Carthaigh's book); from MSS NLI G 6 and G 5. Fragments 2 and 3 (1237&ndash;1314, 1392&ndash;1407), from MS Rawl. B 488. English translation, indexes. Appendix on the spelling of fragments 1 and 3 throws light on the pronunciation of the scribes.</bibl>
+</listBibl>
+<listBibl>
+<head>Translations</head>
+<bibl n="1">S&eacute;amus &Oacute; hInnse (ed.), Miscellaneous Irish Annals (A.D. 1114&ndash;1437). Dublin: DIAS, 1947, xix + 222 pp. pls. (MS facss.): Fragment 1 (1114&ndash;1437) (Mac Carthaigh's book); from MSS NLI G 6 and G 5. Fragments 2 and 3 (1237&ndash;1314, 1392&ndash;1407), from MS Rawl. B 488.</bibl>
+</listBibl>
+<listBibl>
+<head>Literature including reviews</head>
+<bibl n="1">Gerard Murphy, <hi>in</hi> &Eacute;igse 6, 1948/52, (pt. 1), pp. 80&ndash;82.</bibl>
+<bibl n="2">John T. Collins: A McCarthy miscellany. <hi>In</hi> Journal of the Cork Historical and Archaeological Society 53, 1948, pp. 95&ndash;103. Miscellaneous Irish Annals, fragment 1.</bibl>
+<bibl n="3">Canice Mooney, <hi>in</hi> Irish Historical Studies 7, 1950/51 (1951), pp. 292&ndash;295.</bibl>
+<bibl n="4">Tom&aacute;s &Oacute; Fiaich: The contents of 'Mac Carthaigh's book'. <hi>In</hi> The Irish ecclesiastical record 5th series 74, 1950, pp. 30&ndash;39. Miscellaneous Irish Annals, fragment 1.</bibl>
+<bibl n="5">Brian &Oacute; Cu&iacute;v, 'Miscellanea, I: An entry in the 'Mac Carthaigh book of annals'. <hi>In</hi> &Eacute;igse 8, 1956/57, pp. 96&ndash;98. Ad annum 1117.2.</bibl>
+<bibl n="6">Gear&oacute;id Mac Niocaill, The medieval Irish annals (Dublin 1975), 26&ndash;27, 30.</bibl>
+<bibl n="7">Diarmuid &Oacute; Murchadha, 'A reconsideration of some place-names from Miscellaneous Irish Annals', Ainm 4 (1989&ndash;90), 180&ndash;193.</bibl>
+<bibl n="8">Daniel P. Mc Carthy, The Irish Annals: their genesis, evolution and history (Dublin 2008).</bibl>
+</listBibl>
+<listBibl>
+<head>The edition used in the digital edition</head>
+<biblFull>
+<titleStmt>
+<title level="m">Miscellaneous Irish Annals (A.D. 1114&ndash;1437)</title>
+<author id="SOI">S&eacute;amus &Oacute; hInnse</author>
+</titleStmt>
+<editionStmt>
+<edition>First edition</edition>
+</editionStmt>
+<extent>xix + 222 pp. pls. (MS facss.)</extent>
+<publicationStmt>
+<publisher>Dublin Institute for Advanced Studies</publisher>
+<pubPlace>Dublin</pubPlace>
+<date>1947</date>
+</publicationStmt>
+</biblFull>
+</listBibl>
+</sourceDesc>
+</fileDesc>
+<encodingDesc>
+<projectDesc>
+<p>CELT: Corpus of Electronic Texts</p>
+</projectDesc>
+<samplingDecl>
+<p>The present text represents pages 3&ndash;115 of the volume, being the English translation of the years A.D. 1114&ndash;1437 in the chronology of the compiler(s). All editorial introduction, notes and indexes have been omitted. Editorial corrigenda are integrated into the electronic edition. Explanatory text supplied by the editor appears in square brackets.</p>
+</samplingDecl>
+<editorialDecl>
+<correction status="medium">
+<p>Text has been checked and proofread twice.</p>
+</correction>
+<normalization>
+<p>The electronic text represents the edited text.</p>
+</normalization>
+<hyphenation>
+<p>Soft hyphens are silently removed.</p>
+</hyphenation>
+<segmentation>
+<p><emph>div0</emph>=the body of annals; <emph>div1</emph>=the individual annals (i.e. the annalistic matter gathered under one year); <emph>div2</emph>=the annalistic entry; paragraphs are marked; passages of verse occurring within paragraphs are treated as embedded texts; the stanzas are marked <emph>lg</emph> and metrical lines are
+marked <emph>l</emph>. Page-breaks are marked <emph>pb n=""</emph>.</p>
+</segmentation>
+<interpretation>
+<p>Some Gaelic terms have been tagged. Personal names, place names (kingdoms, lordships, churches, monasteries etc.) and group names (kindreds, lineages, dynasties, peoples etc.) have not been tagged. Social and professional roles (king, 
+lord, bishop, abbot, priest, scholar, lector, scribe etc.) have not been tagged. This might be envisaged in a future edition.</p>
+</interpretation>
+</editorialDecl>
+<refsDecl>
+<state gi="div1" freq="10" label="Annal" unit="Year"/>
+<state gi="div2" attr="n" label="Event" unit="Entry"/>
+</refsDecl>
+</encodingDesc>
+<profileDesc>
+<creation>Translation by S&eacute;amus &Oacute; hInnse 
+<date>c.1946</date></creation>
+<langUsage> 
+<language id="en">The text is in English.</language>
+<language id="ga">Some names and terms are in Irish.</language>
+</langUsage>
+<textClass>
+<keywords>
+<term>histor</term>
+<term>prose</term>
+<term>annals</term>
+<term>medieval</term>
+<term>translation</term>
+</keywords>
+</textClass>
+</profileDesc>
+<revisionDesc>
+<change>
+<date>2010-03-23</date>
+<respStmt>
+<name>Beatrix F&auml;rber</name>
+<resp>ed.</resp>
+</respStmt>
+<item>Header updated; minor modicfications to file encoding made; additions to bibliography and new wordcount made; file reparsed.</item>
+</change>
+<change>
+<date>2008-10-21</date>
+<respStmt>
+<name>Beatrix F&auml;rber</name>
+<resp>ed.</resp>
+</respStmt>
+<item>Keywords added; minor changes to header made.</item>
+</change>
+<change>
+<date>2008-10-21</date>
+<respStmt>
+<name>Beatrix F&auml;rber</name>
+<resp>ed.</resp>
+</respStmt>
+<item>Keywords added; minor changes to header made.</item>
+</change>
+<change>
+<date>2007-12-10</date> 
+<respStmt>
+<name>Beatrix F&auml;rber</name>
+<resp>ed.</resp>
+</respStmt>
+<item>Typos corrected, new SGML and HTML versions created.</item>
+</change>
+<change>
+<date>2005-08-25</date>
+<respStmt>
+<name>Julianne Nyhan</name>
+<resp>ed.</resp>
+</respStmt>
+<item>Normalised language codes and edited langUsage for XML conversion</item>
+</change>
+<change>
+<date>2005-08-04T16:33:43+0100</date>
+<respStmt>
+<name>Peter Flynn</name>
+<resp>ed.</resp>
+</respStmt>
+<item>Converted to XML</item>
+</change>
+<change>
+<date>2001-06-14</date>
+<respStmt>
+<name>Beatrix F&auml;rber</name>
+<resp>ed.</resp>
+</respStmt>
+<item>File re-parsed.</item>
+</change>
+<change>
+<date>2001-04-10</date>
+<respStmt>
+<name>P&aacute;draig Bambury</name>
+<resp>ed.</resp>
+</respStmt>
+<item>Second proofing of pages 51 to 116.</item>
+</change>
+<change>
+<date>2001-03-20</date>
+<respStmt>
+<name>Beatrix F&auml;rber</name>
+<resp>ed.</resp>
+</respStmt>
+<item>File parsed using NSGMLS.</item>
+</change>
+<change>
+<date>2001-02-07</date>
+<respStmt>
+<name>Beatrix F&auml;rber</name>
+<resp>ed.</resp>
+</respStmt>
+<item>Header created; second proofing of file to page 50; structural markup
+ of paragraphs and divisions applied, terms tagged.</item>
+</change>
+<change>
+<date>2000-12</date>
+<respStmt>
+<name>P&aacute;draig Bambury</name>
+<resp>ed.</resp>
+</respStmt>
+<item>First proofing of file; structural markup of page-breaks applied.</item>
+</change>
+<change>
+<date>2000-12-07</date>
+<respStmt>
+<name>P&aacute;draig Bambury</name>
+<resp>ed.</resp>
+</respStmt>
+<item>Text capture by scanning.</item>
+</change>
+</revisionDesc>
+</teiHeader>
+<text n="T100013">
+<body>
+<div0 type="annals" lang="en">
+<pb n="3"/>
+<div1 n="MCB1114" type="annal">
+<div2 n="MCB1114.0" type="entry">
+<p>1114</p>
+</div2>
+<div2 n="MCB1114.1">
+<p> ... between them not to send Diarmaid to take 
+ Leath Cuinn and Toirdhealbhach &Oacute;
+ Conchobhair to ... 
+ Leath Mogha for Diarmaid. Diarmaid
+ &Oacute; Briain came after that to Limerick and drove Muircheartach
+ &Oacute; Briain, king of Ireland, from his sick-bed and his own
+ encampment, from Limerick to Killaloe, under guard.</p>
+</div2>
+<div2 n="MCB1114.2">
+<p> Diarmaid &Oacute; Briain made peace with Brian son of
+ Murchadh an Sg&eacute;ith Ghirr son of Donnchadh son of Brian
+ Boramha, and with Domhnall son of the son of Muircheartach son of
+ Tadhg son of Brian B&oacute;ramha, and he captured them both in
+ violation of the relics of Ireland.</p>
+</div2>
+<div2 n="MCB1114.3">
+<p> Muircheartach &Oacute; Briain enjoined the Galls of
+ Limerick ... to take Diarmaid &Oacute; Briain prisoner, and he came
+ to them from Killaloe to Limerick and freed Brian. son of Murchadh
+ [&Oacute; Briain] and Domhnall, his own son, and he took possession
+ of his kingship again. And he went with the nobles of Munster on a
+ hosting against Leinster, and he took the hostages of Leinster and of
+ the Galls, and left Domhnall &Oacute; Briain, his own son, in the
+ kingship of Dublin.</p>
+</div2>
+<div2 n="MCB1114.4">
+<p> Attacks by some of his own people on Toirdhealbhach son of
+ Ruaidhr&iacute; [&Oacute; Conchobhair] at &Aacute;th B&oacute; in the
+ territory of Iarthar Connacht from which he received grievous wounds.
+ He released Domhnall son of Ruaidhr&iacute;, his own brother, who was
+ his prisoner, although he himself was under treatment.</p>
+</div2>
+<div2 n="MCB1114.5">
+<p> The whole of the province of Connacht rebelled with
+ Domhnall, and he was banished to Thomond.</p>
+</div2>
+</div1>
+<div1 n="MCB1115" type="annal">
+<div2 n="MCB1115.1">
+<p>1115. A hosting by Toirdhealbhach son of Ruaidhr&iacute; [&Oacute;
+Conchobhair] into Thomond in which Domhnall Claon son of Tadhg
+&Oacute; Briain was killed.</p>
+</div2>
+<div2 n="MCB1115.2">
+<p> The Leinstermen turned against Muircheartach &Oacute;
+ Briain. Domhnall son of Muircheartach &Oacute; Briain went to avenge
+ this on the Leinstermen. They fought a battle in which were killed
+ Donnchadh Mac Murchadha, king of Leinster, Conchobhar &Oacute;
+ Conchobhair, king of U&iacute; Fhailghe, with his retinue, Tadhg
+ <pb n="5"/> &Oacute; Lorc&aacute;in, king of ..., after they had been
+ routed by Donnchadh.</p>
+</div2>
+<div2 n="MCB1115.3">
+<p> A foray by the Connachtmen into Ormond in which they took
+ many cows. A great hosting by Muircheartach &Oacute; Briain into
+ Connacht to avenge this, and he was the greater part of a week in an
+ encampment at Loch Cime ravaging Connacht on all sides of him.</p>
+</div2>
+<div2 n="MCB1115.4">
+<p> A hosting by Toirdhealbhach son of Ruaidhr&iacute; into
+ Thomond and he did much harm there, and Maol Sheachlainn son of the
+ son of Aodh son of Ruaidhr&iacute; [&Oacute; Conchobhair] was
+ killed.</p>
+</div2>
+<div2 n="MCB1115.5">
+<p> A fleet [was brought] on the Shannon by Toirdhealbhach son
+ of Ruaidhr&iacute; [&Oacute; Conchobhair]. He cleared Buinne an
+ Bheithe against the Munstermen, and after that he had a conference
+ with Murchadh son of Domhnall [&Oacute; Maoil Sheachlainn], king of
+ Midhe, at Clonmacnois, and they made peace and an alliance there.
+ Great forays by Toirdhealbhach son of Ruaidhr&iacute; in that
+ maritime expedition, and he plundered a great portion of the
+ Conmhaicne, and he came to Clonmacnois, where he fasted and gave a
+ drinking-horn ornamented with gold and a silver goblet ornamented
+ with gold to God and Ciaran.</p>
+</div2>
+<div2 n="MCB1115.6">
+<p> A foray by Domhnall son of Muircheartach &Oacute; Briain
+ from Midhe into Ormond against Diarmaid, to avenge the deposition of
+ his father twice. Diarmaid &Oacute; Briain overtook him and defeated
+ him, and captured Domhnall himself, and the son of Donnchadh Mac
+ Murchadha, king of Leinster, was killed, with slaughter of the
+ Leinstermen and Munstermen about him. Diarmaid went after that with a
+ great force to Limerick, and made an encampment against Muircheartach
+ and Brian son of Murchadh [&Oacute; Briain], and he threatened to
+ blind Domhnall son of Muircheartach unless Muircheartach submitted to
+ his terms. Muircheartach &Oacute; Briain submitted to the terms of
+ Diarmaid, his own brother, for the sake of Domhnall, his son.</p>
+</div2>
+<div2 n="MCB1115.7">
+<p> Peace was made by the Galls of Limerick and Diarmaid, and Brian son of Murchadh was driven out of Munster into Connacht.</p>
+</div2>
+</div1>
+<div1 n="MCB1116" type="annal">
+<div2 n="MCB1116.0">
+<p>1116</p>
+</div2>
+<div2 n="MCB1116.1">
+<p> The year before this, Diarmaid &Oacute; Briain turned
+  against Muircheartach son of Toirdhealbhach &Oacute; Briain, his own
+  brother, and took the kingship of Munster from him, in violation of
+  [the security of] the relics and sanctuaries of all Ireland, at
+  Cashel and Lismore.</p>
+</div2>
+<pb n="7"/>
+<div2 n="MCB1116.2">
+<p> A foray by Toirdhealbhach son of Ruaidhr&iacute; &Oacute;
+  Conchobhair into Iarthar Midhe, and he plundered it in one day
+  westwards from Loch Aininne.</p>
+</div2>
+</div1>
+<div1 n="MCB1117" type="annal">
+<div2 n="MCB1117.0">
+<p>1117</p>
+</div2>
+<div2 n="MCB1117.1">
+<p> Maol Muire &Oacute; D&uacute;n&aacute;in, the archbishop
+  of Ireland over the bishops and clergy of all Munster, left Munster
+  to wreak vengeance on Diarmaid &Oacute; Briain for the violation [of
+  his security] through the taking of the kingship of Munster from his
+  brother, Muircheartach M&oacute;r son of Toirdhealbhach &Oacute;
+  Briain.</p>
+</div2>
+<div2 n="MCB1117.2">
+<p> A great famine in Munster after Diarmaid &Oacute; Briain
+  had taken the kingship in violation of the relics and the clergy ...
+  from Linn Mode N. and from G ... down and laid waste the greater part
+  of Munster ... famine ... in the time of Loingseach son of Aonghus
+  ...</p>
+</div2>
+<div2 n="MCB1117.3">
+<p> Diarmaid &Oacute; Briain with a force from Munster went
+  ... an Ruadhbheitheach and did much harm in Connacht on all sides of
+  him.</p>
+</div2>
+<div2 n="MCB1117.4">
+<p> Aodh son of Donnchadh &Oacute; Ruairc, king of
+  Br&eacute;ifne, together with the nobles of Conmhaicne and U&iacute;
+  Bhri&uacute;in, submitted to Toirdhealbhach son of Ruaidhr&iacute;
+  &Oacute; Conchobhair.</p>
+</div2>
+<div2 n="MCB1117.5">
+<p> A hosting by Toirdhealbhach son of Ruaidhr&iacute;
+  &Oacute; Conchobhair to Rubha Conaill in Midhe, and he carried off
+  the hostages of Midhe.</p>
+</div2>
+<div2 n="MCB1117.6">
+<p> A hosting by Diarmaid son of Toirdhealbhach &Oacute;
+ Briain, ... and he returned without giving battle or obtaining
+ hostages.</p>
+</div2>
+<div2 n="MCB1117.7">
+<p> A very great plague in Leinster and Munster which caused
+  great mortality in Dublin.</p>
+</div2>
+<div2 n="MCB1117.8">
+<p> Maol Brighde Mac R&oacute;nain ... of Ceanannas [was
+killed] by Aodh son of Donnchadh &Oacute; Ruairc ...</p>
+</div2>
+<div2 n="MCB1117.9">
+<p> Diarmaid son of Toirdhealbhach &Oacute; Briain ...
+ Fiachrach and of Connacht with the U&iacute; Bhri&uacute;in ...</p>
+</div2>
+<div2 n="MCB1117.10">
+<p> That Diarmaid &Oacute; Briain son of Toirdhealbhach son
+  of Tadhg son of Brian B&oacute;ramha died at Cork after a victory
+  of penance ...</p>
+</div2>
+<pb n="9"/>
+</div1>
+<div1 n="MCB1118" type="annal">
+<div2 n="MCB1118.0">
+<p>1118</p>
+</div2>
+<div2 n="MCB1118.1">
+<p> A.D. 1118. Brian son of Murchadh an Sgeith Ghirr son
+of Donnchadh son of Brian B&oacute;ramha took the kingship of Sliocht
+E&oacute;ghain Mh&oacute;ir ...</p>
+</div2>
+<div2 n="MCB1118.2">
+<p> ... to the east of Cork to meet Brian son of Murchadh,
+and they fought a battle there in which Brian Gleanna Maidhir son of
+Murchadh an Sgeith Ghirr [&Oacute; Briain] fell by the hand of
+Toirdhealbhach son of Diarmaid son of Tadhg son of Brian
+B&oacute;ramha, who had been driven out by Muircheartach son of
+Toirdhealbhach [&Oacute; Briain] and by Brian son of Murchadh, and
+was with Tadhg son of Muireadhach Mac Carthaigh.</p>
+</div2>
+<div2 n="MCB1118.3">
+<p> Muircheartach son of Toirdhealbhach son of Tadhg son
+of Brian B&oacute;ramha with [the men of] Thomond, Toirdhealbhach son
+of Ruaidhr&iacute; [&Oacute; Conchobhair], king of Connacht, Murchadh
+&Oacute; Maoil Sheachlainn, king of Midhe, and Aodh son of Donnchadh
+&Oacute; Ruairc, king of U&iacute; Bhri&uacute;in, came with their
+forces to Gleann Maidhir to avenge Brian son of Murchadh and to take
+the kingship of Sliocht Edghain Mhdir again for Muircheartach.
+Sliocht Edghain went to meet them at the other side of Gleann
+[Maidhir]. Toirdhealbhach &Oacute; Conchobhair, Murchadh &Oacute;
+Maoil Sheachlainn, and Aodh son of Donnchadh &Oacute; Ruairc came
+into the assembly of Tadhg son of Mac Carthaigh and made an enduring
+treaty with him and with Cormac, his kinsman, against Muircheartach
+son of Toirdhealbhach and S&iacute;ol Briain. It was then that
+Muircheartach &Oacute; Briain was parted from the kingship of Munster
+and Ireland.</p>
+</div2>
+<div2 n="MCB1118.4">
+<p> A house of C&uacute; Chollchoille &Oacute;
+Baoigheall&aacute;in was seized at Ros Cloinne Cinaetha. He, the
+chief <term lang="ga">ollamh</term> of Ireland for poetry, honour and general benevolence, 
+his wife and two sons, fifteen men, and six score of his train were killed by &Oacute; Flannag&aacute;in of Tuath R&aacute;tha and the Fir Luirg.</p>
+</div2>
+<div2 n="MCB1118.5">
+<p> Ruaidhr&iacute; &Oacute; Conchobhair, who was blinded
+by &Oacute; Flaithbheartaigh and who was called Ruaidhr&iacute; na
+Soidhe Buidhe, son of Aodh in Gha Bhearnaigh son of Tadhg an Eich
+Ghil, died at Clonmacnois after a victory of repentance, and after
+receiving the Body of Christ and wine out of 
+<term lang="ga" type="relic:Ciar&aacute;n's chalice">Fraoch&aacute;n
+ Ciar&aacute;in.</term></p>
+</div2>
+<div2 n="MCB1118.6">
+<p> Domhnall son of that Ruaidhr&iacute; died in Thomond
+after he had been banished by Toirdhealbhach, his own kinsman, out of
+Connacht, and he was buried at Tuaim Gr&eacute;ine.</p>
+</div2>
+</div1>
+<pb n="11"/>
+<div1 n="MCB1119" type="annal">
+<div2 n="MCB1119.0">
+<p>1119</p>
+</div2>
+<div2 n="MCB1119.1">
+<p> Niall son of Domhnall son of Ardghal Mac Lochlainn,
+<term lang="ga" type="roydamna">rioghdhamhna</term> of Oileach, was treacherously killed by the Cin&eacute;al Mo&aacute;in.</p>
+</div2>
+<div2 n="MCB1119.2">
+<p> A hosting by Toirdhealbhach son of Ruaidhr&iacute;
+&Oacute; Conchobhair to R&aacute;ith &Eacute;dair in Leinster, and he
+divided the province of Leinster in two between Donnchadh Mac Giolla
+Ph&aacute;draig and &Eacute;anna son of Donnchadh son of Murchadh son of
+Maol na mB&oacute;. He went from thence to Dublin and took from them
+[i.e. the inhabitants] by force the son of Murchadh son of Domhnall.
+[&Oacute; Maoil Sheachlainn], king of Midhe, who was a prisoner with
+them, and all the other hostages of 
+Leath Cuinn who were with him, and by his own authority he left
+&Eacute;anna son of Donnchadh in the kingship of Leinster and
+Dublin.</p>
+</div2>
+<div2 n="MCB1119.3">
+<p> A fleet [was brought] by Toirdhealbhach son of
+Ruaidhr&iacute; on Lough Derg, and they ... R&aacute;ith Cinn
+Choradh.</p>
+</div2>
+<div2 n="MCB1119.4">
+<p> Muircheartach son of Toirdhealbhach son of Tadhg son
+of Brian B&oacute;ramha, high-king of Ireland, died at Killaloe after
+penance and anointment, and having received the Body of Christ, in
+the fifth year of his tribulation, and he was buried with honour in
+the church of Killaloe.</p>
+</div2>
+</div1>
+<div1 n="MCB1120" type="annal">
+<div2 n="MCB1120.0">
+<p>1120</p>
+</div2>
+<div2 n="MCB1120.1">
+<p> A.D. 1120. Donnchadh Donn son of C&uacute; Mara son of
+Brodch&uacute; son of Mathghamhain son of C&iacute;an [&Oacute;
+Mathghamhna] died ...</p>
+</div2>
+<div2 n="MCB1120.2">
+<p> Tadhg son of Muireadhach Mac Carthaigh together with
+the nobles of Munster ... kings, and he gave hostages ...</p>
+</div2>
+<div2 n="MCB1120.3">
+<p> A plundering expedition by Toirdhealbhach son of
+Ruaidhr&iacute; &Oacute; Conchobhair ... and in violation of the
+peace with Mac Lochlainn, and he banished Murchadh &Oacute; Maoil
+Sheachlainn from the east past Ardee into Leinster. He held the 
+<term lang="ga">Aonach</term> [i.e. Fair] of Tailte on
+this expedition.</p>
+</div2>
+<div2 n="MCB1120.4">
+<p> ... and he inflicted slaughter on them, including
+C&uacute; Chumair &Oacute; N&eacute;ill, and their scouts came as far
+as Sliabh Ban bhFionn and E&oacute;ghanacht Caisil.</p>
+</div2>
+<div2 n="MCB1120.5">
+<p> A great hosting by Domhnall son of Ardghar Mac
+Lochlainn <pb n="13"/> and Murchadh &Oacute; Maoil Sheachlainn in
+Iarthar Midhe: A muster by Toirdhealbhach son of Ruaidhr&iacute; to
+Athlone to meet them, and they parted after making peace. Domhnall
+Mac Lochlainn was surety between Toirdhealbhach son of
+Ruaidhr&iacute; and Murchadh &Oacute; Maoil Sheachlainn, king of
+Midhe. Three bridges were built by Toirdhealbhach on that expedition:
+the bridges of Athlone and &Aacute;th Cr&oacute; over the Shannon
+and the bridge of D&uacute;n Le&oacute; over the Suck.</p>
+</div2>
+</div1>
+<div1 n="MCB1121" type="annal">
+<div2 n="MCB1121.0">
+<p>1121</p>
+</div2>
+<div2 n="MCB1121.1">
+<p> A.D. 1121. Domhnall son of Ardghar Mac Lochlainn, a
+king of Ireland as regards appearance, wisdom, valour, treasures and
+the bestowing of food and valuables, died at Derry after a life of
+eight years and three score.</p>
+</div2>
+<div2 n="MCB1121.2">
+<p> A hosting by Toirdhealbhach son of Ruaidhr&iacute;
+into Munster, and he burned Ciarraighe Luachra and went from there
+eastwards through Munster, and burned &Oacute; Caoimh's house on the
+bank of the Abha Mh&oacute;r, and his scouts came to Magh Ceithniuil
+and Druim F&iacute;nghin. On that day were killed Muireadhach &Oacute;
+Flaithbheartaigh, king of Iarthar Connacht, and Aodh &Oacute;
+hEidhin, king of U&iacute; Fhiachrach Aidhne, to avenge the
+profanation of Mo-Chuda, although Toirdhealbhach made compensation
+for the plundering. An encampment by Toirdhealbhach son of
+Ruaidhr&iacute; at Magh Biorra during the winter, and he made a
+settlement between Clann Charthaigh and S&iacute;ol Briain, and they
+both submitted to him.</p>
+</div2>
+</div1>
+<div1 n="MCB1123" type="annal">
+<div2 n="MCB1123.0">
+<p>1123</p>
+</div2>
+<div2 n="MCB1123.1">
+<p> A.D. 1123. Toirdhealbhach son of Ruaidhr&iacute; on a
+hosting to C&iacute;che Anann and the borders of M&uacute;scraighe
+Miteine, and he returned without hostages.</p>
+</div2>
+<div2 n="MCB1123.2">
+<p> &Oacute; Mathghamhna, &Oacute; S&uacute;illeabh&aacute;in,
+&Oacute; Caoimh, &Oacute; Muircheartaigh and &Oacute; Faol&aacute;in
+deposed Tadhg son of Muireadhach Mac Carthaigh; and Cormac son of Mac
+Carthaigh, his own brother, took the kingship from them in his
+presence.</p>
+</div2>
+<div2 n="MCB1123.3">
+<p> Aodh son of Donnchadh &Oacute; Ruairc, king of
+Br&eacute;ifne and Conmhaicne, was killed by the men of Midhe. A
+hosting by Toirdhealbhach son of Ruaidhr&iacute; [&Oacute;
+Conchobhair] into Midhe to Loch Craoibhe to avenge that. &Eacute;anna
+son of Donnchadh Mac Murchadha, king of Leinster and the Galls, came
+into his <pb n="15"/> house and made full submission to him for that
+act.</p>
+</div2>
+<div2 n="MCB1123.4">
+<p> Tadhg son of Muireadhach son of Carthach son of
+Saoirbhreathach [Mac Carthaigh] died penitently at Cashel.</p>
+</div2>
+</div1>
+<div1 n="MCB1124" type="annal">
+<div2 n="MCB1124.0">
+<p>1124</p>
+</div2>
+<div2 n="MCB1124.1">
+<p> A.D. 1124. A fleet [was brought] on Lough Derg by
+Toirdhealbhach son of Ruaidhr&iacute; [&Oacute; Conchobhair] to meet
+the men of Leinster, Osraighe, Ormond, and &Eacute;ile. They came
+into the D&eacute;ise and carried off great spoils to &Aacute;th
+Caille that Easter.</p>
+</div2>
+<div2 n="MCB1124.2">
+<p> Murchadh son of Domhnall [&Oacute; Maoil
+Sheachlainn], king of Midhe, &Eacute;anna son of Donnchadh Mac
+Murchadha, king of Leinster, and Tighearn&aacute;n &Oacute; Ruairc,
+king of Br&eacute;ifne, turned against Toirdhealbhach son of
+Ruaidhr&iacute; [&Oacute; Conchobhair].</p>
+</div2>
+<div2 n="MCB1124.3">
+<p> A hosting by Toirdhealbhach son of Ruaidhr&iacute; to
+take vengeance for that. He made two successive raids on the
+Conmhaicne, and the men of Midhe and the Conmhaicne overtook him at
+Craobh Ruis D&aacute; Charn, and they fought a battle there in which
+the men of Midhe and the Conmhaicne were defeated and slaughter
+inflicted on them.</p>
+</div2>
+<div2 n="MCB1124.4">
+<p> A hosting by Cormac son of Mac Carthaigh, king of
+Desmond, &Eacute;anna son of Donnchadh Mac Murchadha, king of
+Leinster, Murchadh son of Domhnall [&Oacute; Maoil Sheachlainn], king
+of Midhe, and Tighearn&aacute;n &Oacute; Ruairc, king of Conmhaicne,
+to Inne&oacute;in in Iarthar Midhe to destroy Connacht, and they
+returned without giving battle or obtaining hostages.</p>
+</div2>
+<div2 n="MCB1124.5">
+<p> Maol Seachlainn son of Tadhg [Mac Diarmada], king of
+Magh Luirg, was killed by Tighearn&aacute;n &Oacute; Ruairc, king of
+Br&eacute;ifne.</p>
+</div2>
+</div1>
+<div1 n="MCB1125" type="annal">
+<div2 n="MCB1125.0">
+<p>1125</p>
+</div2>
+<div2 n="MCB1125.1">
+<p> A.D. 1125. Toirdhealbhach son of Diarmaid &Oacute;
+Briain turned against Toirdhealbhach son of Ruaidhr&iacute; &Oacute;
+Conchobhair, and Murchadh &Oacute; Maoil Sheachlainn, king of Midhe,
+destroyed the bridges of Athlone and &Aacute;th Crocha when he heard
+of that.</p>
+</div2>
+<div2 n="MCB1125.2">
+<p> A hosting by Toirdhealbhach son of Ruaidhr&iacute; to
+Achadh B&oacute; and from thence to Dublin. He took the kingship of Leinster
+and banished Murchadh &Oacute; Maoil Sheachlainn, king of Midhe,
+and set up three kingships over Midhe after &Oacute; Maoil
+Sheachlainn, and Domhnall [&Oacute; Cearbhaill] over Oirghialla.</p>
+</div2>
+<div2 n="MCB1125.3">
+<p> A battle by Diarmaid &Oacute; Maoil Sheachlainn in
+which <pb n="17"/> Domhnall &Oacute; Cearbhaill, king of Oirghialla,
+was killed, together with his nobles.</p>
+</div2>
+<div2 n="MCB1125.4">
+<p> Ranna son of Donnchadh son of Mac Murchadha died.</p>
+</div2>
+</div1>
+<div1 n="MCB1126" type="annal">
+<div2 n="MCB1126.0">
+<p>1126</p>
+</div2>
+<div2 n="MCB1126.1">
+<p> A.D. 1126. A battle between Eochaidh &Oacute;
+Mathghamhna, king of Ulaidh, and Aodh Mac Duinn Shl&eacute;ibhe, the
+other king of Ulaidh, in which they were both killed, with slaughter
+of the Ulaidh.</p>
+</div2>
+<div2 n="MCB1126.2">
+<p> A hosting by Toirdhealbhach son of Ruaidhr&iacute;
+[&Oacute; Conchobhair] to the south of Osraighe, and Cormac son of
+Muireadhach Mac Carthaigh, king of Munster, went on another great
+hosting against them to give them battle, and Toirdhealbhach turned
+back without giving battle or obtaining hostages.</p>
+</div2>
+<div2 n="MCB1126.3">
+<p> A great foray by Ruaidhr&iacute; &Oacute;
+Canann&aacute;in, king of Cin&eacute;al Conaill, into Connacht after
+Toirdhealbhach.</p>
+</div2>
+<div2 n="MCB1126.4">
+<p> A hosting by the Connachtmen to avenge that foray, and
+they reached R&aacute;ith Both, and took great preys from there.</p>
+</div2>
+<div2 n="MCB1126.5">
+<p> Cormac son of Mac Carthaigh was deposed by the nobles
+of Munster, and he went to Lismore on a pilgrimage, and took the
+tonsure there. He built a church at Cashel and twelve churches at
+Lismore. Donnchadh son of Muireadhach Mac Carthaigh took the kingship
+in his presence.</p>
+</div2>
+<div2 n="MCB1126.6">
+<p> A hosting by Toirdhealbhach son of Ruaidhr&iacute;,
+together with the nobles of 
+Leath Cuinn, and Conchobhar and
+Toirdhealbhach, the two sons of Diarmaid &Oacute; Briain, to Cork.
+Donnchadh son of Mac Carthaigh, Donnchadh son of C&uacute; Mara son
+of Brodch&uacute; &Oacute; Mathghamhna, Aonghus &Oacute; Donnchadha,
+and &Oacute; Caoimh, together with the other nobles of Desmond, went
+[against them], but they parted in peace, and they made submission
+side by side to Ruaidhr&iacute;'s son.</p>
+</div2>
+<div2 n="MCB1126.7">
+<p> Toirdhealbhach son of Ruaidhr&iacute; went from thence
+to Leinster and took their hostages and the hostages of the men of
+Midhe and Dublin, and left Conchobhar, his son, in the kingship of
+Dublin.</p>
+</div2>
+<div2 n="MCB1126.8">
+<p> Maghnus son of Ardghar Mac Lochlainn took the kingship
+of Fearnmhagh, and he inflicted a defeat on Tighearn&aacute;n
+&Oacute; Ruairc at &Aacute;th Droithid, in which &Oacute; Ciardha,
+king of Cairbre, &Oacute; Dubhda, and &Oacute; Raighilligh were
+killed.</p>
+</div2>
+<div2 n="MCB1126.9">
+<p> Another defeat was inflicted by Maghnus son of Mac
+Lochlainn on Tighearn&aacute;n &Oacute; Ruairc at Ardee, in which
+slaughter was inflicted on the U&iacute; Bhri&uacute;in.</p>
+</div2>
+<pb n="19"/>
+<div2 n="MCB1126.10">
+<p> A hosting by Conchobhar son of Ardghar Mac Lochlainn
+and the [men of] the north of Ireland into Midhe, and they burned
+Trim, including the belfry and church, with many people in them.</p>
+</div2>
+<div2 n="MCB1126.11">
+<p> Conchobhar and Toirdhealbhach, two sons of Diarmaid
+&Oacute; Briain, turned against Toirdhealbhach son of
+Ruaidhr&iacute;, and went to Lismore, and clasped hands with
+Cormac Mac Carthaigh, and brought him back to lay life. He took the
+kingship of Munster again, and banished Donnchadh son of Mac
+Carthaigh to Connacht.</p>
+</div2>
+<div2 n="MCB1126.12">
+<p> The Galls of Dublin turned against Toirdhealbhach sore
+of Ruaidhr&iacute;, and drove out Conchobhar son of Toirdhealbhach
+son of Ruaidhr&iacute;.</p>
+</div2>
+</div1>
+<div1 n="MCB1128" type="annal">
+<div2 n="MCB1128.0">
+<p>1128</p>
+</div2>
+<div2 n="MCB1128.1">
+<p> A.D. 1128. Maghnus son of Ardghar Mac Lochlainn, king
+of Oileach, was treacherously killed by &Oacute; Gairmleadhaigh.</p>
+</div2>
+<div2 n="MCB1128.2">
+<p> A great fleet [was brought] by Donnchadh son of Mac
+Carthaigh, and by the son of An Fionnsh&uacute;ileach &Oacute;
+Domhnaill, and by the son of An Fionnsh&uacute;ileach &Oacute;
+Muircheartaigh, and by Fionghuine &Oacute; Caoimh, and by Gearr na
+gCuinne&oacute;g &Oacute; Bric to Ciarraighe Luachra. &Oacute;
+Conchobhair committed treachery on them, and they came in pursuit
+from there into U&iacute; Eachach, and he was not long in Munster
+again till he was banished to Connacht.</p>
+</div2>
+</div1>
+<div1 n="MCB1129" type="annal">
+<div2 n="MCB1129.0">
+<p>1128</p>
+</div2>
+<div2 n="MCB1129.1">
+<p> A.D. 1129. Diarmaid &Oacute; Maoil Sheachlainn, king
+of Midhe, was killed by Tighearn&aacute;n &Oacute; Ruairc, together
+with the nobles of Iarthar Midhe at Craobh Treithni. Aonghus &Oacute;
+Caoindealbh&aacute;in, king of Laoghaire, and Amalghaidh son of Mac
+Sean&aacute;in, who was called Cochall Fliuch, king of Fearnmhagh, were
+killed in the same battle.</p>
+</div2>
+</div1>
+<div1 n="MCB1130-1" type="annal">
+<div2 n="MCB1130-1.0">
+<p>1130-1</p>
+</div2>
+<div2 n="MCB1130-1.1">
+<p> A hosting by Conchobhar son of Ardghar Mac Lochlainn
+along with Cin&eacute;al E&oacute;ghain and Cin&eacute;al Conaill and
+the Oirghialla into Ulaidh, and they plundered Druim Both, including
+round tower, and oratory, and books. The Ulaidh came to Cnoc Cluana
+to meet them in battle, and the Ulaidh were defeated and slaughter
+inflicted on them.</p>
+</div2>
+<pb n="21"/>
+<div2 n="MCB1130-1.2">
+<p> A hosting by Conchobhar &Oacute; Lochlainn with the
+Ulaidh, the Oirghialla, and Cin&eacute;al Conaill into Connacht, and
+the Connachtmen and the Cin&eacute;al Conaill fought a battle on
+Sliabh Seaghsa, in which Cin&eacute;al Conaill were defeated, and An
+Garbh&aacute;nach &Oacute; Baoighill and Conn &Oacute; Maoil Ghaoithe
+killed, with slaughter of Cin&eacute;al Conaill around them.
+Toirdhealbhach son of Ruaidhr&iacute;, king of Connacht, and
+Conchobhar son of Mac Lochlainn, king of Oileach, made peace, and the
+forces dispersed to their own territories on every side.</p>
+</div2>
+<div2 n="MCB1130-1.3">
+<p> The Ulaidh and the men of Fearnmhagh [went] beyond
+Athlone into the territory of Fir Rois, and Tighearn&aacute;n
+&Oacute; Ruairc with the Craobh Fearnmhuighe met them at Muine
+Uachtair Imrimhe, where they fought a battle, in which the Ulaidh
+were defeated, and Raghnall &Oacute; hEochadha, king of Ulaidh,
+C&uacute; Midhe &Oacute; Cr&iacute;ochain, king of Fearnmhagh and
+Oirghialla, Aodh, his son, and Donn Sl&eacute;ibhe &Oacute;
+hOireachtaigh, king of U&iacute; Mh&eacute;ith, were killed, with
+slaughter of the Ulaidh, [the men of] Fearnmhagh, and the U&iacute;
+Mh&eacute;ith.</p>
+</div2>
+<div2 n="MCB1130-1.4">
+<p> A fleet [was brought] by Donnchadh son of Muireadhach
+Mac Carthaigh to Connacht, in spite of the peace between
+Toirdhealbhach son of Ruaidhr&iacute; and Cormac Mac Carthaigh ...
+and he perpetrated plunders and burnings.</p>
+</div2>
+</div1>
+<div1 n="MCB1132" type="annal">
+<div2 n="MCB1132.0">
+<p>1132</p>
+</div2>
+<div2 n="MCB1132.1">
+<p> A.D. 1132. A hosting on land by Cormac son of Mac
+Carthaigh and the nobles of 
+Leath Mogha into ... and U&iacute;
+Eachach and Corca Laoighdhe, and the fleet of 
+Leath Mogha [came] by sea to meet
+them, and they demolished the castle of Bun Gaillmhe, and plundered
+and burned the town. The defeat of An Cloidhe [was inflicted] on the
+following day on [the men of] Iarthar Connacht by the same fleet, and
+Conchobhar &Oacute; Flaithbheartaigh, king of Iarthar Connacht, was
+killed, with slaughter of his people.</p>
+</div2>
+</div1>
+<div1 n="MCB1134" type="annal">
+<div2 n="MCB1134.0">
+<p>1134</p>
+</div2>
+<div2 n="MCB1134.1">
+<p> A.D. 1134. A church built by Cormac son of Muireadhach
+Mac Carthaigh at Cashel was consecrated with great honour by the
+archbishop of Cashel and the bishops of Munster.</p>
+</div2>
+<div2 n="MCB1134.2">
+<p> Maol Maodh&oacute;g &Oacute; Morgair entered into the
+succession of Patrick, with the prayers of the men of Ireland.</p>
+</div2>
+<pb n="23"/>
+<div2 n="MCB1134.3">
+<p> Cearbhall son of the son of Faol&aacute;n [&Oacute;
+Broin], king of U&iacute; Fhaol&aacute;in, was killed at Kildare by
+Donnchadh &Oacute; Conchobhair Failghe, with slaughter of the
+U&iacute; Fhaol&aacute;in, as he was defending the abbacy for his
+daughter.</p>
+</div2>
+<div2 n="MCB1134.4">
+<p> A troop [was brought] by Cormac son of Muireadhach Mac
+Carthaigh and Toirdhealbhach, Tadhg, and Conchobhar, three sons of
+Toirdhealbhach son of Tadhg son of Brian B&oacute;ramha, into
+Connacht. A great part of an Ruadhbheitheach was cut and burned, and
+they killed Cathal &Oacute; Conchobhair and Giolla na Naomh &Oacute;
+Floinn, and burned D&uacute;n Modhairn, D&uacute;n M&oacute;r, and
+the greater part of Connacht. The men of Midhe came from the east
+against them, and they levelled and demolished the fort of
+Athlone.</p>
+</div2>
+<div2 n="MCB1134.5">
+<p> Cormac son of Mac Carthaigh again assembled the
+Munstermen, Leinstermen, Conmhaicne, the men of Midhe, the Galls of
+Dublin, Waterford, Wexford and Cork, and the U&iacute; Eachach and
+Corca Laoighdhe on sea, in order to proceed into Connacht.
+Muireadhach &Oacute; Dubhthaigh, archbishop of Connacht, came from
+Toirdhealbhach son of Ruaidhr&iacute;, king of Connacht, to make
+peace between Leath Cuinn and Leath Mogha. Cormac made peace
+with Toirdhealbhach in honour of the archbishop, and he himself went
+to Abhall Ceithearnaigh to confirm the peace with Toirdhealbhach.</p>
+</div2>
+<div2 n="MCB1134.6">
+<p> A rupture of the peace between Cormac son of Mac
+Carrthaigh and Conchobhar son of Diarmaid &Oacute; Briain and his
+kinsmen. S&iacute;ol Briain made an encampment against Sliocht
+E&oacute;ghain. Shocht E&oacute;ghain went into the encampment of
+S&iacute;ol Briain and carried off great plunders from it, and
+Donnchadh son of Brian Gleanna Maidhir son of Murchadh an Sgeith
+Ghirr [&Oacute; Briain] and his son were killed, and many others
+along with them.</p>
+</div2>
+<div2 n="MCB1134.7">
+<p> A defeat [inflicted] by the Osraighe on the U&iacute;
+Chinnsealaigh, in which &Uacute;ghaire &Oacute; Tuathail, king of
+U&iacute; Chinnsealaigh, was killed, with slaughter of his
+people.</p>
+</div2>
+<div2 n="MCB1134.8">
+<p> A hosting by Conchobhar son of Diarmaid &Oacute;
+Briain and the Osraighe, together with the Galls of Waterford; into
+U&iacute; Chinnsealaigh. Mac Murchadha with the Galls of Dublin and
+U&iacute; Chinnsealaigh defeated that force, and slaughter was
+inflicted on [the Galls of] Waterford and the Osraighe.</p>
+</div2>
+</div1>
+<pb n="25"/>
+<div1 n="MCB1135" type="annal">
+<div2 n="MCB1135.0">
+<p>1135</p>
+</div2>
+<div2 n="MCB1135.1">
+<p> A.D. 1135. Derry, including houses and church,
+R&aacute;ith L&uacute;raigh, R&aacute;ith Both, Cluain Ioraird,
+Roscommon, Eanach D&uacute;in, part of Cunga Fh&eacute;ich&iacute;n,
+part of Lismore, and all Lann Eala were burned in the same year.</p>
+</div2>
+<div2 n="MCB1135.2">
+<p> A foray by Cormac son of Muireadhach Mac Carthaigh and
+[the men of] Desmond, and C&uacute; Mara M&oacute;r son of Mac Con
+Mara, king of U&iacute; Chais&iacute;n, was killed by them. A
+grievous pursuit was inflicted on them at T&oacute;char Cluana
+Eidhneach, and Cian son of Donnchadh Donn son of C&uacute; Mara son
+of Brodch&uacute; [&Oacute; Mathghamhna], king of U&iacute; Eachach,
+Fionghuine &Oacute; Caoimh, Mathghamhain &Oacute; Donnchadha,
+&Oacute; Rinn, the son of Lochlainn &Oacute; Cinn Fhaoladh, and Aodh
+&Oacute; Conchobhair Corca Mruadh were killed.</p>
+</div2>
+</div1>
+<div1 n="MCB1136" type="annal">
+<div2 n="MCB1136.0">
+<p>1136</p>
+</div2>
+<div2 n="MCB1136.1">
+<p> A foray by Donnchadh son of C&uacute; Chaisil &Oacute;
+Cearbhaill, king of Fearnmhagh, to Lusga in Midhe. The Galls of
+Dublin and all Fine Gall overtook him above Drogheda, and they fought
+a battle in which Raghnall son of P&oacute;l Mac Adhmainn was killed,
+with slaughter of the Galls of Dublin and Midhe around him.</p>
+</div2>
+<div2 n="MCB1136.2">
+<p> Ceall &Iacute;de was plundered by Toirdhealbhach son
+of Diarmaid &Oacute; Briain and his kinsmen. &Oacute; Cinn Fhaoladh,
+king of U&iacute; Chonaill Gabhra, made peace on account of the
+foray.</p>
+</div2>
+<div2 n="MCB1136.3">
+<p> The son of the son of Tadhg &Oacute; Briain and the
+son of Maol Sheachlainn &Oacute; Bric, king of the Deise, were killed
+by Cormac son of Mac Carthaigh, and he himself took the kingship of
+Munster and Osraighe.</p>
+</div2>
+<div2 n="MCB1136.4">
+<p> R&aacute;ith Muighe Deiscirt was burned and
+  plundered, including house and church, and much ill besides was
+  wrought in Ciarraighe Luachra by Toirdhealbhach son of Diarmaid
+  &Oacute; Briain and [the men of] Thomond.</p>
+</div2>
+</div1>
+<div1 n="MCB1137" type="annal">
+<div2 n="MCB1137.0">
+<p>1137</p>
+</div2>
+<div2 n="MCB1137.1">
+<p> A hosting by Conchobhar [&Oacute; Briain] and
+Toirdhealbhach son of Diarmaid &Oacute; Briain with [the men of]
+Thomond, and by the son of Murchadh grandson of Maol na mB&oacute;
+with the <pb n="27"/> Leinstermen to attack Waterford. Cormac son of
+Mac Carthaigh, &Oacute; Mathghamhna, &Oacute; Faol&aacute;in, and
+&Oacute; Caoimh, together with the nobles of Desmond, met them at
+Waterford. S&iacute;ol Briain and the son of Murchadh turned back
+home.</p>
+</div2>
+</div1>
+<div1 n="MCB1138" type="annal">
+<div2 n="MCB1138.0">
+<p>1138</p>
+</div2>
+<div2 n="MCB1138.1">
+<p> A.D. 1138. Cormac son of Muireadhach Mac Carthaigh,
+king of the two provinces of Munster, and defender of all 
+Leath Mogha, the most pious and
+valorous of men, the best for [bestowing] food and clothes, was,
+after building the church of Cormac at Cashel and twelve churches at
+Lismore, treacherously killed by Diarmaid S&uacute;gach Son of
+Mathghamhain &Oacute; Conchobhair Ciarraighe and &Oacute;
+Tailc&iacute;n, at the instigation of Toirdhealbhach son of Diarmaid
+&Oacute; Briain, in his own house at Magh Tamhnach.</p>
+</div2>
+</div1>
+<div1 n="MCB1139" type="annal">
+<div2 n="MCB1139.0">
+<p>1139</p>
+</div2>
+<div2 n="MCB1139.1">
+<p> A.D. 1139. Conchobhar son of Ardghar Mac Lochlainn,
+king of Oileach, was killed by &Oacute; Gairmleadhaigh.</p>
+</div2>
+<div2 n="MCB1139.2">
+<p> Cluain Ioraird was plundered by the men of Fearnmhagh
+and the U&iacute; Bhri&uacute;in.</p>
+</div2>
+<div2 n="MCB1139.3">
+<p> A hosting by Diarmaid Mac Murchadha and the
+Leinstermen and the Galls of Dublin to Inis Mochta, and slaughter was
+inflicted on them on the lake, after they had plundered the
+island.</p>
+</div2>
+</div1>
+<div1 n="MCB1140" type="annal">
+<div2 n="MCB1140.0">
+<p>1140</p>
+</div2>
+<div2 n="MCB1140.1">
+<p> A.D. 1140. A hosting by Conchobhar son of Diarmaid son
+of Toirdhealbhach &Oacute; Briain with the men of Munster and Midhe,
+and Br&eacute;ifne to Ardee, and two hostages, were given to him by
+Donnchadh son of C&uacute; Chaisil &Oacute; Cearbhaill.</p>
+</div2>
+<div2 n="MCB1140.2">
+<p> A predatory hosting by Donnchadh son of C&uacute;
+Chaisil &Oacute; Cearbhaill, king of Oirghialla, and he made a
+circuit of all Conmhaicne and took a heavy cattle-spoil from
+there.</p>
+</div2>
+</div1>
+<div1 n="MCB1141" type="annal">
+<div2 n="MCB1141.0">
+<p>1141</p>
+</div2>
+<div2 n="MCB1141.1">
+<p> A.D. 1141. The nobles of Leinster were killed by
+Diarmaid <pb n="29"/> Mac Murchadha, king of Leinster, and Domhnall
+Mac Faol&aacute;in, and Mac Giolla Cholm&oacute;g were blinded by
+him.</p>
+</div2>
+</div1>
+<div1 n="MCB1142" type="annal">
+<div2 n="MCB1142.0">
+<p>1142</p>
+</div2>
+<div2 n="MCB1142.1">
+<p> A.D. 1142. Conchobhar son of Diarmaid son of
+Toirdhealbhach son of Tadhg son of Brian B&oacute;ramha, king of
+Munster, died at Killaloe, and Toirdhealbhach, his kinsman, took the
+kingship after him.</p>
+</div2>
+<div2 n="MCB1142.2">
+<p> Donnchadh son of Muireadhach Mac Carthaigh came to
+Droichead [U&iacute; Bhriain] to defend the kingship, and Donnchadh
+son of Cinn&eacute;idigh [&Oacute; Briain] was killed by him there.
+He went from thence westward across Luachair, and they [his
+followers] were turned again into D&eacute;ise. He contracted an
+illness there, and the U&iacute; Fhlannag&aacute;in betrayed him and
+handed him over to Toirdhealbhach son of Diarmaid &Oacute;
+Briain.</p>
+</div2>
+</div1>
+<div1 n="MCB1143" type="annal">
+<div2 n="MCB1143.0">
+<p>1143</p>
+</div2>
+<div2 n="MCB1143.1">
+<p> A.D. 1143. Donnchadh son of Tadhg son of Muireadhach
+Mac Carthaigh died on Loch Goir, when he was a hostage with
+Toirdhealbhach son of Diarmaid &Oacute; Briain.</p>
+</div2>
+<div2 n="MCB1143.2">
+<p> Conchobhar son of Toirdhealbhach son of
+Ruaidhr&iacute; &Oacute; Conchobhair was killed in treachery by the
+men of Midhe, the Fir Thulach, and in particular by &Oacute; Loith,
+king of Fir Thulach, after he had taken the full kingship of Midhe
+and Dublin.</p>
+</div2>
+</div1>
+<div1 n="MCB1144" type="annal">
+<div2 n="MCB1144.0">
+<p>1144</p>
+</div2>
+<div2 n="MCB1144.1">
+<p> A.D. 1144. Flannagan of Inis Faithlinn died after
+completing his ninety-eighth year.</p>
+</div2>
+</div1>
+<div1 n="MCB1145-7" type="annal">
+<div2 n="MCB1145-7.0">
+<p>1145-7</p>
+</div2>
+<div2 n="MCB1145-7.1">
+<p> A.D. 1145. Raghnall son of Thorkill, king of Dublin,
+was killed by the men of Midhe, with slaughter of the Galls around
+him.</p>
+</div2>
+<div2 n="MCB1145-7.2">
+<p> Ceallach &Oacute; Ceallaigh, king of Fir Bhreagh, was
+killed, with slaughter of the Fir Bhreagh around him, by
+Flaithbheartach &Oacute; Cathasaigh and the Galls of Dublin.</p>
+</div2>
+<pb n="31"/>
+<div2 n="MCB1145-7.3">
+<p> The Easter house of Eas Duibhe was erected by Diarmaid
+S&uacute;gach son of Mathghamhain &Oacute; Conchobhair
+Ciarraighe.</p>
+</div2>
+<div2 n="MCB1145-7.2">
+<p> Tadhg son of Diarmaid &Oacute; Briain was released by
+Toirdhealbhach son of Diarmaid &Oacute; Briain, his kinsman, in
+deference to the Bachall &Iacute;osa, Patrick's coarb and the
+principal clerics of Ireland, after he had been taken prisoner in
+violation of the protection of all these.</p>
+</div2>
+<div2 n="MCB1145-7.5">
+<p> A hosting by Muircheartach son of Niall &Oacute;
+Lochlainn and Donnchadh &Oacute; Cearbhaill into Ulaidh, and they
+reached Tr&aacute;igh D&uacute;in Droma after a defeat of the Ulaidh.
+They plundered and burned Leath Cathail, and carried off
+four hostages from the Ulaidh, after leaving four kings over
+them.</p>
+</div2>
+</div1>
+<div1 n="MCB1148" type="annal">
+<div2 n="MCB1148.0">
+<p>1148</p>
+</div2>
+<div2 n="MCB1148.1">
+<p> A.D. 1148. Maol Maodh&oacute;g &Oacute; Morgair,
+archbishop of all Ireland, died at Clairveaux.</p>
+</div2>
+</div1>
+<div1 n="MCB1149" type="annal">
+<div2 n="MCB1149.0">
+<p>1149</p>
+</div2>
+<div2 n="MCB1149.1">
+<p> AD. 1149. Diarmaid son of Maghnus son of Ardghar Mac
+Lochlainn was killed by the Leinstermen and the Galls of Dublin.</p>
+</div2>
+</div1>
+<div1 n="MCB1150" type="annal">
+<div2 n="MCB1150.0">
+<p>1150</p>
+</div2>
+<div2 n="MCB1150.1">
+<p> A.D. 1150. Domhnall son of Aodh &Oacute; Conchobhair
+was killed by Ruaidhr&iacute; son of Toirdhealbhach &Oacute;
+Conchobhair.</p>
+</div2>
+</div1>
+<div1 n="MCB1151" type="annal">
+<div2 n="MCB1151.0">
+<p>1151</p>
+</div2>
+<div2 n="MCB1151.1">
+<p> A.D. 1151. Muircheartach son of Toirdhealbhach son of
+Diarmaid &Oacute; Briain made an alliance with [the men of] Thomond
+and deposed his own father. Tadhg son of Diarmaid &Oacute; Briain and
+Diarmaid S&uacute;gach &Oacute; Conchobhair captured Muircheartach by
+treachery, and he was detained by Toirdhealbhach.</p>
+</div2>
+<div2 n="MCB1151.2">
+<p> Tadhg son of Diarmaid &Oacute; Briain turned against
+Toirdhealbhach, <pb n="33"/> his own kinsman, and Toirdhealbhach son
+of Ruaidhr&iacute; &Oacute; Conchobhair came with him to defend the
+kingship of Munster for him.</p>
+</div2>
+<div2 n="MCB1151.3">
+<p> A contention was begun by Sliocht E&oacute;ghain
+Mh&oacute;ir against S&iacute;ol Briain, &Oacute; Conchobhair
+Ciarraighe, and Toirdhealbhach son of Ruaidhr&iacute; [&Oacute;
+Conchobhair]. They made Diarmaid son of Cormac Muighe Thamhnach son
+of Muireadhach Mac Carthaigh their king, and going into Ciarraighe
+Luachra they spent a night there burning and plundering. On the
+following day they were routed by the Ciarraighe at the head of
+Sliabh Mis and they suffered slaughter. Toirdhealbhach &Oacute;
+Briain and Diarmaid Sidgach &Oacute; Conchobhair came with a very
+large force together with their trains across the Shannon and into
+Ciarraighe to meet each other in U&iacute; Chonaill. They banished
+Diarmaid son of Cormac Muighe Thamhnach southwards across M&oacute;in
+Mh&oacute;r to Donnchadh son of Cian son of Donnchadh Donn &Oacute;
+Mathghamhna. The U&iacute; Mhuircheartaigh, the U&iacute;
+Fh&aacute;ilbhe and all from Sliabh Mis southwards fled to
+F&eacute;ardhruim in U&iacute; Eachach. It was at this time that
+Diarmaid S&uacute;gach &Oacute; Conchobhair took seven ships on
+wheels from Eas Duibhe to Loch L&eacute;in. From Limerick to Cork,
+and from Waterford to Cnoc Br&eacute;anainn was laid waste in this
+war. S&iacute;ol Briain pursued Diarmaid Mac Carthaigh through
+M&uacute;iscraighe southwards to Ceann Eich to plunder it. Diarmaid
+son of Cormac and the nobles of the E&oacute;ghanachta sent messengers to
+ask [the support of] Toirdhealbhach son of Ruaidhr&iacute;, king of
+Connacht, and Diarmaid Mac Murchadha, king of Leinster, against
+S&iacute;ol Briain. It was the night the Connachtmen and the
+Leinstermen came to Abha Mh&oacute;r that S&iacute;ol Briain came to
+Cork. They set out on the following day through M&oacute;in
+Mh&oacute;r northwards, having committed many outrages on the
+community of Barra; and Cormac's son, the U&iacute; Mhathghamhna, the
+U&iacute; Dhonnchadha, the U&iacute; Chaoimh, and the U&iacute;
+Mhuircheartaigh, as well as the nobles of the E&oacute;ghanacht, were
+at their rear in pursuit of them. The day being misty, S&iacute;ol
+Briain did not perceive the Connachtmen and the Leinstermen until
+they found themselves in their midst. S&iacute;ol Briain were defeated
+by these three hostings, and Conchobhar &Oacute; Briain,
+Flaithbheartach &Oacute; Deadhaidh, Aineislis &Oacute; Gr&aacute;da,
+and three thousand others of the host were slain. Toirdhealbhach
+&Oacute; Briain and Diarmaid S&uacute;dgach &Oacute; Conchobhair,
+with a few <pb n="35"/> horsemen, went from the battle unperceived
+through the mist past Abha Mh&oacute;r northwards. &Oacute;
+Conchobhair sent word to Inis Faithlinn informing the people there of
+the defeat. When word reached them, they sprang to their ships, and
+leaving them at the north side of Loch L&eacute;in they went
+themselves to Ciarraighe without being noticed. Diarmaid son of
+Cormac Muighe Thamhnach went with the nobles of Sliocht
+E&oacute;ghain to Ciarraighe, and they plundered and levelled their
+houses and their forts, and searched their fastnesses and woods, and
+they carried off hostages from &Oacute; Conchobhair for all their
+requirements, though it was not for long that &Oacute; Conchobhair
+fulfilled them.</p>
+</div2>
+<div2 n="MCB1151.4">
+<p> The king of the Deise, Muircheartach &Oacute; Bric,
+was put to death by Diarmaid son of Cormac Muighe Thamhnach while his
+prisoner, having been captured by him at Lismore a long time
+before.</p>
+</div2>
+</div1>
+<div1 n="MCB1152" type="annal">
+<div2 n="MCB1152.0">
+<p>1152</p>
+</div2>
+<div2 n="MCB1152.1">
+<p> A.D. 1152. Toirdhealbhach &Oacute; Briain came to
+Ciarraighe to support &Oacute; Conchobhair against Cormac's son.
+Diarmaid son of Cormac, with the nobles of Sliocht E&oacute;ghain
+Mh&oacute;ir, went against him to Ciarraighe, and he drove
+Toirdhealbhach and Diarmaid S&uacute;gach out of the territory, and
+destroyed and plundered the whole territory, and he put Mac Beathadh
+and Mac Craith, two sons of Diarmaid S&uacute;gach's father, by his
+own authority over the territory.</p>
+</div2>
+<div2 n="MCB1152.2">
+<p> Peace was made by Toirdhealbhach &Oacute; Briain and
+his kinsman Tadhg, and they made great forays in U&iacute; Chonaill
+on Cormac's son.</p>
+</div2>
+<div2 n="MCB1152.3">
+<p> &Oacute; Cuil&eacute;in went into Ciarraighe and
+burned Ard Fearta Br&eacute;anainn to the detriment of the nobles of
+Diarmaid &Oacute; Conchobhair.</p>
+</div2>
+<div2 n="MCB1152.4">
+<p> Cork, Imleach Iubhair, Lismore, and C&uacute;il
+Chollainge were burned in the same year.</p>
+</div2>
+<div2 n="MCB1152.5">
+<p> F&iacute;nghin son of Mac Carthaigh was killed by the
+U&iacute; Sh&uacute;illeabh&aacute;in after he had been taken by
+force the monks [in a dispute] concerning division of booty at Leac
+Lacht&aacute;in. It was Gearr Uille's son who struck him on the head
+with an axe.</p>
+</div2>
+</div1>
+<pb n="37"/>
+<div1 n="MCB1153" type="annal">
+<div2 n="MCB1153.0">
+<p>1153</p>
+</div2>
+<div2 n="MCB1153.1">
+<p> Tadhg son of Diarmaid &Oacute; Briain turned against
+Toirdhealbhach, his own kinsman, in violation of relics and sureties,
+and joined with Diarmaid son of Cormac Muighe Thamhnach [Mac
+Carthaigh], Toirdhealbhach son of Ruaidhr&iacute; &Oacute;
+Conchobhair, king of Connacht, and Diarmaid Mac Murchadha, king of
+Leinster, and they banished Toirdhealbhach son of Diarmaid &Oacute;
+Briain to Cin&eacute;al E&oacute;ghain to Muircheartach son of Niall
+&Oacute; Lochlainn.</p>
+</div2>
+<div2 n="MCB1153.2">
+<p> A hosting by Tadhg son of Diarmaid &Oacute; Briain,
+Murchadh son of Mac Murchadha, Maol Sheachlainn Crosach [&Oacute;
+Maoil Sheachlainn], king of Midhe, and Ruaidhr&iacute; son of
+Toirdhealbhach son of Ruaidhr&iacute; &Oacute; Conchobhair to
+&Aacute;th Maighne in Iarthar Midhe.</p>
+</div2>
+<div2 n="MCB1153.3">
+<p> A hosting by Muircheartach son of Niall &Oacute;
+Lochlainn, king of Cin&eacute;al E&oacute;ghain, Donnchadh &Oacute;
+Cearbhaill with the Ulaidh and Cin&eacute;al Conaill, and
+Toirdhealbhach son of Diarmaid &Oacute; Briain to &Aacute;th Maighne
+against Tadhg &Oacute; Briain, and they threw them [i.e. the forces
+of Tadhg &Oacute; Briain] out of their three encampments and killed
+nine hundred of them. Toirdhealbhach &Oacute; Briain and [the men of]
+the north of Ireland stayed at Teach Tille that night, celebrating
+the triumph.</p>
+</div2>
+<div2 n="MCB1153.4">
+<p> A great famine in Munster this year owing to the
+extent of the war, and it spread throughout Ireland in all
+directions.</p>
+</div2>
+<div2 n="MCB1153.5">
+<p> Tadhg son of Diarmaid &Oacute; Briain was blinded
+through the miracles of the clergy and the relics of Ireland, which
+were security between him and Toirdhealbhach &Oacute; Briain, his
+kinsman.</p>
+</div2>
+</div1>
+<div1 n="MCB1154" type="annal">
+<div2 n="MCB1154.0">
+<p>1154</p>
+</div2>
+<div2 n="MCB1154.1">
+<p> A.D. 1154. Bernard, abbot of Clairveaux, head of the
+monks of Ireland and of all Europe, died.</p>
+</div2>
+<div2 n="MCB1154.2">
+<p> Diarmaid S&uacute;gach son of Mathghamhain &Oacute;
+Conchobhair, king of Ciarraighe and Corca Dhuibhne, died after much
+suffering.</p>
+</div2>
+<div2 n="MCB1154.3">
+<p> Toirdhealbhach son of Diarmaid &Oacute; Briain came to
+Munster again, and the foray of M&oacute;in Mh&oacute;r was made by
+him on Diarmaid son of Cormac [Mac Carthaigh]. Cormac's son
+immediately made a foray against him in reprisal.</p>
+</div2>
+<pb n="39"/>
+<div2 n="MCB1154.4">
+<p> Tadhg son of Diarmaid &Oacute; Briain died at Lismore
+unknown to his attendants.</p>
+</div2>
+<div2 n="MCB1154.5">
+<p> A hosting by Muircheartach son of Niall [&Oacute;
+  Lochlainn] past Eas Ruaidh into Connacht, and he destroyed Magh
+  n-Aoi, Magh Luirg and D&uacute;n Iomdh&aacute;in. They went through
+  Connacht past &Aacute;th Liag eastwards, and from thence to Dublin,
+  the kingship of which they took.</p>
+</div2>
+</div1>
+<div1 n="MCB1155" type="annal">
+<div2 n="MCB1155.0">
+<p>1155</p>
+</div2>
+<div2 n="MCB1155.1">
+<p> A.D.1155. Amhlaoibh &Oacute; hEidirsge&oacute;il, king
+of Corca Laoighdhe, was killed in front of the church of
+Br&eacute;anainn of Birr.</p>
+</div2>
+</div1>
+<div1 n="MCB1156" type="annal">
+<div2 n="MCB1156.0">
+<p>1156</p>
+</div2>
+<div2 n="MCB1156.1">
+<p> A.D. 1156. Cuil&eacute;an &Oacute; Cuil&eacute;in,
+king of U&iacute; Chonaill Gabhra, was killed by &Oacute; Cinn
+Fhaoladh, and he himself was killed forthwith in retribution.</p>
+</div2>
+<div2 n="MCB1156.2">
+<p> Toirdhealbhach son of Aodh an Gha Bhearnaigh son of
+Ruaidhr&iacute; na Soidhe Buidhe [&Oacute; Conchobhair], high-king of
+the Te&oacute;ra Connachta, defenders of Ireland, and its king with
+opposition according to some, died.</p>
+</div2>
+</div1>
+<div1 n="MCB1157" type="annal">
+<div2 n="MCB1157.0">
+<p>1157</p>
+</div2>
+<div2 n="MCB1157.1">
+<p> A.D. 1157. A foray by Tighearn&aacute;n &Oacute;
+Ruairc into Leinster. Diarmaid Mac Murchadha and the Galls of Dublin
+overtook him at Cuas&aacute;n &Iacute; Bhraoin and put him and the
+men of Br&eacute;ifne to flight.</p>
+</div2>
+<div2 n="MCB1157.2">
+<p> Lismore, including houses and churches, was burned for
+the most part.</p>
+</div2>
+<div2 n="MCB1157.2">
+<p> Daimhinis was burned, including houses and
+churches.</p>
+</div2>
+</div1>
+<div1 n="MCB1158" type="annal">
+<div2 n="MCB1158.0">
+<p>1158</p>
+</div2>
+<div2 n="MCB1158.1">
+<p> A.D. 1158. A hosting by Muircheartach son of Niall
+&Oacute; Lochlainn together with [the men of] the north of Ireland
+came to Limerick to demand hostages from Toirdhealbhach son of
+Diarmaid &Oacute; Briain.</p>
+</div2>
+<pb n="41"/>
+<div2 n="MCB1158.2">
+<p> Brian son of Donnchadh &Oacute; Briain and Donnchadh
+son of Aodh &Oacute; Cearbhaill, son of the king of the
+E&oacute;ghanacht Locha L&eacute;in, killed each other, after they
+had killed the son of Aodh &Oacute; Ceallachain, two of the U&iacute;
+Dhonnchadha, and many others on the same day.</p>
+</div2>
+<div2 n="MCB1158.3">
+<p> A hosting by Ruaidhr&iacute; son of Toirdhealbhach
+&Oacute; Conchobhair, king of Connacht, and Tighearn&aacute;n
+&Oacute; Ruairc to &Aacute;th na Casbearna in the territory of
+U&iacute; Sheaghain. A hosting by Muircheartach son of Niall &Oacute;
+Lochlainn and Donnchadh &Oacute; Cearbhaill to meet them there. A
+battle was fought between them, in which the Connachtmen, the
+U&iacute; Bhri&uacute;in, and the Conmhaicne were routed, and
+slaughter inflicted on them.</p>
+</div2>
+<div2 n="MCB1158.4">
+<p> Amhlaoibh son of Aonghus &Oacute; Donnchadha went on a
+foray to Uaithne, and &Oacute; hIfearn&aacute;in, &Oacute; Cathail,
+and many others were killed by him.</p>
+</div2>
+<div2 n="MCB1158.5">
+<p> Conchobhar son of Domhnall &Oacute; Briain and his son
+were blinded by Toirdhealbhach son of Diarmaid &Oacute; Briain.</p>
+</div2>
+<div2 n="MCB1158.6">
+<p> The great church of Achadh D&aacute; E&oacute; was
+completed by Amhlaoibh son of Aonghus &Oacute; Donnchadha.</p>
+</div2>
+<div2 n="MCB1158.7">
+<p> The same Amhlaoibh &Oacute; Donnchadha, high king of
+E&oacute;ghanachta Locha L&eacute;in, usurper of West Munster, was
+killed in Magh Breoghain on the bank of the Suir by Muircheartach son
+of Toirdhealbhach &Oacute; Briain and [the men of] Thomond, and
+Mathghamhain son of Mathghamhain son of Mac Carthaigh was killed with
+him. His own family and his people took the body of Amhlaoibh to
+Achadh D&aacute; E&oacute;, and he was honourably buried by them with
+hymns and psalms and Masses on the right side of the church which he
+himself had built in honour of the Trinity and Mary.</p>
+</div2>
+<div2 n="MCB1158.8">
+<p> A hosting by Muircheartach son of Niall [&Oacute;
+Lochlainn] with the Oirghialla, the Ulaidh, and Cin&eacute;al Conaill
+into Connacht, and they destroyed D&uacute;n M&oacute;r and many
+other towns, and returned home without peace or battle.</p>
+</div2>
+<div2 n="MCB1158.9">
+<p> A hosting by Muircheartach son of Niall [&Oacute;
+Lochlainn] with [the men of] the north of Ireland, and they gave the
+kingship of Midhe, to Donnchadh &Oacute; Maoil Sheachlainn, and they
+plundered the U&iacute; Fhionnal&aacute;in and the greater part of
+Dealbhna.</p>
+</div2>
+</div1>
+<pb n="43"/>
+<div1 n="MCB1159" type="annal">
+<div2 n="MCB1159.0">
+<p>1159</p>
+</div2>
+<div2 n="MCB1159.1">
+<p> A.D. 1159. Aodh &Oacute; hOisin, the archbishop from
+whom Giolla Aodha of Cork is named, died.</p>
+</div2>
+<div2 n="MCB1159.2">
+<p> Donnchadh &Oacute; Maoil Sheachlainn, king of Midhe,
+was treacherously killed by the U&iacute; Fhionnal&aacute;in.</p>
+</div2>
+<div2 n="MCB1159.3">
+<p> Domhnall son of Maol Muaidh [&Oacute; Mathghamhna],
+king of Cin&eacute;al mB&eacute;cce, was killed by the U&iacute;
+Mhathghamhna.</p>
+</div2>
+</div1>
+<div1 n="MCB1160" type="annal">
+<div2 n="MCB1160.0">
+<p>1160</p>
+</div2>
+<div2 n="MCB1160.1">
+<p> A.D. 1160. A hosting by Muircheartach son of Niall
+&Oacute; Lochlainn with [the men of] the north of Ireland, the men of
+Midhe, the Leinstermen, and the Galls of Dublin; and they divided all
+Br&eacute;ifne and Connacht, and Ruaidhr&iacute; son of
+Toirdhealbhach &Oacute; Conchobhair, king of Connacht, submitted to
+Muircheartach son of Niall &Oacute; Lochlainn.</p>
+</div2>
+</div1>
+<div1 n="MCB1163" type="annal">
+<div2 n="MCB1163.0">
+<p>1163</p>
+</div2>
+<div2 n="MCB1163.1">
+<p> A.D. 1163. Donnchadh son of Donnchadh son of Cithach
+Mac Carthaigh, candle of generosity and valour of Clann Charthaigh,
+was treacherously killed by Diarmaid son of Cormac Muighe Thamhnach
+after excelling one another(?) ... Mo Chuda as well as all the other
+relics between them.</p>
+</div2>
+<div2 n="MCB1163.2">
+<p> War broke out between Somhairle Mac Giolla
+Adhamhn&aacute;in, king of the Hebrides ... of Scotland with a great
+fleet came from Dublin.</p>
+</div2>
+<div2 n="MCB1163.3">
+<p> A foray by Toirdhealbhach &Oacute; Briain against
+Diarmaid son of Cormac [Mac Carthaigh] through Druim F&iacute;nghin,
+and he carried off many cows.</p>
+</div2>
+</div1>
+<div1 n="MCB1164" type="annal">
+<div2 n="MCB1164.0">
+<p>1164</p>
+</div2>
+<div2 n="MCB1164.1">
+<p> A.D. 1164. Muircheartach son of Toirdhealbhach son of
+Diarmaid &Oacute; Briain joined with Thomond against his own father,
+and they banished him to the house of Diarmaid son of Cormac [Mac
+Carthaigh] at Lismore. He gave hostages and military service to
+Diarmaid son of Cormac for assisting him against Muircheartach, his
+son, and Ruaidhr&iacute; son of Toirdhealbhach &Oacute; Conchobhair,
+king of Connacht.</p>
+</div2>
+<pb n="45"/>
+<div2 n="MCB1164.2">
+<p> A hosting by Muircheartach son of Toirdhealbhach
+&Oacute; Briain and by Ruaidhr&iacute; &Oacute; Conchobhair in
+pursuit of his father to banish him from the son of Cormac [Mac
+Carthaigh]. Giolla Ailbhe &Oacute; Deadhaidh was killed by them, and
+they turned back without banishing Toirdhealbhach or making peace
+with the son of Cormac.</p>
+</div2>
+<div2 n="MCB1164.3">
+<p> A hosting by Muircheartach son of Niall &Oacute;
+Lochlainn with the men of Fearnmhagh, the Cin&eacute;al Conaill, and
+the [Cin&eacute;al] E&oacute;ghain into Ulaidh. They destroyed the
+monastery of the monks of Newry, and plundered Sabhall P&aacute;draig
+in Rinn M&oacute;in, Downpatrick, Aointreabh, Baile Cluig Comhghaill,
+all Ulaidh, and almost all D&aacute;l n-Araidhe, and they banished
+Domhnall son of C&uacute; Uladh [Mac Duinn Shl&eacute;ibhe] from the
+kingship of Ulaidh.</p>
+</div2>
+<div2 n="MCB1164.4">
+<p> A hosting by Ruaidhr&iacute; son of Toirdhealbhach
+&Oacute; Conchobhair and Tighearn&aacute;n &Oacute; Ruairc in ... and
+they plundered the people of Inis P&aacute;draig, and the nuns, and
+they burned a large part of it.</p>
+</div2>
+</div1>
+<div1 n="MCB1165(1166)" type="annal">
+<div2 n="MCB1165.0">
+<p>1165</p>
+</div2>
+<div2 n="MCB1165.1">
+<p> A.D. 1165. Armagh, together with its three churches,
+was burned, except St. Paul's church, and from Dair Colaim Cille to
+Craobh Brighde.</p>
+</div2>
+<div2 n="MCB1165.2">
+<p> Muircheartach son of Niall &Oacute; Lochlainn, king of
+Oileach, captured Eochaidh son of C&uacute; Uladh Mac Duinn
+Shl&eacute;ibhe, king of Ulaidh, his own gossip, at Camus Comhghaill,
+in his Easter house, after they had been at the same guest-table up
+to that, and he carried him off to Inis Aonaigh and blinded him
+there, in violation of the protection of Patrick's coarb, the <term lang="ga" type="Relic:Staff">Bachall
+&Iacute;osa</term>, <term lang="ga" type="Relic:Bell of the Will">Clog an Udhachta</term>, <term lang="ga" type="Artifact:St. Martin's Gospels">Soisg&eacute;ala M&aacute;rtain</term>,
+<term lang="ga" type="Artifact:Calendar/Martyrology of Cairneach">M&iacute;osach Cairnigh</term>, the three shrines in Teampall na
+Sgr&iacute;n, together with the relics of the north of Ireland, and
+in violation of the protection of Donnchadh son of C&uacute; Chaisil
+&Oacute; Cearbhaill, king of Oirghialla, together with the nobles of
+the north of Ireland, including <pb n="47"/> Cin&eacute;al Conaill and
+Cin&eacute;al E&oacute;ghain, laymen and clergy. An account reached
+&Oacute; Cearbhaill of this violation of his protection and of the
+blinding of his foster-son. He made peace with Ruaidhr&iacute;
+&Oacute; Conchobhair, king of Connacht, and Tighearn&aacute;n
+&Oacute; Ruairc, and taking with him the Oirghialla south of Sliabh
+Beatha, the Conmhaicne, and the U&iacute; Bhri&uacute;in, he went
+into T&iacute;r E&oacute;ghain. Muircheartach son of Niall [&Oacute;
+Lochlainn] was at Teallach &Oacute;g, and he came to Fiodh &Oacute;
+nEachach to meet &Oacute; Cearbhaill, and they fought a battle there
+in which Cin&eacute;al E&oacute;ghain were defeated, and
+Muircheartach son of Niall &Oacute; Lochlainn, king of Oileach, was
+killed and his head cut off for the [outraged] honour of Jesus,
+Patrick, and &Oacute; Cearbbaill. &Oacute; Cearbhaill went from there
+to Magh nImchl&aacute;ir, and Aodh &Oacute; N&eacute;ill proclaimed
+his kingship of Cin&eacute;al E&oacute;ghain.</p>
+</div2>
+<div2 n="MCB1165.3">
+<p> At that time Diarmaid Mac Murchadha, king of Leinster,
+carried off by force Derborguill, daughter of Murchadh Mac Floinn,
+wife of Tighearn&aacute;n &Oacute; Ruairc, king of Br&eacute;ifne and
+Midhe according to some books. When Tighearn&aacute;n heard of this,
+he sent word to Ruaidhr&iacute; son of Toirdhealbhach [&Oacute;
+Conchobhair], king of Connacht, and setting out together, with the
+Galls of Dublin, the men of Midhe, and the U&iacute; Fhaol&aacute;in,
+they burned Fearna Mh&oacute;r Maodh&oacute;g with all its churches,
+and brought away hostages from Mac Murchadha.</p>
+</div2>
+<div2 n="MCB1165.4">
+<p> Another hosting by Ruaidhr&iacute; &Oacute;
+Conchobhair with the same people to Fearna, in which he demolished
+Mac Murchadha's stone house, and they banished himself eastwards
+oversea to the king of England [who was] in France.</p>
+</div2>
+<div2 n="MCB1165.5">
+<p> The king of England at that time was King Henry, Duke
+of Normandy, Aquitaine, and Anjou, and Lord of Wales and Scotland,
+according to the books of the Galls. On Mac Murchadha's arrival, the
+king welcomed him and kept him with him for a while, and then allowed
+him to return to England with letters and treasure. As it was not
+possible for himself or hit forces to go with Mac Murchadha, he gave
+permission to everyone who wished to go with Mac Murchadha to Ireland
+for the purpose of recovering his territory.</p>
+</div2>
+<div2 n="MCB1165.6">
+<p> Mac Murchadha came to Bristol and made a treaty with
+Richard FitzGilbert, Earl of Striguil; &Aacute;ine, daughter of Mac
+Murchadha, was to be given in marriage to the Earl, and the province
+of Leinster after Mac Murchadha's death, in consideration of his
+coming to Ireland to effect the conquest for Mac Murchadha in the
+ensuing summer.</p>
+</div2>
+<pb n="49"/>
+<div2 n="MCB1165.7">
+<p> Mac Murchadha left Bristol and went to the north of
+Wales. The king of Wales at this time was Rhys ap Gruffudd. Mac
+Murchadha came to him, and complained of his own case and of how he
+was exiled, and requested help of him. The king granted him that, and
+treated him well.</p>
+</div2>
+</div1>
+<div1 n="MCB1166" type="annal">
+<div2 n="MCB1166.0">
+<p>1166</p>
+</div2>
+<div2 n="MCB1166.1">
+<p> A.D. 1166. A hosting of Ireland by Ruaidhr&iacute; son
+of Toirdhealbhach &Oacute; Conchobhair to Machaire Arda Macha, from
+there to Bealach Gr&eacute;ine, to Teach Damhnatan, through An Fotair
+over Sliabh Beatha, in Magh Leamhna, and to Fearnach na Meabhla ...
+The nobles of the north came to meet him, and gave him four hostages:
+two from north of the Mountain and two from south of the Mountain, so
+that Ruaidhr&iacute; was then named King of Ireland.</p>
+</div2>
+</div1>
+<div1 n="MCB1167" type="annal">
+<div2 n="MCB1167.0">
+<p>1167</p>
+</div2>
+<div2 n="MCB1167.1">
+<p>A.D. 1167. Mac Murchadha came to an agreement with the king of Wales concerning the help he had promised to send with him to Ireland. The king aided him by giving him Robert FitzStephen, whom he had in prison for three years, and by affirming to Mac Murchadha that he would come to Ireland with him in consideration of his release, together with as much of a following as he could get. Mac Murchadha crossed the sea from there to Fearna, and was in hiding there throughout the Spring.</p>
+</div2>
+<div2 n="MCB1167.2">
+<p>Toirdhealbhach son of Diarmaid &Oacute; Briain, king of almost all Ireland, died.</p>
+</div2>
+<div2 n="MCB1167.3">
+<p>Muircheartach D&uacute;in na Sgiath, son
+of that Toirdhealbhach, was killed and burned by Conchobhar son of the son of
+Conchobhar &Oacute; Briain, i.e. Slapar Salach. This Conchobhar, Slapar Salach,
+was killed by Maol Seachlainn &Oacute; Faol&aacute;in and his son three days
+after that.</p>
+</div2>
+<div2 n="MCB1167.4">
+<p>&Eacute;anna son of Diarmaid Mac Murchadha was blinded by Domhnall Mac Giolla. Ph&aacute;draig, king of Osraighe.</p>
+</div2>
+<div2 n="MCB1167.5">
+<p>Donnchadh son of C&uacute; Chaisil &Oacute; Cearbhaill, high-king of Oirghialla, who obtained
+the kingship of Midhe as far as Cloch&aacute;n na hImrime, and the kingship of
+Ulaidh, and to whom was <pb n="51"/>
+ offered many times the kingship of
+Cin&eacute;al E&oacute;ghain, chief ornament of the north of Ireland, and even
+of all Ireland, for appearance, wisdom, bravery, friendship, brotherliness,
+vigour, kingship, power, for bestowing treasure, food, bounty, and reward to
+laymen and clergy, for overwhelming all evil and exalting all goodness, for
+protecting bells, croziers, and the monasteries of canons and monks, and like
+unto Solomon for peacefulness in his own native territory and towards every
+territory around, died after repentance, having bequeathed much gold, silver,
+and stock, and having partaken of the Body of Christ.</p>
+</div2>
+<div2 n="MCB1167.6">
+<p>Robert FitzStephen came to Ireland, as he
+had promised Mac Murchadha, with thirty knights, three score esquires, and
+three hundred archers. They made port at Banabh, and leaving their ships,
+encamped at the harbour until Mac Murchadha arrived with five hundred
+supporters. The principal knights who came there with Robert FitzStephen were,
+Maurice FitzGerald, Robert de Barry, Meiler FitzHenry, and Hervey de
+Montmorency: it was this Hervey who endowed the monastery of D&uacute;in
+Br&oacute;ith. They confirmed their agreement, and unfurling their banners they
+proceeded with one accord to attack Wexford, and captured it. After its
+capture, Mac Murchadha, as he had promised, handed it over to Robert
+FitzStephen and Maurice FitzGerald, together with the county to the east and
+the west of it. He went from thence to Osraighe, where he inflicted slaughter
+and took hostages from Mac Giolla Ph&aacute;draig as an earnest of submission
+to him.</p>
+</div2>
+<div2 n="MCB1167.7">
+<p>An account of these
+events reached Ruaidhr&iacute; &Oacute; Conchobhair, who was titled King of
+Ireland at that time. He assembled those of the forces of Ireland who were his
+lieges, and went to Fearna. Mac Murchadha was in the fastnesses of a wood near
+Fearna, and they made peace: Diarmaid Mac Murchadha was to receive &Oacute;
+Conchobhair's daughter as wife, and Mac Murchadha was to send back the knights,
+and not to bring any more foreigners to Ireland, nor to support them there. He
+gave up his own halidoms and his son to &Oacute; Conchobhair in token of his
+fulfilment of that agreement.</p>
+</div2>
+<div2 n="MCB1167.8">
+<p>A short time after this, Mac Murchadha sent letters to England for Richard,
+Earl of Striguil. The Earl sent Raymond le Gros FitzGerald with ten knights
+and seventy archers to assist Mac Murchadha and the knights, for he was a son
+of the paternal uncle of Robert FitzStephen and Maurice FitzGerald, according
+to the books of the Galls.</p>
+</div2>
+<pb n="53"/>
+<div2 n="MCB1167.9">
+<p>Raymond landed, four miles east of
+Waterford, and when Maol Seachlainn &Oacute; Faol&aacute;in and the people of
+Waterford learned of his arrival, they set out, three thousand strong, to
+attack Raymond in the fortress in which he was. Raymond struck the first man of
+them who crossed the moat on the head with his sword, and split his head in
+two. When the crowd nearest saw this, they at once fled, towards their people,
+and when the rearguard saw the van fleeing towards them, they too fled, and the
+English pursued them and inflicted slaughter on them by drowning and by
+killing.</p>
+</div2>
+<div2 n="MCB1167.10">
+<p>Domhnall M&oacute;r &Oacute;
+Briain son of Toirdhealbhach son of Diarmaid son of Toirdhealbhach son of Tadhg
+son of Brian B&oacute;ramha took the kingship of Thomond, and Brian son of
+Toirdhealbhach &Oacute; Briain was blinded by him.</p>
+</div2>
+</div1>
+<div1 n="MCB1169(1170)" type="annal">
+<div2 n="MCB1169.0">
+<p>1169</p>
+</div2>
+<div2 n="MCB1169.1">
+<p>A.D. 1169. Thomas of
+Canterbury, archbishop of Canterbury and primate of all England, was killed
+within the church of Canterbury by the retainers of Henry, son of the Empress,
+king of England.</p>
+</div2>
+<div2 n="MCB1169.2">
+<p>Richard, Earl of Striguil, came to Ireland with two hundred
+knights and a thousand archers to the assistance of Mac Murchadha on St.
+Bartholomew's Day. Mac Murchadha came with his knights to meet them, and gave
+his married daughter, &Aacute;ine, to the Earl, in consideration of his
+assisting him to conquer Ireland. On the following day they proceeded to
+Waterford and took it.</p>
+</div2>
+<div2 n="MCB1169.3">
+<p>When Diarmaid son of Mac Carthaigh heard of this, he
+went with all the Munstermen he could get to Waterford to meet them. They
+fought a battle there, and Cathal son of Amhlaoibh M&oacute;r &Oacute;
+Donnchadha, Raghnall &Oacute; R&iacute;oghbhard&aacute;in, and the son of
+&Iacute;omhar &Oacute; Cathail were killed, and there was slaughter of the
+English on the other side.</p>
+</div2>
+<div2 n="MCB1169.4">
+<p>Mac Murchadha and the Earl went with their
+knights to Dublin, and they drove out all the Norse, the merchants, and the
+inhabitants who were there, killed or drowned many women and men and youths,
+and carried off much gold and silver and apparel. The English Earl left the
+care of these, as well as of the town, in the hands of Diarmaid Mac Murchadha,<pb n="55"/>
+ 
+to avenge the wicked slaying of his father by the people of Dublin
+before that, when a dead dog was buried with his body in the ground as a mark
+of hatred and contempt.</p>
+</div2>
+<div2 n="MCB1169.5">
+<p>Mac Murchadha with his Galls and Gaels plundered the
+most of Midhe and Cluain Ioraird, and set Ceanannas and Br&eacute;ifne on fire.</p>
+</div2>
+</div1>
+<div1 n="MCB1171" type="annal">
+<div2 n="MCB1171.0">
+<p>1171</p>
+</div2>
+<div2 n="MCB1171.1">
+<p>A.D. 1171. Diarmaid Mac Murchadha, king of Leinster, 
+died at Fearna.</p>
+</div2>
+<div2 n="MCB1171.2">
+<p>Iohannes Orcach and [Haskulf son of Raghnall son of] 
+Thorkil, two officials of Dublin, came to Ireland with three score shiploads of Norsemen to avenge 
+their reverse and their expulsion from Dublin. The Norse and the English fought a
+battle around Dublin, in which the two one-time officials of Dublin were
+killed, with slaughter of the Norse fleet.</p>
+</div2>
+<div2 n="MCB1171.3">
+<p>Maghnus son of C&uacute; Uladh son of Conchobhar 
+[Mac Duinn Shl&eacute;ibhe] king of Ulaidh, was killed by his own brother, Donn Sleibhe.</p>
+</div2>
+<div2 n="MCB1171.4">
+<p>A hosting by Tighearn&aacute;n &Oacute; Ruairc
+with the forces of U&iacute; Bhri&uacute;in, Domhnall son of Maol Seachlainn
+Crosaoh [&Oacute; Maoil Sheachlainn with the men of] Oirthear Midhe, and
+Murchadh &Oacute; Cearbhaill with the Oirghialla and U&iacute; Mheith, to drive
+the knights from Dublin. The English went to Ceall Maighneann, to meet the
+Irish, and they fought a battle, in which the Galls were defeated, and the
+Gaels pursued beyond the town, eastwards and southwards, all those who did not
+go into the town with the knights. &Oacute; Ruairc remained on the green of the
+town with a small force of horse, and when the knights saw him, they sallied
+forth from the town against him, killing Aodh, son of Tigheaman &Oacute; Ruairc; 
+and &Oacute; Ruairc was defeated. When the Irish saw &Oacute; Ruairc fleeing,
+they themselves fled, and the knights pursued them, killing many of them. So
+far the rout of An Luaithreadh.</p>
+</div2>
+</div1>
+<div1 n="MCB1172" type="annal">
+<div2 n="MCB1172.0">
+<p><date value="1171">1172</date></p>
+</div2>
+<div2 n="MCB1172.1">
+<p>A.D. 1172. Henry son of the
+Empress, King of England, Duke of Normandy, Aquitaine, and Anjou, came to
+Ireland with five hundred knights and numerous cavalry and infantry, and
+entered Waterford harbour on the feast of St. Luke the Apostle.</p>
+</div2>
+<pb n="57"/>
+<div2 n="MCB1172.2">
+<p>The Pope at that time was Alexander III, the Emperor was Frederick
+[Barbarossa], and Louis [VII] was King of France: Ruaidhr&iacute; son of
+Toirdhealbhach son of Ruaidhr&iacute; &Oacute; Conchobhair was over Ireland.
+Aodh &Oacute; N&eacute;ill over Cin&eacute;al E&oacute;ghain and the whole
+province. Donn Sl&eacute;ibhe son of C&uacute; Uladh son of Conchobhar [Mac
+Duinn Shl&eacute;ibhe] over the Ulaidh. Domhnall M&oacute;r son of
+Toirdhealbhach son of Diarmaid son of Toirdhealbhach son of Tadhg son of Brian
+B&oacute;ramha over Thomond and one of the two provinces of Munster. Diarmaid
+son of Cormac son of Muireadheach Mac Carthaigh over the other province.
+Donnchadh son of Cian son of Donnchadh Donn son of C&uacute; Mara son of
+Brodch&uacute; son of Mathghamhain son of Cian son of Maol Muaidh [&Oacute;
+Mathghamhna] over U&iacute; Eachach. Lochlainn &Oacute; Mic Th&iacute;re over
+U&iacute; Mac Caille. Maol Seachlainn &Oacute; Faol&aacute;in over
+D&eacute;ise. Domhnall &Oacute; Giolla Ph&aacute;draig over Osraighe. Domhnall
+Caomh&aacute;nach son of Mac Murchadha over Leinster. Murchadh son of Donnchadh
+son of C&uacute; Chaisil &Oacute; Cearbhaill over Oirghialla and the men of
+Fearnmhagh. Dornhnall son of Maol Seachlainn Crosach [&Oacute; Maoil
+Sheachlainn] over Oirthear Midhe. Tighearn&aacute;n &Oacute; Ruairc over
+Gairbhthrian Connacht, and he was called King of Midhe.</p>
+</div2>
+<div2 n="MCB1172.3">
+<p>The King of England was not long in Waterford 
+when Diarmaid M&oacute;r [Mac Carthaigh] came into his house and gave hostages and 
+made submission to him. Shortly after that,
+Domhnall M&oacute;r &Oacute; Briain and Donnchadh son of Cian &Oacute;
+Mathghamhna went to meet him on the banks of the Suir, and made submission to
+him.</p>
+</div2>
+<div2 n="MCB1172.4">
+<p>The King of England went from thence to Dublin, and the Leinstermen and
+Domhnall Caomhanach submitted to him.</p>
+</div2>
+<div2 n="MCB1172.5">
+<p>Tighearn&aacute;n &Oacute; Ruairc,
+Murchadh son of Donnchadh &Oacute; Cearbhaill, and Donn Sl&eacute;ibhe [Mac
+Duinn Shl&eacute;ibhe], king of Ulaidh, came into the house of the King at
+Dublin and made submission to him.</p>
+</div2>
+</div1>
+<div1 n="MCB1173" type="annal">
+<div2 n="MCB1173.0">
+<p><date value="1172">1173</date></p>
+</div2>
+<div2 n="MCB1173.1">
+<p>A.D. 1173. The King of
+England departed from Ireland, leaving Hugo de Lacy as constable in his place
+with great power.</p>
+</div2>
+<div2 n="MCB1173.2">
+<p>Numerous churches were destroyed by the English after the
+King had left.</p>
+</div2>
+<pb n="59"/>
+<div2 n="MCB1173.3">
+<p>Tighearn&aacute;n &Oacute; Ruairc was killed by
+the constable, Hugo de Lacy, and Clann Ghearailt on Cnoc &Iacute; Ruairc, when
+he had come to meet them. Seven knights of them waited on their horses, and
+when they found &Oacute; Ruairc coming to where the constable was, they pierced
+him with spears, cut off his head, and hung his body, feet upwards, at the
+north side of Ceall na Truan.</p>
+</div2>
+<div2 n="MCB1173.4">
+<p>Domhnall son of Giolla na Naomh &Oacute; Fearghail was killed by the same Englishmen.</p>
+</div2>
+<div2 n="MCB1173.5">
+<p>Dorm Sl&eacute;ibhe son of
+C&uacute; Uladh son of Conchobhar Mac Duinn Shl&eacute;ibhe, king of Ulaidh,
+was killed by U&iacute; Eachach, U&iacute; Bhreasail, and U&iacute; Niallain,
+with great slaughter of the Ulaidh, to avenge the killing of Mac Giolla Easpuig
+in violation of the relics and clergy of the north of Ireland a fortnight
+before that.</p>
+</div2>
+<div2 n="MCB1173.6">
+<p>Ruaidhr&iacute; son of C&uacute; Uladh [Mac Duinn
+Shl&eacute;ibhe] took the kingship of Ulaidh, and Niall son of C&uacute; Uladh,
+his own brother, was blinded by him.</p>
+</div2>
+<div2 n="MCB1173.7">
+<p>Giolla Aodha, bishop of Cork, died.</p>
+</div2>
+</div1>
+<div1 n="MCB1174" type="annal">
+<div2 n="MCB1174.0">
+<p><date value="1173">1174</date></p>
+</div2>
+<div2 n="MCB1174.1">
+<p>A.D. 1174. The Earl of Striguil came to U&iacute;
+Chinnsealaigh, and Domhnall Caomh&aacute;nach [Mac Murchadha] and U&iacute;
+Chinnsealaigh killed two hundred of his people.</p>
+</div2>
+<div2 n="MCB1174.2">
+<p>The same Earl came into Munster to Lismore and plundered it completely, and levied a thousand marks from the legate, as a tribute from the great church. He turned back to Dublin
+from there.</p>
+</div2>
+</div1>
+<div1 n="MCB1175" type="annal">
+<div2 n="MCB1175.0">
+<p><date value="1174">1175</date></p>
+</div2>
+<div2 n="MCB1175.1">
+<p>A.D. 1175. Domhnall M&oacute;r &Oacute; Briain
+inflicted a defeat on the Saxon Earl and the knights at Thurles and killed four
+knights and seven hundred others of his people there.</p>
+</div2>
+<div2 n="MCB1175.2">
+<p>When the people of Waterford heard of this, they killed the two hundred English who 
+were left to garrison them, together with their constable.</p>
+</div2>
+<pb n="61"/>
+<div2 n="MCB1175.3">
+<p>The Earl went from thence by. night to an island to the east of Waterford, and was two months
+there before he went to Dublin.</p>
+</div2>
+</div1>
+<div1 n="MCB1176" type="annal">
+<div2 n="MCB1176.0">
+<p>1176</p>
+</div2>
+<div2 n="MCB1176.1">
+<p>A.D. 1176. A hosting by Domhnall &Oacute; Briain to E&oacute;ghanacht 
+Locha L&eacute;in, and from thence to Ciarraighe [Luachra], and he plundered there both 
+church and lay property.</p>
+</div2>
+<div2 n="MCB1176.2">
+<p>Diarmaid M&oacute;r Mac Carthaigh was captured by Cormac Liath&aacute;nach, his own
+son, who proclaimed himself king in place of his father.</p>
+</div2>
+<div2 n="MCB1176.3">
+<p>Domhnall son of
+Amhlaoibh &Oacute; Maoil Ruanaidh, king of Fir Mhanach, was burned by his own
+kinsmen in the round tower of Daimhinis.</p>
+</div2>
+<div2 n="MCB1176.4">
+<p>Diarmaid son of Cormac [Mac Carthaigh] came out and took his kingship.</p>
+</div2>
+<div2 n="MCB1176.5">
+<p>Tadhg &Oacute; Briain's son and Mathghamhain &Oacute; Briain were blinded by Domhnall M&oacute;r &Oacute; Briain.</p>
+</div2>
+<div2 n="MCB1176.6">
+<p>Domhnall Caomh&aacute;nach, Mac Giolla Ph&aacute;draig, and Raymond
+FitzGerald with his knights, came to Limerick and captured and plundered it.</p>
+</div2>
+<div2 n="MCB1176.7">
+<p>CormacLi&aacute;thanach son of Diarmaid M&oacute;r Mac Carthaigh was killed by Cathal
+Odhar [Mac Carthaigh], Conchobhar &Oacute; Donnchadha, and the nobles of Desmond, and the U&iacute; Shuilleabh&aacute;in in particular, to avenge his capture and deposition of his own father, and the killing by him of Mac Craith &Oacute; S&uacute;illeabh&aacute;in and Conchobhar &Oacute; Domhnaill, together with many others, when he was taking Diarmaid Mac Carthaigh prisoner.</p>
+</div2>
+<div2 n="MCB1176.8">
+<p>Domhnall Caomh&aacute;nach and &Oacute; Giolla Ph&aacute;draig, with their knights, came from
+Limerick into M&uacute;scraighe Aodha;, and plundered Bealach &Aacute;tha and C&uacute;il Eimhne. Diarmaid son of Cormac [Mac Carthaigh] went to meet them,and made peace, with them, and all the hostages of Munster they had were left
+with him.</p>
+</div2>
+<div2 n="MCB1176.9">
+<p>The people of Thomond themselves burned and razed Limerick, lest
+the English should return there to depose him <hi rend="ital">[i.e. </hi>Diarmaid].</p>
+</div2>
+<div2 n="MCB1176.10">
+<p>The English hanged Maghnus &Oacute; Maoil Sheachlainn, whom they
+had in captivity; and they built castles at Domhnach Seachlainn, at Trim, at Sgr&iacute;n Coluim Cille, at Navan, and at Cnoghbha.</p>
+</div2>
+<pb n="63"/>
+<div2 n="MCB1176.11">
+<p>Niall son of Muircheartach son of Niall &Oacute; Lochlainn, king of Cin&eacute;al
+E&oacute;ghain, was killed by Muinntear Bhran&aacute;in na Glinne.</p>
+</div2>
+<div2 n="MCB1176.12">
+<p>A hosting by Maol Sheachlainn &Oacute; Lochlainn, king of Cin&eacute;al
+E&oacute;ghain, into Ulaidh, and he carried off their hostages.</p>
+</div2>
+<div2 n="MCB1176.13">
+<p>A foray by the English of Dublin and Midhe to Fionncharn Sl&eacute;ibhe Modhornn and Gort Conaing, and they killed people, and carried off many cows.</p>
+</div2>
+<div2 n="MCB1176.14">
+<p>Another foray by them to the north of Sliabh Fuaid, where they did much plundering. 
+The men of Fearnmhagh attacked them at Fiodh Conaille and killed a large number of them.</p>
+</div2>
+<div2 n="MCB1176.15">
+<p>The Galls of Dublin and Midhe laid waste Oirghialla from the Boyne to
+Sliabh Fuaid, and Richard Fleming built a castle at Dumhach Sl&aacute;ine.</p>
+</div2>
+<div2 n="MCB1176.16">
+<p>Richard Earl of Striguil died an unholy death in Dublin, as was fitting, after a long wasting sickness, in punishment for all the churches of saints he had plundered and ravaged.</p>
+</div2>
+<div2 n="MCB1176.17">
+<p>A hosting by Maol Sheachlainn &Oacute; Lochlainn, king of Cin&eacute;al E&oacute;ghain,
+ with the CinD&aacute;l E&oacute;ghain and the men of Fearnmhagh and Oirghialla, to Sl&aacute;ine, to attack Richard Fleming. They demolished and razed the castle that Richard had built at Dumhach Sl&aacute;ine, through a miracle of God, Patrick, bishop Erc, and the holy men whose churches Richard had ravaged and plundered, and they carried off all the
+ people, horses, and other wealth they found there.</p>
+</div2>
+<div2 n="MCB1176.18">
+<p>C&uacute; Muighe &Oacute; Floinn, king of U&iacute; Thuirtre, Fir L&iacute;,
+ D&aacute;l Riada, and D&aacute;l nAraidhe, was treacherously killed by his brother C&uacute; Midhe &Oacute; Floinn and by the Fir L&iacute;.</p>
+</div2>
+</div1>
+<div1 n="MCB1177" type="annal">
+<div2 n="MCB1177.0">
+<p>1177</p>
+</div2>
+<div2 n="MCB1177.1">
+<p>A.D. 1177. Muircheartach son of the son of Domhnall Mac
+Carthaigh took Miles de Cogan and FitzStephen with him to Cork and plundered it, and they made an encampment there. A troop of them went from Cork to attack Waterford, and the Irish rose against them from every side of Lismore and killed well-nigh all the English.</p>
+</div2>
+<div2 n="MCB1177.2">
+<p>A great war broke out between Domhnall M&oacute;r &Oacute; Briain and Diarmaid M&oacute;r Mac Carthaigh, and they laid waste from<pb n="65"/>
+Limerick to Cork, and from Cl&aacute;r Doire Mh&oacute;ir and Waterford to Cnoc Br&eacute;anainn, both church and lay property. The U&iacute; Mac Caille fled southwards across the Lee into U&iacute; Eachach, the E&oacute;ghanacht Locha L&eacute;in fled to F&eacute;ardhruim in U&iacute; Eachach, the Ciarraighe Luahra into Thomond, the U&iacute; Chairbre, the U&iacute; Chonaill, and the U&iacute; Dhonnabh&aacute;in into E&oacute;ghanacht Locha L&eacute;in, and to [the
+country] around Mangarta.</p>
+</div2>
+<div2 n="MCB1177.3">
+<p>A hosting by Domhnall M&oacute;r &Oacute; Briain to Munster, and he reached Cnoc Br&eacute;anainn and plundered it.</p>
+</div2>
+<div2 n="MCB1177.4">
+<p>Domhnall son of Amhlaoibh M&oacute;r &Oacute; Donnchadha, Cuilean &Oacute; Cuil&eacute;in, and the nobles of Desmond made a raid on Machaire Caisil to exact retribution for the westward raid, as the poet said: 
+<text type="poem">
+<body>
+<lg type="QUATRAIN">
+<l>Wretched is Munster of the steeds, </l>
+<l>between E&oacute;ghan and Cormac:</l>
+<l>a westward raid by noble S&iacute;ol Cormaic, </l>
+<l>an eastward raid by S&Iacute;ol E&oacute;ghain. </l>
+</lg>
+</body>
+</text></p>
+</div2>
+<div2 n="MCB1177.5">
+<p>Domhnall &Oacute; Briain and
+Diarmaid Mac Carthaigh made peace there with one another.</p>
+</div2>
+</div1>
+<div1 n="MCB1178" type="annal">
+<div2 n="MCB1178.0">
+<p>1178</p>
+</div2>
+<div2 n="MCB1178.1">
+<p>A.D. 1178. The valiant knight John de Courcy came secretly with a
+band of knights and archers from Dublin to Downpatrick, and reaching it unperceived, they made a dyke from sea to sea about Downpatrick. The Ulaidh then assembled, under Ruaidhr&iacute; Mac Duinn Shl&eacute;ibhe, to make an attack on Downpatrick against John, but on reaching it they retreated without striking a blow when they saw the Englishmen with their horses in full battle-dress. When the Englishmen saw the Ulaidh in flight, they followed them with their people, and inflicted slaughter upon them, both by drowning and by the sword. The <term lang="ga" type="RELIC:Crozier">Bachall F&iacute;nghin</term> and <term lang="ga" type="RELIC:Crozier">Bachall R&oacute;n&aacute;in Fhinn</term> and many other relics were left behind in that slaughter.</p>
+</div2>
+<div2 n="MCB1178.2">
+<p>A hosting by Maol Sheachlainn &Oacute; Lochlainn with Cin&eacute;al
+E&oacute;ghain, Ruaidhr&iacute; Mac Duinn Shl&eacute;ibhe with the Ulaidh, Giolla an Choimdhe &Oacute; Car&aacute;in, Patrick's coarb, having with them the relics of the north of Ireland, together with their clerical keepers to Downpatrick to capture it from John [de Courcy]. When they reached it, they fled without striking a blow, leaving<pb n="67"/>
+behind Patrick's coarb with his clergy, and the <term lang="ga" type="ARTIFACT:Book of Armagh">Can&oacute;in P&aacute;draig</term>, <term lang="ga" type="RELIC:Bell">Fionn Faoidheach P&aacute;draig</term>, <term lang="ga" type="RELIC:Bell">Clog Timchill Arda Macha</term>, <term lang="ga" type="RELIC:Crozier">Bachall Comhghaill</term>, <term lang="ga" type="RELIC:Bell">Ceol&aacute;n Tighearnaigh</term>, <term lang="ga" type="RELIC:Crozier">Bachall Da-Chiar&oacute;g Argail</term>, <term lang="ga" type="RELIC:Crozier">Bachall Eimhine</term>, <term lang="ga" type="RELIC:Crozier">Bachall Mhura</term>, and many other relics. There fell there Domhnall &Oacute; Flaithbheartaigh, chieftain of Clann Fhlaithbheartaigh, Conchobhar &Oacute; Ciarall&aacute;in, chieftain of Clann Diarmada, Giolla Mic Liag &Oacute; Donnghaile, chieftain of Fir Dhroma, Giolla Criost &Oacute; hAdhmaill, chieftain of Clann Adhmaill, Giolla M&aacute;rtain Mac Con
+Allaidh, chieftain of Clann Chonchadha, Giolla Comhghaill Mac Ti&uacute;lac&aacute;in, chieftain of Muinntear Mhong&aacute;in, Cionaoth Mac Cart&aacute;in, chieftain of Cin&eacute;al Faghartaigh, and many others who cannot be
+reckoned here. Patrick's coarb was captured, but was released by the English of their own accord, and the <term lang="ga" type="ARTIFACT:Book of Armagh">Can&oacute;in P&aacute;draig</term> and the <term lang="ga" type="RELIC:Bell">Ceol&aacute;n Tighearnaigh</term> were brought back from the Galls, after they had been found in the slaughter, when their young keepers were killed. The Galls have all the other relics still.</p>
+<p></p>
+</div2>
+<div2 n="MCB1178.3">
+<p>A hosting by Miles de Cogan and the English of Dublin into Connacht. The
+Connachtmen themselves burned the churches and houses of the country, all of them that were in level and cleared land. When the English found neither food nor a place to settle down, they turned back to Dublin, broken and weary.</p>
+</div2>
+<div2 n="MCB1178.4">
+<p>A treacherous foray by Miles de Cogan and the Galls of Dublin and Midhe against Louth and Machaire Conaill.</p>
+</div2>
+<div2 n="MCB1178.5">
+<p>Aodh &Oacute; N&eacute;ill, who was king of Cin&eacute;al E&oacute;ghain before Maol Sheachlainn &Oacute; Lochlainn, was killed by Maol Sheachlainn near Armagh. Ardghal &Oacute; Lochlainn, a son of
+that Maol Sheachlainn, son of the king of Oileach, was killed by Aodh at that place.</p>
+</div2>
+<div2 n="MCB1178.6">
+<p>Lismore, Cashel, and Magh Feimhin were plundered by the Galls.</p>
+</div2>
+<div2 n="MCB1178.7">
+<p>Lane R&oacute;n&aacute;in Fhinn, chief sanctuary of all Ulaidh, was plundered by John de Courcy, and Tomas &Oacute; Corcr&aacute;in, its erenach, was beheaded.</p>
+</div2>
+</div1>
+<pb n="69"/>
+<div1 n="MCB1179" type="annal">
+<div2 n="MCB1179.0">
+<p>1179</p>
+</div2>
+<div2 n="MCB1179.1">
+<p>A.D. 1179. Conchobhar son of Amhlaoibh M&oacute;r &Oacute; Donnchadha was killed by Domhnall son of Amhlaoibh, his own brother.</p>
+</div2>
+<div2 n="MCB1179.2">
+<p>Muircheartach son of the son of Domhnall Mac Carthaigh was killed by &Oacute; hEidirsge&oacute;il at Ros Oihthre.</p>
+</div2>
+<div2 n="MCB1179.3">
+<p>Domhnall son of Amhlaoibh M&oacute;r &Oacute; Donnchadha, king of E&oacute;ghanacht and U&iacute; Eachach while Donnchadh son of Cian &Oacute; Mathghamhna was in banishment by Diarmaid Mac Carthaigh, the U&iacute; Dhonnchadha, and the Galls, was killed.</p>
+</div2>
+<div2 n="MCB1179.4">
+<p>A defeat of the English of Dublin and Leinster at T&oacute;char Cluana Eidhneach, and at Fiodh M&oacute;r in Laoighis, by the Leinstermen themselves.</p>
+</div2>
+<div2 n="MCB1179.5">
+<p>Defeat and slaughter [were inflicted] on the English, of Ceanannas by Maol Ruanaidh &Oacute; Baoigheall&aacute;n, with a force of the Dartraighe.</p>
+</div2>
+<div2 n="MCB1179.6">
+<p>Ulaidh was laid waste, both church and lay property, by John de Courcy and the Irish who were along with him.</p>
+</div2>
+<div2 n="MCB1179.7">
+<p>Ruaidhr&iacute; Mac Duinn Shl&eacute;ibhe, king of Ulaidh, in exile in T&iacute;r E&oacute;ghain.</p>
+</div2>
+<div2 n="MCB1179.8">
+<p>A foray by John de Courcy into Machaire Conaill and Cuailghne, and they carried off four thousand cows to Cuan Aighneach. Murchadh &Oacute; Cearbhaill, king of Oirghialla, Maol Ruanaidh &Oacute; Baoigheall&aacute;in, king of Dartraighe, Giolla P&aacute;draig &Oacute; hAinbheith, king of Mughdhorna and U&iacute; Mheith, and Dubh Inse Mac Aonghusa overtook them and fought a very vigorous battle with them on the shores of the bay, and inflicted slaughter on them, both by drowning and by the sword.</p>
+</div2>
+<div2 n="MCB1179.9">
+<p>An overthrow of battle and dreadful slaughter on John de Courcy at Sgrig Arcaidh by C&uacute; Midhe &Oacute; Floinn, with a force of the U&iacute; Thuirtre and Fir L&iacute;.</p>
+</div2>
+<div2 n="MCB1179.10">
+<p>A treacherous foray by the English of Dublin and Midhe, and they plundered the south of Oirghialla, both church and lay property, from Inis Mochta to Inbhear B&oacute;inne.</p>
+</div2>
+</div1>
+<div1 n="MCB1180" type="annal">
+<div2 n="MCB1180.0">
+<p>1180</p>
+</div2>
+<div2 n="MCB1180.1">
+<p>A.D. 1180. John de Courcy left Downpatrick desolate, and he came to &Aacute;th Glaise, and built a castle and dwelt there.</p>
+</div2>
+<pb n="69"/>
+<div2 n="MCB11809.2">
+<p>Ard Fearta Br&eacute;anainn was plundered by Clann Charthaigh, and they carried off all the livestock they found there.
+They killed many senior clergy within their sanctuary and graveyard.</p>
+</div2>
+<div2 n="MCB11809.3">
+<p>Muircheartach &Oacute; Briain was drowned, and the "snow of the venom" fell this year.</p>
+</div2>
+<div2 n="MCB11809.4">
+<p>Conchobhar &Oacute; Ceallaigh, king of U&iacute; Mhaine, and his only son, with their kinsmen and the nobles of U&iacute; Mhaine, were slain by Conchobhar Maonmhuighe &Oacute; Conchobhair.</p>
+</div2>
+<div2 n="MCB11809.5">
+<p>A new fort [was built] at Leithlinn by the king of England's people.</p>
+</div2>
+</div1>
+<div1 n="MCB1181" type="annal">
+<div2 n="MCB1181.0">
+<p>1181</p>
+</div2>
+<div2 n="MCB1181.1">
+<p>A.D. 1181. Labhr&aacute;s &Oacute; Tuathail, archbishop of Dublin and Leinster, died at Augum in France, while making peace between the king of England and the Irish.</p>
+</div2>
+</div1>
+<div1 n="MCB1182" type="annal">
+<div2 n="MCB1182.0">
+<p>1182</p>
+</div2>
+<div2 n="MCB1182.1">
+<p>A.D. 1182. A defeat of the Ulaidh, under Ruaidhr&iacute; Mac Duinn
+Shl&eacute;ibhe, by Domhnall &Oacute; Maoil Sheachlainn, king of Cin&eacute;al E&oacute;ghain.</p>
+</div2>
+<div2 n="MCB1182.21">
+<p>Pope Alexander died.</p>
+</div2>
+</div1>
+<div1 n="MCB1183" type="annal">
+<div2 n="MCB1183.0">
+<p>1183</p>
+</div2>
+<div2 n="MCB1183.1">
+<p>A.D. 1183. Miles de Cogan, FitzStephen, Ceann Cuilinn, Robert FitzStephen's son, and five knights were killed, and slaughter was inflicted by the family of &Oacute; Mic Th&iacute;re, king of U&iacute; Ghlais&iacute;n, on the English at Lismore as they were going to attack Waterford.</p>
+</div2>
+<div2 n="MCB1183.2">
+<p>Defeat and slaughter [inflicted] by Ruaidhr&iacute; son of Toirdhealbhach son of Ruaidhr&iacute; &Oacute; Conchobhair on Flaithbheartach &Oacute; Maoil Doraidh, king of Cin&eacute;al Conaill, and on Donnchadh &Oacute; Conchobhair.</p>
+</div2>
+<div2 n="MCB1183.3">
+<p>Defeat and, slaughter [inflicted] by John de Courcy at C&uacute;il an Tuaiscirt on Cin&eacute;al E&oacute;ghain, [Cin&eacute;al] Conaill, and Cianachta, and Giolla Cr&iacute;ost &Oacute; Cathain, son of the king of Fir na Craoibhe, and Raghnall &Oacute; Brisl&eacute;in, chieftain of F&aacute;na, were killed.</p>
+</div2>
+</div1>
+<pb n="73"/>
+<div1 n="MCB1184" type="annal">
+<div2 n="MCB1184.0">
+<p>1184</p>
+</div2>
+<div2 n="MCB1184.1">
+<p>A.D. 1184. Ruaidhr&iacute; &Oacute; Conchobhair,
+king of Connacht and of Ireland for a time, renounced the world and went to ... on a pilgrimage. Conchobhar Maonmhuighe, son of that Ruaidhr&iacute;, took the kingship of Connacht.</p>
+</div2>
+<div2 n="MCB1184.2">
+<p>A hosting by Murchadh &Oacute; Cearbhaill, king of Oirghialla, and Hugo de Lacey,
+ lord of the Galls of Ireland, and they were three nights at Armagh
+ encamped against Tr&iacute;ocha C&eacute;ad Oiridh and the north of Fearnmhagh.</p>
+</div2>
+</div1>
+<div1 n="MCB1185" type="annal">
+<div2 n="MCB1185.0">
+<p>1185</p>
+</div2>
+<div2 n="MCB1185.1">
+<p>A.D. 1185. Art &Oacute; Maoil Sheachlainn, king of Midhe, was killed by Diarmaid son of Toirdhealbhach &Oacute; Briain.</p>
+</div2>
+<div2 n="MCB1185.2">
+<p>A castle [built] at Ceall &Aacute;ir in Iarthar Midhe by Hugo de Lacy.</p>
+</div2>
+<div2 n="MCB1185.3">
+<p>Englishmen on Lough Erne with Flaithbheartach &Oacute; Maoil Doraidh ..., and the territories of the lake around were laid waste and plundered by them.</p>
+</div2>
+</div1>
+<div1 n="MCB1192" type="annal">
+<div2 n="MCB1192.0">
+<p>1192</p>
+</div2>
+<div2 n="MCB1192.1">
+<p>A.D. 1192. Great slaughter of the Galls by Domhnall &Oacute; Briain in a battle at Thurles.</p>
+</div2>
+<div2 n="MCB1192.2">
+<p>Numerous castles [were built] by the Galls in Munster, and there were frequent forays in Thomond.</p>
+</div2>
+<div2 n="MCB1192.3">
+<p>Mathghamhain son of Muireadhach &Oacute; Muircheartaigh was killed by the U&iacute; Eachach.</p>
+</div2>
+<div2 n="MCB1192.4">
+<p>F&iacute;nghin Lice Lacht&aacute;in son of Mac Carthaigh left the Church for the laity, without the advice of monks or clergy.</p>
+</div2>
+<div2 n="MCB1192.5">
+<p>Conchobhar son of Maghnus Mac Duinn Shl&eacute;ibhe, king of Ulaidh, was killed at Armagh by Ardghal &Oacute; hAnluain, king of U&iacute; Niall&aacute;in.</p>
+</div2>
+</div1>
+<pb n="75"/>
+<div1 n="MCB1193" type="annal">
+<div2 n="MCB1193.0">
+<p>[1193]</p>
+</div2>
+<div2 n="MCB1193.1">
+<p>The castle of Br&iacute; Uis was built by the Galls, with the consent of &Oacute; Briain, if the general report be true, as a check on Domhnall son of Mac Carthaigh.</p>
+</div2>
+<div2 n="MCB1193.2">
+<p>Cathal Odhar son of Ceallach&aacute;n son of Mac Carthaigh was treacherously killed by Domhnall M&oacute;r son of Diarmaid Cille Baghdhun son of Cormac Muighe Thamhnach son of Muireadhach Mac Carthaigh.</p>
+</div2>
+<div2 n="MCB1193.3">
+<p>C&uacute; Midhe &Oacute; Floirin, king of U&iacute; Thuirtre and Fir L&iacute;, was treacherously killed by the followers of John de Courcy, in Aointreabh.</p>
+</div2>
+</div1>
+<div1 n="MCB1194" type="annal">
+<div2 n="MCB1194.0">
+<p>[1194]</p>
+</div2>
+<div2 n="MCB1194.1">
+<p>F&iacute;nghin son of Mac Carthaigh turned against his own brother and took him
+prisoner.</p>
+</div2>
+<div2 n="MCB1194.2">
+<p>Domhnall M&oacute;r son of Toirdhealbhach son of Diarmaid son of Toirdhealbhach son of Tadhg son of Brian B&oacute;ramha died this year. Muircheartach, his son, took the kingship of Thomond.</p>
+</div2>
+<div2 n="MCB1194.3">
+<p>Muircheartach son of Domhnall M&oacute;r &Oacute; Briain was treacherously taken prisoner by the Galls and blinded by them.</p>
+</div2>
+<div2 n="MCB1194.4">
+<p>Tadhg son of Mathgharnhain &Oacute; Briain was treacherously killed by the Galls at Cashel, despite the protection of the legate and Patrick.</p>
+</div2>
+<div2 n="MCB1194.5">
+<p>Giolla Ailbhe &Oacute; Caoimh and his kinsman were treacherously killed by the Galls, with the approval of Mac Carthaigh's son.</p>
+</div2>
+</div1>
+<div1 n="MCB1195" type="annal">
+<div2 n="MCB1195.0">
+<p>1195</p>
+</div2>
+<div2 n="MCB1195.1">
+<p>A.D. 1195. Cathal Croibhdhearg &Oacute; Conchobhair, king of Connacht, came to Munster and demolished many of the castles of the Galls there, and everybody thought that the Galls of Munster would be destroyed by himself, S&iacute;ol Briain, and Clann Charthaigh.</p>
+</div2>
+<div2 n="MCB1196.1">
+<p>The churches of T&iacute;r E&oacute;ghain were plundered and laid waste by Ruaidhr&iacute; Mac Duinn Shl&eacute;ibhe, king of Ulaidh. The churches of Domhnach M&oacute;r, the refectory of Cruimthear Coluim, the church of Doire Lor&aacute;in, and Tearmann Com&aacute;in were plundered, and the church of D&iacute;seart D&aacute; Chr&iacute;och was burned.</p>
+</div2>
+</div1>
+<pb n="77"/>
+<div1 n="MCB1196" type="annal">
+<div2 n="MCB1196.0">
+<p>1196</p>
+</div2>
+<div2 n="MCB1196.1">
+<p>A.D. 1196. Donnchadh &Oacute; Donnag&aacute;in was killed by Donnchadh Cairbreach &Oacute; Briain, with the assent of F&iacute;nghin son of Mac Carthaigh.</p>
+</div2>
+<div2 n="MCB1196.2">
+<p>Conchobhar Ruadh son of Domhnall M&oacute;r &Oacute; Briain captured Donnchadh Cairbreach son of Domhnall M&oacute;r, and robbed Mac Con &Oacute; hEidirsge&oacute;il; and Giolla na bhFlann &Oacute; S&uacute;illeabh&aacute;in died.</p>
+</div2>
+<div2 n="MCB1196.3">
+<p>A prey [taken] by Domhnall son of Diarmaid Cille Badhuna [Mac Carthaigh] from the castle of Ceall Fiacla, and eight Galls were killed there, and two of their nobles were taken by him as hostages. He demolished castles in U&iacute; Mac Caille, and put people to death.</p>
+</div2>
+<div2 n="MCB1196.4">
+<p>A hosting by the Galls of Munster and Cork, and they sent marauders throughout F&eacute;ardhruim, and killed Corc &Oacute; Muircheartaigh, and Giolla Mucuille &Oacute; C&eacute;adfadha, and the son
+of Buadhach &Oacute; S&uacute;illeabh&aacute;in, and many others. Slaughter was inflicted on the Galls as they were returning to Cork.</p>
+</div2>
+<div2 n="MCB1196.5">
+<p>A hosting by Cathal Croibhdhearg &Oacute; Conchobhair and the nobles of Munster
+came to destroy Cork, but Domhnall son of Mac Carthaigh prevented them, after he had handed over the town on his own conditions to the Galls.</p>
+</div2>
+<div2 n="MCB1196.6">
+<p>Louth was plundered and burned, together with its castle, by Niall Mac Mathghamhna and John de Courcy.</p>
+</div2>
+<div2 n="MCB1196.7">
+<p>Defeat and slaughter [were inflicted] by Cin&eacute;al E&oacute;ghain and the Oirthir on
+Ruaidhr&iacute; Mac Duinn Shl&eacute;ibhe, king of Ulaidh, near Armagh.</p>
+</div2>
+<div2 n="MCB1196.8">
+<p>Muircheartach &Oacute; Lochlainn, king of Cin&eacute;al E&oacute;ghain, was treacherously killed by Conchobhar &Oacute; Cathain and the Cin&eacute;al E&oacute;ghain themselves, in violation
+of the security of Patrick and his saints, the Three Shrines, the <term lang="ga" type="Artifact:Book of Armagh">Can&oacute;in</term>, and <term lang="ga" type="Relic:Bell of the Will">Clog an Udhachta</term>.</p>
+</div2>
+</div1>
+<div1 n="MCB1197" type="annal">
+<div2 n="MCB1197.0">
+<p>1197</p>
+</div2>
+<div2 n="MCB1197.1">
+<p>A.D. 1197. Conchobhar Ruadh &Oacute; Briain turned against Donnchadh Cairbreach, his own
+kinsman, and brought Galls with him to Thomond, which they plundered, both church and lay property. They killed C&uacute; Meadha Mac Con Mara, Conchobhar &Oacute; Cuinn, and many others.</p>
+</div2>
+<pb n="79"/>
+<div2 n="MCB1197.2">
+<p>A hosting by the Galls to Durrus, but they did no harm there other than the burning of churches, and they turned back.</p>
+</div2>
+<div2 n="MCB1197.3">
+<p>Conchobhar &Oacute; Cathain, king of Fir na Craoibhe and Cianachta, fell by the power of Patrick together with his saints and relics, inretribution for the violation of his security.</p>
+</div2>
+<div2 n="MCB1197.4">
+<p>Flaithbheartach &Oacute; Maoil Doraidh, king of Cin&eacute;al Conaill, Cin&eacute;al
+E&oacute;ghain and the territories as far as Eas Dara and Loch Gile in the north of Br&eacute;ifne, died after he had renounced the world.</p>
+</div2>
+<div2 n="MCB1197.5">
+<p>A hosting by John de Courcy past Tuaim into T&iacute;r E&oacute;ghain to Ard Sratha, Magh Nidh, R&aacute;ith Both, and Derry. A battle between him and Cin&eacute;al Conaill at Cnoc na Sgam, in which slaughter was inflicted on them, and Eachmharcach &Oacute; Dochartaigh, their king, was killed. John plundered well-nigh all Inis E&oacute;ghain, and returned in triumph.</p>
+</div2>
+</div1>
+<div1 n="MCB1198" type="annal">
+<div2 n="MCB1198.0">
+<p>1198</p>
+</div2>
+<div2 n="MCB1198.1">
+<p>A.D. 1198. Ruaidhr&iacute; son of Toirdhealbhach son of Ruaidhr&iacute; [&Oacute; Conchobhair], king of Connacht, who had the kingship of Ireland for a time, died on a pilgrimage at Cunga, having renounced
+the world.</p>
+</div2>
+<div2 n="MCB1198.2">
+<p>A castle [was built] by the Galls at Ard P&aacute;draig.</p>
+</div2>
+<div2 n="MCB1198.3">
+<p>Muircheartach son of Domhnall M&oacute;r &Oacute; Briain was banished by his kinsman, Conchobhar Ruadh son of Domhnall M&oacute;r, out of Thomond, and he himself took the kingship in Thomond after
+him.</p>
+</div2>
+</div1>
+<div1 n="MCB1199" type="annal">
+<div2 n="MCB1199.0">
+<p>1199</p>
+</div2>
+<div2 n="MCB1199.1">
+<p>1. A.D. 1199. Richard, king of England, died, and John, his brother, took the kingship of England.</p>
+</div2>
+<div2 n="MCB1199.2">
+<p>Richard Carew, a noble baron, died at Cork.</p>
+</div2>
+<div2 n="MCB1199.3">
+<p>A great war was made by the Galls on the Gaels, in which the territory froze the Shannon to F&eacute;ardhruim was laid waste.</p>
+</div2>
+<div2 n="MCB1199.4">
+<p>A castle [was built] by the Galls at Eas Geibhtine.</p>
+</div2>
+</div1>
+<pb n="81"/>
+<div1 n="MCB1200" type="annal">
+<div2 n="MCB1200.0">
+<p>1200</p>
+</div2>
+<div2 n="MCB1200.1">
+<p>A.D. 1200. Slaughter [was inflicted] on the Oirthir through the treachery of Sliabh Fuaid by the followers of John de Courcy.</p>
+</div2>
+<div2 n="MCB1200.2">
+<p>Slaughter [was inflicted] on the Connachtmen by the Galls of Midhe, and Ruaidhr&iacute; &Oacute; Conchobhair, king of Iarthar Connacht, was killed.</p>
+</div2>
+<div2 n="MCB1200.3">
+<p>Cathal son of Toirdhealbhach [&Oacute; Conchobhair], king of Connacht, banished Cathal Carrach son of Conchobhar Maonmhuighe into Munster.</p>
+</div2>
+<div2 n="MCB1200.4">
+<p>The Galls of Munster went with Cathal Carrach into Connacht and banished Cathal Croibhdhearg to John de Courcy in Ulaidh, and set up Cathal Carrach in his place.</p>
+</div2>
+<div2 n="MCB1200.5">
+<p>A foray by Ruaidhr&iacute; [Mac Duinn Shl&eacute;ibhe] with the Galls of Ardee against Armagh. He made another foray against Inis Caoin Deagha Mic Cairill and plundered the town and its church.</p>
+</div2>
+</div1>
+<div1 n="MCB1201" type="annal">
+<div2 n="MCB1201.0">
+<p>1201</p>
+</div2>
+<div2 n="MCB1201.1">
+<p>A.D. 1201. Gerald son of Maurice [FitzGerald], Anadh &Oacute; S&uacute;illeabh&aacute;in, and Fionghuine &Oacute; Caoimh, king of Fir Mhuighe, died.</p>
+</div2>
+<div2 n="MCB1201.2">
+<p>A great hosting by William de Burgo and by Muircheartach, Conchobhar Ruadh, and Donnchadh
+Cairbreach,&mdash;three sons of Domhnall M&oacute;r &Oacute; Briain&mdash;together with the Galls of Cork and Munster. They were a week at Ceann Eich, and they killed Amhlaoibh &Oacute; Donnabh&aacute;in, king of U&iacute; Chairbre &Eacute;abha, and some of the Galls were killed, including Mac Coisdealbha.  The legate and the bishops of Munster came and made peace between S&iacute;ol Briain and Clann Charthaigh and &Oacute; Mathghamhna and William de Burgo. William allowed S&iacute;ol Briain to go home, and he himself remained in Cork for most of the winter.</p>
+</div2>
+<div2 n="MCB1201.3">
+<p>Ruaidhr&iacute; Mac Duinn Shl&eacute;ibhe, late king of Ulaidh, was killed by a few of the followers of John de Courcy.</p>
+</div2>
+<div2 n="MCB1201.4">
+<p>Niall &Oacute; h&Eacute;ignigh, king of Oirghialla and Fir Mhanach, came with a full muster of troops, together with Cathal Croibhdhearg &Oacute; Conchobhair, to recover the kingship of Connacht. Defeat and slaughter [were inflicted] on them by Cathal Carrach son of Conchobhar Maonmhuighe [&Oacute; Conchobhair] at Eas Dara, and Niall &Oacute; h&Eacute;ignigh, Donnchadh Mac Tighearn&aacute;in, lord of Clann Fhearghaile, the king of Fir Luirg, and many others were killed.</p>
+</div2>
+<pb n="83"/>
+<div2 n="MCB1201.5">
+<p>John de Courcy and the Galls of Ulaidh and Midhe [were] in Connacht with Cathal Croibhdhearg son of Toirdhealbhach to recover his kingship. Defeat and slaughter [were inflicted] by Cathal
+son of Conchobhar Maonmhuighe and the <corr resp="PB" sic="Connacht, men">Connachtmen</corr> on that force, and John went eastwards across Loch R&iacute; and the family of Hugo de Lacy took him prisoner, and hostages of the nobility of the Galls of Ulaidh had to be given for him. That was the defeat of An Forbhar.</p>
+</div2>
+</div1>
+<div1 n="MCB1202" type="annal">
+<div2 n="MCB1202.0">
+<p>1202</p>
+</div2>
+<div2 n="MCB1202.1">
+<p>A.D. 1202. A hosting by the Galls of Munster, William [de Burgo], Cathal Croibhdhearg son of Toirdhealbhach, and S&iacute;ol Briain into Connacht. Cathal Carrach, son of Conchobhar Maonmhuighe with a full muster of troops came before them out of Coirrshliabh, and they fought a battle in which Cathal Carrach son of Conchobhar
+Maonmhuighe was killed; and Cathal Croibhdhearg took the kingship of Connacht.</p>
+</div2>
+<div2 n="MCB1202.2">
+<p>Conchobhar Ruadh son of Domhnall M&oacute;r &Oacute; Briain came to Muircheartach son of Domhnall, his kinsman, on a foray. The followers of Muircheartach overtook him and killed him.</p>
+</div2>
+<div2 n="MCB1202.3">
+<p>John Carrtanoin came to Ireland from Pope Innocent.</p>
+</div2>
+<div2 n="MCB1202.4">
+<p>A castle [was built] by Hugo de Lacy ... in D&uacute;n Ocalla above Loch Righe.</p>
+</div2>
+</div1>
+<div1 n="MCB1203" type="annal">
+<div2 n="MCB1203.0">
+<p>1203</p>
+</div2>
+<div2 n="MCB1203.1">
+<p>A.D. 1203. A windy, wet summer, with famine and wars.</p>
+</div2>
+<div2 n="MCB1203.2">
+<p>Clonmacnois and the churches and territories of Connacht were ravaged and plundered by William de Burgo.</p>
+</div2>
+<div2 n="MCB1203.3">
+<p>Low Sunday on the second day of May this year.</p>
+</div2>
+<div2 n="MCB1203.4">
+<p>Defeat and slaughter [were inflicted] by Domhnall M&oacute;r son of Diarmaid Cille Badhuna [Mac Carthaigh] on the Galls at Bearn Mic &Iacute;omhair.</p>
+</div2>
+<div2 n="MCB1203.5">
+<p>The Order of the Friars Minor was confirmed and a Rule was given to them.</p>
+</div2>
+<div2 n="MCB1203.6">
+<p>A battle between Hugo de Lacy and John de Courcy at Downpatrick in which John was captured and his people slaughtered, so that he had to surrender his lordship and his castellation to Hugo.</p>
+</div2>
+</div1>
+<pb n="85"/>
+<div1 n="MCB1204" type="annal">
+<div2 n="MCB1204.0">
+<p>1204</p>
+</div2>
+<div2 n="MCB1204.1">
+<p>A.D. 1204. John de Courcy came with the Cin&eacute;al E&oacute;ghain from the north into
+Ulaidh to recover his lordship. Walter de Lacy with a force from Midhe came from the south against him, and between them they ravaged Ulaidh.</p>
+</div2>
+<div2 n="MCB1204.2">
+<p>Hugo de Lacy an Earl and Justiciar from the king of England in Ireland.</p>
+</div2>
+<div2 n="MCB1204.3">
+<p>Murchadh son of Murchadh son of Amhlaoibh M&oacute;r &Oacute; Donnchadha, king of E&oacute;ghanacht Locha Lain, died.</p>
+</div2>
+</div1>
+<div1 n="MCB1206" type="annal">
+<div2 n="MCB1206.0">
+<p>1206</p>
+</div2>
+<div2 n="MCB1206.1">
+<p>A.D. 1206. Domhnall M&oacute;r son of Diarmaid Cille Badhun, son of Cormac Muighe Thamhnach, died at Corr Tighe Mic Curmainn, having held the kingship for twenty years. It was by this Domhnall that Geoffrey de Cogan was killed, and he was flayed, together with his speckled kerns, to avenge his father. It was he who inflicted the defeats of Inis E&oacute;ghanain, Ceall Mo-Chum&oacute;g, Bearn Mic &Iacute;omhair, Sr&oacute;n Olair and many other battles, who hanged seven officials, and who demolished the castles of Lismore, D&uacute;n Coireadha, Cora, U&iacute; Mhairile, and all U&iacute; Mac Caille.</p>
+</div2>
+<div2 n="MCB1206.2">
+<p>F&iacute;nghin son of Mac Carthaigh took the kingship. Diarmaid D&uacute;na Droighne&aacute;in [Mac Carthaigh], Donnchadh Cairbreach &Oacute; Briain, and Donnchadh na hImirce Timchill son of Cian, son of Donnchadh Donn, son of C&uacute; Mara, son of Brodch&uacute;, son of Mathghamhain; son of Cian, son of Maol Muaidh [&Oacute; Mathghamhna] deposed that F&iacute;nghin within a year, and all
+Munstermen from that on, and there was great destruction that year from Gall and Gael in all Munster.</p>
+</div2>
+<div2 n="MCB1206.3">
+<p>Hugo de Lacy was ten days and ten nights in Armagh plundering it.</p>
+</div2>
+<div2 n="MCB1206.4">
+<p>The monastery of Peter and Paul was plundered and burned by Bratach Buile &Oacute; Maothagain and Mac Mathghamhna's bandits.</p>
+</div2>
+<div2 n="MCB1206.5">
+<p>Defeat and slaughter [were inflicted] on John de Courcy at Carrickfergus.</p>
+</div2>
+<div2 n="MCB1206.6">
+<p>Teach Damhnata, Ceall Murag&aacute;in, and Clones were burned by Hugo de Lacy.</p>
+</div2>
+<div2 n="MCB1206.7">
+<p>The castle of D&uacute;n L&oacute;ich was built by the Galls.</p>
+</div2>
+</div1>
+<pb n="87"/>
+<div1 n="MCB1207" type="annal">
+<div2 n="MCB1207.0">
+<p>1207</p>
+</div2>
+<div2 n="MCB1207.1">
+<p>A.D. 1207. Armagh was again plundered about St. Bridget's Day by Hugo de
+ Lacy.</p>
+</div2>
+<div2 n="MCB1207.2">
+<p>&Eacute;igneachan &Oacute; Domhnaill, king of Cin&eacute;al Conaill, and many others were killed by Niall Mac Mathghamhna, the Fir Mhanach, and Tuath Ratha, as they were plundering the country as
+far as Fochraobh.</p>
+</div2>
+</div1>
+<div1 n="MCB1209" type="annal">
+<div2 n="MCB1209.0">
+<p>1209</p>
+</div2>
+<div2 n="MCB1209.1">
+<p>A.D. 1209. A hosting by F&iacute;nghin son of Cormac Muighe Thamhnach [Mac Carthaigh] to Caman M&oacute;nadh, and there was a fleet to meet him in U&iacute; R&aacute;thach, and they killed a great number of people and cattle. This F&iacute;nghin was killed by the U&iacute;Shuilleabh&aacute;in at Leac Lacht&aacute;in [in a dispute] concerning division of booty. Gearr Uille's son struck him with an axe.</p>
+</div2>
+<div2 n="MCB1209.2">
+<p>A battle between Cin&eacute;al E&oacute;ghain and Cin&eacute;al Conaill near Fathan Mura, in which Cathbharr &Oacute; Domhnaill, king of Cin&eacute;al Conaill, together with many of the Cin&eacute;al Conaill, was killed.</p>
+</div2>
+<div2 n="MCB1209.3">
+<p>Diarmaid D&uacute;na Droighne&aacute;in son of Mac Carthaigh took the kingship.</p>
+</div2>
+<div2 n="MCB1209.4">
+<p>F&iacute;nghin son of F&iacute;nghin Lice Lacht&aacute;in [Mac Carthaigh] was killed by  the Galls of Cork.</p>
+</div2>
+</div1>
+<div1 n="MCB1210" type="annal">
+<div2 n="MCB1210.0">
+<p>1210</p>
+</div2>
+<div2 n="MCB1210.1">
+<p>A.D. 1210. John, king of England, lord of the Galls of Ireland, Duke of Normandy and Aquitaine, Earl of Anjou came with a great fleet to Waterford. Donnchadh Cairbreach &Oacute; Briain came to him, and he knighted him and gave him Carraig &Oacute; gCoinneall with its lordship, stipulating an annual rent of three score marks, and the liberation of Muircheartach son of Domhnall M&oacute;r &Oacute; Briain. Cathal Croibhdhearg &Oacute; Conchobhair, king of Connacht, came to him with large forces to do him honour. He went from thence to Dublin and banished Walter de Lacy from Ireland.</p>
+</div2>
+<div2 n="MCB1210.2">
+<p>The king went to Midhe from Dublin, and sent his fleet north to D&uacute;n Ogalla, [now] called Carlingford, to meet him. When Hugo de Lacy perceived the king going north, he himself burned the castles of Machaire Conaill and Cuailghne in sight of the king, who had but a short time previously made <pb n="89"/>
+him Earl of Ulster and Oriel, and he fled to Carrickfergus, leaving the nobles of his followers to hold the castle. Dundalk was burned, and he himself went across the sea for fear of the king. When the king of England saw the want of respect he was being shown, he went from Droichead Sruthra to Carlingford, where he made a bridge of his ships across the harbour, and from thence he went to Carrickfergus with great forces on land and with a fleet at sea, and so took the castle.</p>
+</div2>
+<div2 n="MCB1210.3">
+<p>A castle [was built] at Athlone by the followers of the king of England, and a bridge eastwards across the Shannon, and a town at the eastern end of the bridge.</p>
+</div2>
+</div1>
+<div1 n="MCB1211" type="annal">
+<div2 n="MCB1211.0">
+<p>1211</p>
+</div2>
+<div2 n="MCB1211.1">
+<p>A.D. 1211. A castle [was built] at Caoluisce Locha &Eacute;irne by Henry Beck(?) for the king of England; and he himself was killed there by &Oacute; N&eacute;ill and Mac Mathghamhna.</p>
+</div2>
+<div2 n="MCB1211.2">
+<p>Diarmaid Ddna Droighne&aacute;in son of Domhnall M&oacute;r son of Diarmaid Cille Baghuna was captured at Cork by the sheriff,
+ and Donnchadh &Oacute; Mic Thire was killed by them, and Cormac Ciarraigheach was blinded after he had been handed over by the U&iacute; Sh&uacute;illeabh&aacute;in to the sheriff, and Maghnus &Oacute; Caoimh was killed by the same Galls.</p>
+</div2>
+</div1>
+<div1 n="MCB1212" type="annal">
+<div2 n="MCB1212.0">
+<p>1212</p>
+</div2>
+<div2 n="MCB1212.1">
+<p>A.D. 1212. The later Cormac Liath&aacute;nach, son of Cormac Liath&aacute;nach, son of Diarmaid Cille Badhuna [Mac Carthaigh], took the kingship, and he killed Mac na Seathar &Oacute; Floinn.</p>
+</div2>
+<div2 n="MCB1212.2">
+<p>A castle [was built] at Clones by a force of the king of England's men, and they made a foray to Abha T&iacute;re Crithmuiun, and defeat and slaughter [were inflicted] on that force by &Oacute; N&eacute;ill and Mac Mathghamhna.</p>
+</div2>
+</div1>
+<div1 n="MCB1213" type="annal">
+<div2 n="MCB1213.0">
+<p>1213</p>
+</div2>
+<div2 n="MCB1213.1">
+<p>A.D. 1213. Donnchadh na hImirce Timchill son of Cian, son of Donnchadh Donn, son
+of C&uacute; Mara, son of Brodch&uacute;, son of Mathghamhain, from whom the U&iacute; Mhathghamhna are named, died.</p>
+</div2>
+<pb n="91"/>
+<div2 n="MCB1213.2">
+<p>Aodh Garbh &Oacute; hEidirsge&oacute;il was killed by the U&iacute; Chedaga.in and some of his own people in Inis an Ghaithneamha.</p>
+</div2>
+<div2 n="MCB1213.3">
+<p>Thomas son of Maurice FitzGerald, died.</p>
+</div2>
+<div2 n="MCB1213.4">
+<p>&Oacute; N&eacute;ill demolished the castle of &Aacute;th Cruithne and killed the Galls who were in it.</p>
+</div2>
+<div2 n="MCB1213.5">
+<p>Domhnall &Oacute; Maoil Sheachlainn was killed by the Galls of Midhe.</p>
+</div2>
+<div2 n="MCB1213.6">
+<p>Slaughter [inflicted] on the Galls of Midhe by Cormac &Oacute; Maoil Sheachlainn and his kinsman.</p>
+</div2>
+</div1>
+<div1 n="MCB1214" type="annal">
+<div2 n="MCB1214.0">
+<p>1214</p>
+</div2>
+<div2 n="MCB1214.1">
+<p>A.D. 1214. Donnchadh Cairbreach &Oacute; Briain and the sheriff, together with the Galls of Munster and Leinster, came with Cormac Liath&aacute;nach [Mac Carthaigh] to harry Desmond and to obtain supremacy over Diarmaid D&uacute;na Droighne&aacute;in son of Domhnall M&oacute;r, son of Diarmaid Cille Baghuna. A hosting by Diarmaid D&uacute;na Droighne&aacute;in together with the Galls of Cork, and he was twenty nights encamped at Durrus opposite Cormac Liath&aacute;nach, and Cormac was at the north of Mangarta during that time.</p>
+</div2>
+<div2 n="MCB1214.2">
+<p>Diarmaid D&uacute;na Droighne&aacute;in [Mac Carthaigh] treacherously killed the whole family of Domhnall M&oacute;r &Oacute; S&uacute;illeabh&aacute;in, save Dunlaing and Giolla na bhFlann, at R&aacute;ithin na nGaraidhthe in the territory of the Barretts, on the advice of many, if not the greater part, of [the people of] Desmond.</p>
+</div2>
+<div2 n="MCB1214.3">
+<p>A castle was built by Mac Cuidithe in Muinntear Bhaire, and one at D&uacute;n na mB&aacute;rc by Carew, and another at Ard Tuilithe. Another castle [was built] by the son of Thomas [FitzGerald] at D&uacute;n L&oacute;ich, and one at Killorglin. A castle [was built] by Roche at Oirbhealach. A castle by the son of Maurice [FitzGerald] at Magh U Fhlaithimh. A castle by Fitz Stephen in Corca Laoighdhe. A castle by Barrett in the village above Cuan Dor. A castle by Nicholas Buidhe [de Barry] at Teach Mo-Laige. And it was during the war of Diarmaid D&uacute;na Droighne&aacute;in and Cormac Liath&aacute;nach [Mac Carthaigh] that the Galls overran the whole of Munster in every direction, from the Shannon to the sea.</p>
+</div2>
+</div1>
+<pb n="93"/>
+<div1 n="MCB1215" type="annal">
+<div2 n="MCB1215.0">
+<p>1215</p>
+</div2>
+<div2 n="MCB1215.1">
+<p>A.D. 1215. Pope Innocent died.</p>
+</div2>
+</div1>
+<div1 n="MCB1216" type="annal">
+<div2 n="MCB1216.0">
+<p>1216</p>
+</div2>
+<div2 n="MCB1216.1">
+<p>A.D. 1216. The king of England died, and the son of the king of France came to England to take it for himself.</p>
+</div2>
+</div1>
+<div1 n="MCB1217" type="annal">
+<div2 n="MCB1217.0">
+<p>1217</p>
+</div2>
+<div2 n="MCB1217.1">
+<p>A.D. 1217. M&oacute;r daughter of &Oacute; Briain, wife of Cathal Croibhdhearg &Oacute;  Conchobhair, died.</p>
+</div2>
+</div1>
+<div1 n="MCB1218" type="annal">
+<div2 n="MCB1218.0">
+<p>1218</p>
+</div2>
+<div2 n="MCB1218.1">
+<p>A.D. 1218. Diarmaid D&uacute;na Droighne&aacute;in [Mac Carthaigh] took the castle of John Butler.</p>
+</div2>
+</div1>
+<div1 n="MCB1219" type="annal">
+<div2 n="MCB1219.0">
+<p>1219</p>
+</div2>
+<div2 n="MCB1219.1">
+<p>A.D. 1219.</p>
+</div2>
+</div1>
+<div1 n="MCB1220" type="annal">
+<div2 n="MCB1220.0">
+<p>1220</p>
+</div2>
+<div2 n="MCB1220.1">
+<p>A.D. 1220. A hosting by Geoffrey de Mareis to Desmond, and he encamped at &Aacute;th na
+ hUamha, and he destroyed the corn of the country, and he built a castle at Magh R&aacute;tha.</p>
+</div2>
+</div1>
+<div1 n="MCB1221" type="annal">
+<div2 n="MCB1221.0">
+<p>1221</p>
+</div2>
+<div2 n="MCB1221.1">
+<p>A.D. 1221. A great wind this year, which demolished houses and churches and woods, and sank many ships.</p>
+</div2>
+</div1>
+<div1 n="MCB1222" type="annal">
+<div2 n="MCB1222.0">
+<p>1222</p>
+</div2>
+<div2 n="MCB1222.1">
+<p>Anno Domini, 1222.</p>
+</div2>
+</div1>
+<pb n="95"/>
+<div1 n="MCB1223" type="annal">
+<div2 n="MCB1223.0">
+<p>1223</p>
+</div2>
+<div2 n="MCB1223.1">
+<p>A.D. 1223.</p>
+</div2>
+</div1>
+<div1 n="MCB1224" type="annal">
+<div2 n="MCB1224.0">
+<p>1224</p>
+</div2>
+<div2 n="MCB1224.1">
+<p>A.D. 1224. Cathal Croibhdhearg son of Toirdhealbhach son of Ruaidhr&iacute; [&Oacute;
+Conchobhair], king of Connacht, died.</p>
+</div2>
+</div1>
+<div1 n="MCB1225" type="annal">
+<div2 n="MCB1225.0">
+<p>1225</p>
+</div2>
+<div2 n="MCB1225.1">
+<p>A.D. 1225. &Oacute; N&eacute;ill came with Toirdhealbhach son of Ruaidhr&iacute; son of 
+Toirdhealbhach M&oacute;r [&Oacute; Conchobhair] to support him, and he banished Aodh son of Cathal Croibhdhearg into Munster from Connacht. But he took the Galls of Munster with him, when &Oacute; N&eacute;ill had gone, and he banished Toirdhealbhach, taking the kingship of Connacht himself.</p>
+</div2>
+</div1>
+<div1 n="MCB1226" type="annal">
+<div2 n="MCB1226.0">
+<p>1226</p>
+</div2>
+<div2 n="MCB1226.1">
+<p>A.D. 1226. St. Francis and Pope Honorius died.</p>
+</div2>
+</div1>
+<div1 n="MCB1227" type="annal">
+<div2 n="MCB1227.0">
+<p>1227</p>
+</div2>
+<div2 n="MCB1227.1">
+<p>A.D. 1227.</p>
+</div2>
+</div1>
+<div1 n="MCB1228" type="annal">
+<div2 n="MCB1228.0">
+<p>1228</p>
+</div2>
+<div2 n="MCB1228.1">
+<p>A.D. 1228. Aodh son of Cathal Croibhdhearg &Oacute; Conchobhair, king of Connacht, was killed in the house of Geoffrey de Mareis at Buaile M&oacute;r in Leinster, and Geoffrey hanged with wisps the man who had killed him.</p>
+</div2>
+</div1>
+<div1 n="MCB1229" type="annal">
+<div2 n="MCB1229.0">
+<p>1229</p>
+</div2>
+<div2 n="MCB1229.1">
+<p>A.D. 1229. Diarmaid D&uacute;na Droighne&aacute;in son of Domhnall M&oacute;r son of Diarmaid Cille Badhuna [Mac Carthaigh] was killed by a thunderbolt at D&uacute;n Droighne&aacute;in, through the vengeance of God and because of his own misdeeds.</p>
+</div2>
+<div2 n="MCB1229.2">
+<p>Donnchadh &Oacute; hEidirsge&oacute;il, king of Corca Laoighdhe, died.</p>
+</div2>
+</div1>
+<pb n="97"/>
+<div1 n="MCB1230" type="annal">
+<div2 n="MCB1230.0">
+<p>1230</p>
+</div2>
+<div2 n="MCB1230.1">
+<p>A.D. 1230. A hosting by MacWilliam, the nobles of the Galls of Ireland, Donnchadh Cairbreach &Oacute; Briain, and Cormac Mac Carthaigh into Connacht, and they reached Galway, and &Oacute; Flaithbheartaigh gave them battle at &Aacute;th na Gaillmhe. Nevertheless, they made a circuit of all Connacht, banished Aodh son of Ruaidhr&iacute; [&Oacute; Conchobhair], killed Donnchadh Mac Oireachtaigh, and left Feidhlimidh son of Cathal Croibhdhearg in the kingship of Connacht.</p>
+</div2>
+</div1>
+<div1 n="MCB1231" type="annal">
+<div2 n="MCB1231.0">
+<p>1231</p>
+</div2>
+<div2 n="MCB1231.1">
+<p>A.D. 1231. Ascension Thursday and May Day fell on the same day.</p>
+</div2>
+<div2 n="MCB1231.2">
+<p>William de Burgo treacherously captured Feidhlimidh son of Cathal Croibhdhearg.</p>
+</div2>
+<div2 n="MCB1231.3">
+<p>Aodh son of Conchobhar son of Amhlaoibh M&oacute;r &Oacute; Donnchadha died and was buried [by the monks] in the old monastery of the U&iacute; Mhathghamhna in their own habit.</p>
+</div2>
+</div1>
+<div1 n="MCB1232" type="annal">
+<div2 n="MCB1232.0">
+<p>1232</p>
+</div2>
+<div2 n="MCB1232.1">
+<p>A.D. 1232. Domhnall God Cairbreach son of Domhnall M&oacute;r [Mac Carthaigh] came to
+Coill tSealbhaigh at the instigation of Maghnus &Oacute; Cobhthaigh, and killed three sons of &Oacute; Mathghamhna, namely, of Muircheartach son of Donnchadh na hImirce Timchill.</p>
+</div2>
+<div2 n="MCB1232.2">
+<p>Conchobhar son of Aodh son of Ruaidhr&iacute; son of Toirdhealbhach &Oacute; Conchobhair was killed by the Tuatha, together with many others.</p>
+</div2>
+</div1>
+<div1 n="MCB1233" type="annal">
+<div2 n="MCB1233.0">
+<p>1233</p>
+</div2>
+<div2 n="MCB1233.1">
+<p>A.D. 1233. Aodh son of Ruaidhr&iacute; son of Toirdhealbhach &Oacute; Conchobhair was killed by Feidhlimidh son of Cathal Croibhdhearg.</p>
+</div2>
+<pb n="99"/>
+<div2 n="MCB1233.2">
+<p>Tadhg Duibheagha Mac Carthaigh was blinded by Cormac Liath&aacute;nach and Domhnall Mac Carthaigh.</p>
+</div2>
+</div1>
+<div1 n="MCB1234" type="annal">
+<div2 n="MCB1234.0">
+<p>1234</p>
+</div2>
+<div2 n="MCB1234.1">
+<p>A.D. 1234. Iarla an Churraigh was killed in the battle of Kildare.</p>
+</div2>
+<div2 n="MCB1234.2">
+<p>The defeat of Tralee was inflicted by the Galls on the Gaels, in which Diarmaid son of Cormac Liath&aacute;nach [Mac Carthaigh], An Gasg&uacute;ineach &Oacute; hEidirsge&oacute;il, and his brother, Muircheartach, were killed.</p>
+</div2>
+</div1>
+<div1 n="MCB1236" type="annal">
+<div2 n="MCB1236.0">
+<p>1236</p>
+</div2>
+<div2 n="MCB1236.1">
+<p>A.D. 1236. Thomond and Connacht were despoiled by the Justiciar and MacWilliam.</p>
+</div2>
+</div1>
+<div1 n="MCB1237" type="annal">
+<div2 n="MCB1237.0">
+<p>1237</p>
+</div2>
+<div2 n="MCB1237.1">
+<p>A.D. 1237. Diarmaid son of Donnchadh M&oacute;r na hImirce Timchill &Oacute; Mathghamna died this year.</p>
+</div2>
+</div1>
+<div1 n="MCB1241" type="annal">
+<div2 n="MCB1241.0">
+<p>1241</p>
+</div2>
+<div2 n="MCB1241.1">
+<p>A.D. 1241. Muircheartach son of Domhnall M&oacute;r &Oacute; Briain died.</p>
+</div2>
+</div1>
+<div1 n="MCB1242" type="annal">
+<div2 n="MCB1242.0">
+<p>1242</p>
+</div2>
+<div2 n="MCB1242.1">
+<p>A.D. 1242. Donnchadh Cairbreach &Oacute; Briain, high-king of Thomond, and Toirdhealbhach, his son, died.</p>
+</div2>
+</div1>
+<div1 n="MCB1243" type="annal">
+<div2 n="MCB1244.0">
+<p>1243</p>
+</div2>
+<div2 n="MCB1243.1">
+<p>A.D. 1243. Richard de Burgo and Gerald son of Maurice [FitzGerald] died.</p>
+</div2>
+</div1>
+<div1 n="MCB1244" type="annal">
+<div2 n="MCB1244.0">
+<p>1244</p>
+</div2>
+<div2 n="MCB1244.1">
+<p>A.D. 1244. Cormac Liath&aacute;nach Mac Carthaigh died in the habit of the Grey Monks, and Domhnall Ruadh, his son, was killed by John son of Thomas [FitzGerald] after he had been handed over to him by Domhnall Gall, his own brother, at Seannad.</p>
+</div2>
+</div1>
+<pb n="101"/>
+<div1 n="MCB1247" type="annal">
+<div2 n="MCB1247.0">
+<p>1247</p>
+</div2>
+<div2 n="MCB1247.1">
+<p>A.D. 1247. Cormac Fionn son of Domhnall M&oacute;r Mac Carthaigh died in his own encampment at Magh Seanghlaisse, and there was a great earthquake in Ireland, Scotland, and Wales this year.</p>
+</div2>
+</div1>
+<div1 n="MCB1248" type="annal">
+<div2 n="MCB1248.0">
+<p>1248</p>
+</div2>
+<div2 n="MCB1248.1">
+<p>A.D. 1248. F&iacute;nghin son of Diarmaid D&uacute;na Droighne&aacute;in [Mac Carthaigh] put to death Geoffrey son of John <hi rend="ITAL">M&oacute;r</hi> de Cogan.</p>
+</div2>
+</div1>
+<div1 n="MCB1249" type="annal">
+<div2 n="MCB1249.0">
+<p>1249</p>
+</div2>
+<div2 n="MCB1249.1">
+<p>A.D. 1249. F&iacute;nghin son of Diarmaid D&uacute;na Droighne&aacute;in [Mac Carthaigh] was killed, in violation of a peace, at the court of Staunton, at Coill in Luaithtighi by Domhnall God Cairbreach [Mac Carthaigh] and the de Cogans.</p>
+</div2>
+</div1>
+<div1 n="MCB1252" type="annal">
+<div2 n="MCB1252.0">
+<p>1252</p>
+</div2>
+<div2 n="MCB1252.1">
+<p>A.D. 1252. Domhnall God Cairbreach son of Domhnall M&oacute;r son of Diarmaid Cille Badhuna [Mac Carthaigh] was treacherously killed by John son of Thomas FitzGerald at Baile &Iacute; Dhunadhaigh in Roche's house.</p>
+</div2>
+</div1>
+<div1 n="MCB1254" type="annal">
+<div2 n="MCB1254.0">
+<p>1254</p>
+</div2>
+<div2 n="MCB1254.1">
+<p>A.D. 1254. S&eacute;afraidh an Tighe &Oacute; Donnchadha and Sadhbh daughter of &Oacute; Briain, his wife, Domhnall, his kinsman, his three sons, and Donnchadh son of Cathal &Oacute; Donnchadha were killed and burned at Gort Achaidh Ghlais in his own house by F&iacute;nghin son of Domhnall God Cairbreach son of Domhnall M&oacute;r [Mac Carthaigh], after he had been betrayed by the family of An Fiadhuidhe &Oacute; Donnchadha.</p>
+</div2>
+</div1>
+<div1 n="MCB1257" type="annal">
+<div2 n="MCB1257.0">
+<p>1257</p>
+</div2>
+<div2 n="MCB1257.1">
+<p>A.D. 1257. A hosting by the Galls in Thomond, and they killed Mathghamhain son of Domhnall Connachtach &Oacute; Briain, and the [people of] Thomond inflicted great slaughter on the army of the Galls.</p>
+</div2>
+</div1>
+<pb n="103"/>
+<div1 n="MCB1259" type="annal">
+<div2 n="MCB1259.0">
+<p>1259</p>
+</div2>
+<div2 n="MCB1259.1">
+<p>A.D. 1259. F&iacute;nghin Reanna R&oacute;in son of Domhnall God Cairbreach [Mac Carthaigh] and the U&iacute; Dhonnabh&aacute;in killed Mac Craith son of Diarmaid son of Donnchadh na hImirce Timchill [&Oacute; Mathghamhna] in retribution for the slaying of An Crom [&Oacute; Donnabh&aacute;in] at Inis B&eacute;il &Aacute;tha Dos by the U&iacute; Eachach, about a cowherds' brawl.</p>
+</div2>
+<div2 n="MCB1259.2">
+<p>Donnchadh son of Cormac Mac Carthaigh went on a hosting to Ciarraighe Luachra, and he himself was wounded and many of his people were killed in the defeat of M&oacute;in Crad&aacute;in.</p>
+</div2>
+</div1>
+<div1 n="MCB1260" type="annal">
+<div2 n="MCB1260.0">
+<p>1260</p>
+</div2>
+<div2 n="MCB1260.1">
+<p>A.D. 1260. Tadhg son of Conchobhar son of Donnchadh &Oacute; Briain died&mdash;a 
+fortunate event for the Galls.</p>
+</div2>
+</div1>
+<div1 n="MCB1261" type="annal">
+<div2 n="MCB1261.0">
+<p>1261</p>
+</div2>
+<div2 n="MCB1261.1">
+<p>A.D. 1261. Brian Catha an D&uacute;in son of Niall Ruadh son of Aodh [&Oacute; N&eacute;ill] was killed at Downpatrick by the Irish themselves and the Galls of Downpatrick, with slaughter of princes and chieftains of Cin&eacute;al E&oacute;ghain around him, on a Sunday, and his head was taken to London.</p>
+</div2>
+<div2 n="MCB1261.2">
+<p>Clann Ghearailt and a great force of Galls went to Thomond, and Conchobhar na Si&uacute;daine son of Donnchadh Cairbreach [&Oacute; Briain] inflicted the defeat of Coill Bairin on David Prendergast's Galls and on many Galls besides.</p>
+</div2>
+<div2 n="MCB1261.3">
+<p>F&iacute;nghin Reanna R&oacute;in son of Domhnall God Cairbreach [Mac Carthaigh] went to Ciarraighe Luachra and perpetrated burnings and plunderings and slaughters there.</p>
+</div2>
+<div2 n="MCB1261.4">
+<p>E&oacute;ghan &Oacute; Muircheartaigh was killed by the Galls of D&uacute;in na mB&aacute;rc.</p>
+</div2>
+</div1>
+<div1 n="MCB1262" type="annal">
+<div2 n="MCB1262.0">
+<p>1262</p>
+</div2>
+<div2 n="MCB1262.1">
+<p>A.D. 1262. D&uacute;n na mB&aacute;rc, Inis E&oacute;ghan&aacute;in, and the castle of D&uacute;n Uabhair were burned by F&iacute;nghin Reanna R&oacute;in.</p>
+</div2>
+<pb n="105"/>
+<div2 n="MCB1262.2">
+<p>William de Dene, Justiciar of Ireland, Clann Ghearailt, Mac Risdeard, and a very large force of Galls, together with Domhnall Ruadh son of Cormac Fionn Mac Carthaigh and all the Irish he could get, went to Tuath Cinn Mhara. Defeat and slaughter [were inflicted] on them at Callann Gleanna &Oacute; Ruachtaigh, and John son of Thomas FitzGerald, seneschal of Munster, Sir Maurice, his son, and many of the other knights, together with many of the Galls and of the Irish, were killed.</p>
+</div2>
+<div2 n="MCB1262.3">
+<p>The castles of D&uacute;n Mic Thoghmainn, D&uacute;n Uisni, Macroom, Magh Oiligh, D&uacute;n L&oacute;ich, and Killorglin, and many of the castles of U&iacute; Chonaill, were demolished and burned by F&iacute;nghin Reanna R&oacute;in and [the people of] Desmond.</p>
+</div2>
+<div2 n="MCB1262.4">
+<p>A hosting by F&iacute;nghin Mac Carthaigh and [the people of] Desmond to burn Rinn R&oacute;in. Miles de Courcy offered him terms, and when Mac Carthaigh refused these terms, Miles went with his full body of troops to Bearnach Reanna R&oacute;in before the army, and defeated them on the Thursday after Michaelmas, F&iacute;nghin and many of the nobles of Desmond being slain.</p>
+</div2>
+<div2 n="MCB1262.5">
+<p>A Justiciar came from the king of England to Ireland and landed at D&uacute;n na Long in U&iacute; Eachach. He went from there to Limerick from Cormac na Mangartan son of Domhnall God Cairbreach [Mac Carthaigh] and Desmond with very large forces.</p>
+</div2>
+</div1>
+<div1 n="MCB1263" type="annal">
+<div2 n="MCB1263.0">
+<p>1263</p>
+</div2>
+<div2 n="MCB1263.1">
+<p>A.D. 1263. MacWilliam de Burgo, the majority of the Galls of Ireland, and many Irish came to Desmond, and Cormac son of Domhnall God Cairbreach [Mac Carthaigh] was killed by them at Tuair&iacute;n Cormaic.</p>
+</div2>
+</div1>
+<div1 n="MCB1306" type="annal">
+<div2 n="MCB1306.0">
+<p>1306</p>
+</div2>
+<div2 n="MCB1306.1">
+<p>A.D. 1306. Toirdhealbhach son of Tadhg son of Conchobhar na Si&uacute;daine son of Donnchadh Cairbreach &Oacute; Briain, king of Thomond, died and was buried in the church he built for the brothers at Inis Mac nInill.</p>
+</div2>
+<div2 n="MCB1306.2">
+<p>Donnchadh, his son, was proclaimed &Oacute; Briain.</p>
+</div2>
+<div2 n="MCB1306.3">
+<p>Defeat and slaughter [were inflicted] by &Oacute; Maoil Sheachlainn and Mac Eochag&aacute;in on Bermingham and the Galls of Midhe.</p>
+</div2>
+<pb n="107"/>
+<div2 n="MCB1306.4">
+<p>Domhnall &Oacute;g son of Domhnall Ruadh Mac Carthaigh was captured by Domhnall Maol son of Domhnall God Cairbreach [Mac Carthaigh] as he was leaving Cork. He took him with him to Baile &Iacute; Mhoinigh to his own house, and beheaded him after keeping him in irons for some time. That was a great calamity to the Gaels of Ireland.</p>
+</div2>
+</div1>
+<div1 n="MCB1307" type="annal">
+<div2 n="MCB1307.0">
+<p>1307</p>
+</div2>
+<div2 n="MCB1307.1">
+<p>A.D. 1307. Edward, king of England, died on the Nones of July on a hosting to Scotland in the fight between Scotland and England. He was the ablest and bravest of knights, and by him were the most people killed in his time&mdash;although he did much damage to church and lay property&mdash;for by him were slain Llewelyn, king of Wales, and David, his kinsman; and he subdued the Welsh, so that they are still without a king of their own; and great oppression was inflicted by him also on the Scots after their king was banished, and fifty thousand of them killed in one day.</p>
+</div2>
+</div1>
+<div1 n="MCB1308" type="annal">
+<div2 n="MCB1308.0">
+<p>1308</p>
+</div2>
+<div2 n="MCB1308.1">
+<p>A.D. 1308. The castle of Ceall &Iacute;de was burned and levelled by Conchobhar &Oacute; Briain and Cormac son of Feidhlimidh Mac Carthaigh. Defeat and slaughter [were inflicted] by them on the Galls on the same day.</p>
+</div2>
+</div1>
+<div1 n="MCB1309" type="annal">
+<div2 n="MCB1309.0">
+<p>1309</p>
+</div2>
+<div2 n="MCB1309.1">
+<p>A.D. 1309. Conchobhar son of Donnchadh &Oacute; Briain was killed by Clann Oda.</p>
+</div2>
+<div2 n="MCB1309.2">
+<p>Aodh son of E&oacute;ghan &Oacute; Conchobhair, king of Connacht, was killed by Aodh son of Cathal Ruadh &Oacute; Conchobhair.</p>
+</div2>
+<div2 n="MCB1309.3">
+<p>Aodh son of Cathal Ruadh &Oacute; Conchobhair was treacherously killed by his own constable, Mac Uighilin.</p>
+</div2>
+</div1>
+<div1 n="MCB1310" type="annal">
+<div2 n="MCB1310.0">
+<p>1310</p>
+</div2>
+<div2 n="MCB1310.1">
+<p>A.D. 1310. Donnchadh Cartainn son of Cormac Fionn Mac Carthaigh was deposed and his two sons, Domhnall and Tadhg, captured.</p>
+</div2>
+<div2 n="MCB1310.2">
+<p>The castle of D&uacute;n Mic Thoghmainn was demolished by Domhnall Maol son of Domhnall God Cairbreach [Mac Carthaigh] and Diarmaid Tr&aacute;gha L&iacute; son of Do ... Donnchadh.</p>
+</div2>
+</div1>
+<pb n="109"/>
+<div1 n="MCB1311" type="annal">
+<div2 n="MCB1311.0">
+<p>1311</p>
+</div2>
+<div2 n="MCB1311.1">
+<p>A.D. 1311. Donnchadh son of C&uacute; Meadha Mac Con Mara and Aodh Araduach, his kinsman, were killed by the Bloidigh, Clann Mhathghamhna, and Domhnall &Oacute; Gr&aacute;da; and Domhnall &Oacute; Gr&aacute;da was killed the same day by Clann Chuil&eacute;in.</p>
+</div2>
+<div2 n="MCB1311.2">
+<p>A hosting by Donnchadh son of Toirdhealbhach, son of Tadhg, son of Conchobhar na Si&uacute;daine [&Oacute; Briain] and William de Burgo, with the Connachtmen and the Galls of Midhe, to Bun Raite. Sir Richard son of Thomas de Clare, Sir Maurice Rochefort and Diarmaid son of Donnchadh &Oacute; Briain met them. A battle was fought between them, in which William de Burgo was captured, and Sir John Croke, his standard-bearer, was killed. Donnchadh &Oacute; Briain and the rest of the host came away unharmed.</p>
+</div2>
+<div2 n="MCB1311.3">
+<p>Donnchadh son of Toirdhealbhach son of Tadhg son of Conchobhar na Si&uacute;daine [&Oacute; Briain] was treacherously killed by Murchadh son of Mathghamhain son of Domhnall Connachtach &Oacute; Briain in Boireann.</p>
+</div2>
+<div2 n="MCB1311.4">
+<p>Diarmaid son of Donnchadh &Oacute; Briain took the hostages of Thomond, with the help of de Clare and the Galls, and banished Muircheartach son of Toirdhealbhach &Oacute; Briain into Connacht.</p>
+</div2>
+<div2 n="MCB1311.5">
+<p>William de Burgo was released, and he went to Connacht.</p>
+</div2>
+<div2 n="MCB1311.6">
+<p>A hosting again by William [de Burgo] to Bun Raite to support Muircheartach son of Toirdhealbhach [&Oacute; Briain] and to fulfil his knightly promise, and since de Clare did not take his hand on the green [of the castle], he and Muircheartach went off and took the hostages of Thomond. Muirtheartach son of Toirdhealbhach son of Tadhg son of Conchobhar na Si&uacute;daine remained at Cluain R&aacute;mhfhada as king of Thomond, and let the hostages of Thomond off with William de Burgo to Connacht. Diarmaid son of Donnchadh &Oacute; Briain was banished from Thomond.</p>
+</div2>
+<div2 n="MCB1311.7">
+<p>Diarmaid Ruadh son of Domhnall Ruadh Mac Carthaigh captured Sea&aacute;n &Oacute; Donnchadha. Sea&aacute;n escaped from him and went into the Church of St. Mary at Cluain Droichid. Diarmaid took him out of the church, because of an act of treachery which he [Sea&aacute;n] had planned when a soldier in his [Diarmaid's] service, and he killed and despoiled him.</p>
+</div2>
+</div1>
+<div1 n="MCB1315" type="annal">
+<div2 n="MCB1315.0">
+<p>1315</p>
+</div2>
+<div2 n="MCB1315.1">
+<p>A.D. 1315. Four sons of F&iacute;nghin son of Mac R&aacute;ith [&Oacute; Mathghamhna] came with four long ships from B&eacute;rre, together <pb n="111"/>
+with their womenfolk and followers to Inis Cairbre, and made an encampment against Diarmaid M&oacute;r &Oacute; Mathghamhna and Tadhg, his brother, two sons of Donnchadh R&aacute;tha Dre&oacute;ain [&Oacute; Mathghamhna], and they were there most of the summer. F&iacute;nghin son of Diarmaid M&oacute;r. &Oacute; Mathghamhna hauled a boat from Baile Ris&oacute;id strand to D&uacute;n Maghnuis, and the people in that boat went with them to Inis Cairbre. He sent the boat for another load of his people, and he himself remained on the island until his people came to him in relays. He and the sons of F&iacute;nghin encountered each other in the morning. Diarmaid and Conchobhar, two sons of F&iacute;nghin son of Mac R&aacute;ith
+[&Oacute; Mathghamhna], were killed, with slaughter of their people around them. Domhnall and Cian were captured.</p>
+</div2>
+</div1>
+<div1 n="MCB1398" type="annal">
+<div2 n="MCB1398.0">
+<p>[1398]</p>
+</div2>
+<div2 n="MCB1398.1">
+<p>That same Earl with the Galls and Gaels of Munster [went] into the territory of the Butlers, and the Earl was drowned alone in the Suir, in the midst of the army. The army returned home, having suffered no
+loss other than the Earl.</p>
+</div2>
+<div2 n="MCB1398.2">
+<p>A hosting by Cormac son of E&oacute;ghan son of Cormac son of Domhnall &Oacute;g [Mac Carthaigh] and his kinsman, Domhnall, to Corca Dhuibhne and they plundered it beyond the town of Dingle and the country from that on. It is impossible to estimate the amount of booty they carried off.</p>
+</div2>
+<div2 n="MCB1398.3">
+<p>That same Cormac and Domhnall, his kinsman, went to conquer the territory of the Barretts. A great many cattle and people were taken by them there, and they occupied the territory for a year. Cormac na Coilleadh son of Domhnall Riabhach son of Domimall Glas Mac Carthaigh, and Roche of Fir Mhuighe went with a great force to make a foray against them. Domhnall son of E&oacute;ghan [Mac Carthaigh], with a great force from Desmond, overtook them at B&eacute;al &Aacute;tha Cairrge R&uacute;ch&aacute;in. Cormac na Coilleadh was killed by them, and also Donnchadh son of Mac Carthaigh Cluasach, F&iacute;nghin son of Aonghus &Oacute; hEidirsge&oacute;il, and many others. The remainder of the force went to Carraig R&uacute;ch&aacute;in, and the [men of] Desmond were around them until Cormac son of E&oacute;ghan and Domhnall Glas son of Domhnall Riabhach Mac Carthaigh came to them on the following day, and the sons of E&oacute;ghan allowed the host from Cairbre, apart <pb n="113"/>
+from those who were killed on the first day, to go out of the castle unharmed.</p>
+</div2>
+<div2 n="MCB1398.4">
+<p>Tadhg son of Domhnall &Oacute;g son of Cormac Mac Carthaigh, king of Desmond, died at Baile &Iacute; Chaiibre, and was brought to Cork to be buried.</p>
+</div2>
+<div2 n="MCB1398.5">
+<p>Amhlaoibh Bodhar, Mac Amhlaoibh Ealla, was killed at Claonghlais as he was going to the house of James, Earl of Desmond.</p>
+</div2>
+<div2 n="MCB1398.6">
+<p>Conchobhar &Oacute; Conchobhair Ciarraighe was killed at Druim Ard in the house of &Oacute; h&Iacute;omhair's son by Toirdhealbhach son of Tadhg &Oacute; Conchobhair and the household kerns of Earl James.</p>
+</div2>
+</div1>
+<div1 n="MCB1437" type="annal">
+<div2 n="MCB1437.0">
+<p>1437</p>
+</div2>
+<div2 n="MCB1437.1">
+<p>A.D. 1437. Brian Ballach son of Muircheartach; son of &Eacute;nr&iacute;, son of Brian, son of Aodh Buidhe &Oacute; N&eacute;ill was treacherously killed by the Galls of Carrickfergus, when he had gone into the town to drink wine.</p>
+</div2>
+<div2 n="MCB1437.2">
+<p>Brian, &Oacute;g son of Domhnall son of &Eacute;nri &Oacute; N&eacute;ill, king of Oileach, was killed by the Cath&aacute;naigh.</p>
+</div2>
+<div2 n="MCB1437.3">
+<p>E&oacute;ghan son of Niall &Oacute;g son of Niall M&oacute;r and Neachtan son of Toirdhealbhach son of Niall Garbh [&Oacute; Domhnaill] went with the nobles of the province of Ulaidh to Dublin to make submission to the Earl of March, Justiciar representing the king of England in Ireland. The Earl died. These Irishmen were taken captive in the town after the death of the Earl; and much gold and silver and many horses were levied for their ransom.</p>
+</div2>
+<div2 n="MCB1437.4">
+<p>Niall Garbh son of Toirdhealbhach son of Niall Garbh son of Aodh son of Domhnall &Oacute;g [&Oacute; Domhnaill] went with a large force to Fine Gall. He himself. was overtaken away from his army, and captured, and Toirdhealbhach, his son, was slain.</p>
+</div2>
+<div2 n="MCB1437.5">
+<p>&Oacute; Domhnaill was brought oversea to London, and could not be released afterwards.</p>
+</div2>
+<div2 n="MCB1437.6">
+<p>&Eacute;nr&iacute; son of E&oacute;ghan &Oacute; N&eacute;ill had himself proclaimed &Oacute; N&eacute;ill, and deposed his own father, then an old man.</p>
+</div2>
+<div2 n="MCB1437.7">
+<p>&Oacute; N&eacute;ill, &Eacute;nr&iacute; son of E&oacute;ghan, sent Mac Con Midhe to fetch Brian &Oacute;g &Oacute; N&eacute;ill, and cut off Brian &Oacute;g's foot and hand in violation of Mac Con Midhe.</p>
+</div2>
+<div2 n="MCB1437.8">
+<p>E&oacute;ghan son of Niall &Oacute;g [&Oacute; N&eacute;ill], king of Cin&eacute;al E&oacute;ghain for a time, died.</p>
+</div2>
+<pb n="115"/>
+<div2 n="MCB1437.9">
+<p>Neachtan son of Toirdhealbhach son of Niall Garbh son of Aodh son of Domhnall &Oacute;g [&Oacute; Domhnaill] was killed in a camp attack by Domhnall son of Niall Garbh &Oacute; Domhnaill, and Aodh Ruadh, Conn, and E&oacute;ghan, his three brothers: they were sons of Neachtan's [father's] brother.</p>
+</div2>
+<div2 n="MCB1437.10">
+<p>&Eacute;nr&iacute; son of E&oacute;ghan son of Niall &Oacute;g &Oacute; N&eacute;ill came to Cin&eacute;al E&oacute;ghain with the sons of Neachtan son of Toirdhealbhach son of Niall Garbh [&Oacute; Domhnaill]. Domhnall son of Niall Garbh son of Toirdhealbhach son of Niall Garbh met that force with a small body of horsemen and was killed by them after displaying exceptional valour.</p>
+</div2>
+<div2 n="MCB1437.11">
+<p>Conn son of Niall Garbh &Oacute; Domhnaill went hunting with a small body of horsemen around the border of Gleanna na Finne. &Eacute;igneach&aacute;n son of Neachtan son of Toirdhealbhach son of Niall Garbh and his kinsmen attacked Conn, and he was killed after displaying great valour.</p>
+</div2>
+<div2 n="MCB1437.12">
+<p>Aodh Buidhe son of Brian Ballach son of Muircheartach son of &Eacute;nr&iacute; son of Brian son of Aodh Buidhe [&Oacute; N&eacute;ill] went on a hosting against Mac Aonghusa, and he was wounded on that hosting, and died on reaching home.</p>
+</div2>
+<div2 n="MCB1437.13">
+<p>Mac Uighil&iacute;n and his son, Teab&oacute;id, banished Clann Aodha Buidhe, and came and encamped in the middle of their territory. Conn son of Aodh Buidhe son of Brian Ballach [&Oacute; N&eacute;ill] went close to the encampment with a troop of horsemen, and the host moved out against him. He turned on them, and Teab&oacute;id Mac Uighil&iacute;n was killed, but he himself came away safe.</p>
+</div2>
+<div2 n="MCB1437.14">
+<p>A defeat [inflicted] by Conn son of Aodh Buidhe son of Brian Ballach [&Oacute; N&eacute;ill] on Muircheartach Ruadh son of Brian Ballach and Robert Savage, and Muircheartach Ruadh son of Brian Ballach was captured.</p>
+</div2>
+</div1>
+</div0>
+</body>
+</text>
+</TEI.2>

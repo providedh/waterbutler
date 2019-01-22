@@ -1,0 +1,58 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Rota 1, Księga Ziemska 1, Karta 14v, Pyzdry</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName>ROThA</orgName>
+                </publisher>
+                <date when="2018-12-17"/>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title>Rota 1, Księga Ziemska 1, Karta 14v, Pyzdry</title>
+                        <author role="author">
+                            <persName sameAs="Per.156">PISARZ 1</persName>
+                        </author>
+                        <textLang mainLang="lat-med"/>
+                        <textLang mainLang="pol-old" otherLangs="pol"/>
+                        <imprint>
+                            <pubPlace>Pyzdry</pubPlace>
+                            <date when="1392"/>
+                            <biblScope unit="issue">1</biblScope>
+                            <biblScope unit="volume">PyZ1</biblScope>
+                            <biblScope unit="page" from="14v" to="14v"/>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>ROThA</repository>
+                        <idno>Py.1</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc status="approved">
+            <change when-iso="2018-12-17T14:12:38"/>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <pb n="1" facs="Py.1/1_1392_14v_PyZ1_1.tif"/>
+            <div type="original">
+                <p xml:lang="lat-med">Sandiuogius Mocronoski recepit ad dominum Vincencium Nakelski:</p>
+                <note xml:id="l1">L. 235.</note>
+            </div>
+            <div type="transliteration">
+                <p xml:lang="pol-old">poweczſzczi o gwalt a opoweſzcczi </p>
+            </div>
+            <div type="transcription">
+                <p xml:lang="pol-mod">powieści o gwałt a opowieści.</p>
+            </div>
+        </body>
+    </text>
+</TEI>

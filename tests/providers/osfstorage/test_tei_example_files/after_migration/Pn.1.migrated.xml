@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Rota 1, Księga Ziemska 1, Poznań</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName>ROThA</orgName>	
+            </publisher>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct> 
+               <monogr>		
+                  <title>Rota 1, Księga Ziemska 1, Poznań</title>
+                  <author role="author">
+                     <persName sameAs="Per.27">PISARZ 1</persName>
+                  </author>
+                  <textLang mainLang="lat-med"/>
+                  <textLang mainLang="pol-old" otherLangs="pol"/>
+                  <imprint>
+                     <date when="1386"/>
+                     <pubPlace>Poznań</pubPlace>
+                     <biblScope unit="issue">1</biblScope>
+                     <biblScope unit="volume">PoZ1</biblScope>
+                     <biblScope unit="page" from="@pageNoBegin" to="@pageNoEnd"/>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <msDesc>
+               <msIdentifier>
+                  <repository>ROThA</repository>
+                  <idno>Pn.1</idno>
+               </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="original">
+            <p xml:lang="lat-med">Sequitur rota ad testimonium:</p>
+         </div>
+         <div type="transliteration">
+            <p xml:lang="pol-old">Jacoſm przitem bil gdze Sandziwo<unclear>y</unclear><ref target="#f1">¹</ref> <lb/> vmouil ſyeſſztem yſe mal vpominacz p<unclear>..</unclear>kego<ref target="#f2">²</ref> o ten dlug gdze bi go nevipomi<unclear>nal</unclear><ref target="#f1">¹</ref> mu mal dacz <del>ſwich cobil</del> czſo lepſzi zrze<unclear>biec</unclear><ref target="#f1">¹</ref></p>
+            <note xml:id="f1">L. 26: Sandzẏwoy, neupomi<unclear>nal</unclear>, zrze[bca].</note>
+            <note xml:id="f2">Karta uszkodzona.</note>
+         </div>
+         <div type="transcription">
+            <p xml:lang="pol-mod">Jakośḿ przy tem był, gdzie Sędziwoj | umowił sie s tem, iże miał upominać P..kiego o ten dług, gdzie by go nie wypominał | mu miał dać  cso lepszy źrzebiec.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

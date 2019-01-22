@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+    </teiHeader>
+    <text>
+        <table rows="3" cols="7">
+            <row role="label">
+                <cell>IDENT No</cell>
+                <cell>Name</cell>
+                <cell>Standard</cell>
+                <cell>County</cell>
+                <cell>Occupation</cell>
+                <cell>Office</cell>
+                <cell>ID Num</cell>
+            </row>
+            <row>
+                <cell>1</cell>
+                <cell>missing</cell>
+                <cell>missing</cell>
+                <cell>missing</cell>
+                <cell>missing</cell>
+                <cell></cell>
+                <cell>1</cell>
+            </row>
+            <row>
+                <cell>2</cell>
+                <cell>Ball?, Nicholas</cell>
+                <cell>Ball, Nicholas</cell>
+                <cell>Dublin</cell>
+                <cell></cell>
+                <cell>civic: alderman?</cell>
+                <cell>2</cell>
+            </row>
+            <row>
+                <cell>3</cell>
+                <cell>Young, Gerrald</cell>
+                <cell>Young, Gerald</cell>
+                <cell>Dublin</cell>
+                <cell></cell>
+                <cell>civic: alderman</cell>
+                <cell>3</cell>
+            </row>
+        </table>
+    </text>
+</TEI>

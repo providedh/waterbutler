@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="Windows-1250" standalone="yes"?>
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ns2="http://exist.sourceforge.net/NS/exist">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title>zażółć gęślą jaźń</tei:title>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:publisher>
+                    <tei:orgName>zażółć gęślą jaźń</tei:orgName>
+                </tei:publisher>
+                <tei:date when="2018-12-17"/>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:biblStruct>
+                    <tei:monogr>
+                        <tei:title>zażółć gęślą jaźń</tei:title>
+                        <tei:author role="author">
+                            <tei:persName sameAs="Per.156">zażółć gęślą jaźń</tei:persName>
+                        </tei:author>
+                        <tei:textLang mainLang="lat-med"/>
+                        <tei:textLang mainLang="pol-old" otherLangs="pol"/>
+                        <tei:imprint>
+                            <tei:pubPlace>zażółć gęślą jaźń</tei:pubPlace>
+                            <tei:date when="1392"/>
+                            <tei:biblScope unit="issue">zażółć gęślą jaźń</tei:biblScope>
+                            <tei:biblScope unit="volume">zażółć gęślą jaźń</tei:biblScope>
+                            <tei:biblScope unit="page" from="14v" to="14v"/>
+                        </tei:imprint>
+                    </tei:monogr>
+                </tei:biblStruct>
+                <tei:msDesc>
+                    <tei:msIdentifier>
+                        <tei:repository>zażółć gęślą jaźń</tei:repository>
+                        <tei:idno>zażółć gęślą jaźń</tei:idno>
+                    </tei:msIdentifier>
+                </tei:msDesc>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+        <tei:revisionDesc status="approved">
+            <tei:change when-iso="2018-12-17T14:12:38"/>
+        </tei:revisionDesc>
+    </tei:teiHeader>
+    <tei:text>
+        <tei:body>
+            <tei:pb n="1" facs="Py.1/1_1392_14v_PyZ1_1.tif"/>
+            <tei:div type="original">
+                <tei:p xml:lang="lat-med">zażółć gęślą jaźń</tei:p>
+                <tei:note xml:id="l1">zażółć gęślą jaźń</tei:note>
+            </tei:div>
+            <tei:div type="transliteration">
+                <tei:p xml:lang="pol-old">zażółć gęślą jaźń</tei:p>
+            </tei:div>
+            <tei:div type="transcription">
+                <tei:p xml:lang="pol-mod">zażółć gęślą jaźń</tei:p>
+            </tei:div>
+        </tei:body>
+    </tei:text>
+</tei:TEI>

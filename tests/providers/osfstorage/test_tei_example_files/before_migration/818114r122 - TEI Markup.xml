@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?oxygen RNGSchema="1641-depositions.rng" type="xml"?>
+<!--Copyright of the Board of Trinity College Dublin-->
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>Deposition of <persName>
+						<forename>Nathaniell</forename>
+						<surname>Hewett</surname>
+					</persName></title>
+			</titleStmt>
+			<editionStmt>
+				<edition>Transcribed Version of Deposition <date when="2008-05-14">May 14,
+						2008</date>
+				</edition>
+				<respStmt>
+					<resp>Transcribed</resp>
+					<xi:include href="responsiblePeople.xml" xpointer="RP2"/>
+				</respStmt>
+				<respStmt>
+					<resp>Reviewed</resp>
+					<xi:include href="responsiblePeople.xml" xpointer="RP4"/>
+				</respStmt>
+			</editionStmt>
+			<extent>1088 Words</extent>
+			<publicationStmt>
+				<publisher>Trinity College Dublin</publisher>
+				<pubPlace>Dublin, Ireland</pubPlace>
+				<date when="2008-05-14">May 14, 2008</date>
+			</publicationStmt>
+			<notesStmt>
+				<note>Comments regarding deposition added by Transcriber.</note>
+			</notesStmt>
+			<sourceDesc>
+				<!-- xinclude the entire msDesc (@xml:id="ms818")-->
+				<xi:include href="msDesc.xml" xpointer="ms818"/>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<charDecl>
+				<xi:include href="charDecl.xml" xpointer="sigMark"/>
+				<xi:include href="charDecl.xml" xpointer="hand"/>
+			</charDecl>
+			<xi:include href="projectDesc.xml" xpointer="id1641-projectDesc"/>
+			<xi:include href="editorialDecl.xml" xpointer="id1641-editorialDecl"/>
+		</encodingDesc>
+		<profileDesc>
+			<creation>
+				<date when="1642-10-27"/>
+				<placeName>
+					<settlement type="city">Dublin</settlement>
+					<country>Ireland</country>
+				</placeName>
+			</creation>
+			<!-- Points to keywords in keywords.xml file -->
+			<textClass>
+				<keywords scheme="1641">
+					<list type="deposition_type">
+						<xi:include href="keywords.xml" xpointer="dt1"/>
+					</list>
+				</keywords>
+				<keywords scheme="1641">
+					<list type="nature_of_deposition">
+						<xi:include href="keywords.xml" xpointer="nod1"/>
+						<xi:include href="keywords.xml" xpointer="nod2"/>
+						<xi:include href="keywords.xml" xpointer="nod4"/>
+					</list>
+				</keywords>
+			</textClass>
+			<langUsage>
+				<language ident="en" usage="100"/>
+			</langUsage>
+			<xi:include href="textDesc.xml" xpointer="id1641-textDesc"/>
+			<particDesc>
+				<listPerson>
+					<person sex="1" xml:id="_818114r122-1">
+						<persName>
+							<roleName type="Deponent"/>
+							<forename>Nathaniell</forename>
+							<surname>Hewett</surname>
+						</persName>
+						<residence>
+							<placeName type="Placename">Castlebeamount</placeName>
+							<region type="County">wexford</region>
+						</residence>
+						<occupation>Esquire</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-2">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Lysaghe</forename>
+							<surname type="Patronym">Mc Morroghe</surname>
+							<surname>ô Brian</surname>
+						</persName>
+						<residence>
+							<placeName type="Placename">Turnerstowne</placeName>
+						</residence>
+						<occupation>gentleman</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-3">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Brian</forename>
+							<surname>Mc Mahone</surname>
+						</persName>
+						<residence>
+							<region type="County">Countie of Monoghan</region>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-4">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>John</forename>
+							<surname>Grace</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">
+								<add place="interlinear">Cowrstowne</add>
+							</placeName>
+						</residence>
+						<occupation>
+							<add place="interlinear">Esquire</add>
+						</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-5">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Edmund</forename>
+							<surname>Grace</surname>
+						</persName>
+						<residence>
+							<placeName type="town">Tullaghe</placeName>
+							<region type="County">County of Catherlaghe</region>
+						</residence>
+						<occupation>gentleman</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-6">
+						<persName>
+							<roleName type="Rebel"/>
+							<addName type="Title">Sir</addName>
+							<forename>Morgan</forename>
+							<surname>Cavenaghe</surname>
+						</persName>
+						<residence>
+							<region type="County">Countie of Catherlaghe</region>
+						</residence>
+						<occupation>Knighte</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-7">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Conn</forename>
+							<surname>Conner</surname>
+						</persName>
+						<residence>
+							<placeName type="city">Cittie <del>in the County</del> of
+								Dublin</placeName>
+						</residence>
+						<occupation>gentleman</occupation>
+						<event>
+							<p>(whoe is alreadie hanged for his Rebellion)</p>
+						</event>
+					</person>
+					<person sex="1" xml:id="_818114r122-8">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Leonard</forename>
+							<surname>Synnott</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Ballilea</placeName>
+							<region type="County">Countie of wexford</region>
+						</residence>
+						<occupation>gent</occupation>
+					</person>
+					<person sex="0" xml:id="_818114r122-9">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Beverley</forename>
+							<surname>Britton</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Balleneparke</placeName>
+							<region type="County">Countie of wexford</region>
+						</residence>
+						<occupation>Esquire</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-10">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>John</forename>
+							<surname>English</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Enescorfye</placeName>
+							<region type="County">County of wexford</region>
+						</residence>
+						<occupation>yeoman</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-11">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Robert</forename>
+							<surname>Cleere</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Castlebeamont</placeName>
+						</residence>
+						<occupation><add place="interlinear">late</add> servant</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-12">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Peirce</forename>
+							<surname>Butler</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Clonkeere</placeName>
+						</residence>
+						<occupation>
+							<del>knight</del>
+							<add place="interlinear">Esquire</add>
+						</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-13">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Dudley</forename>
+							<surname>Coakley</surname>
+						</persName>
+						<residence>
+							<placeName type="town">Enescorphy</placeName>
+							<region type="County">Countie of wexford</region>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-14">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Walter</forename>
+							<surname>Lacie</surname>
+						</persName>
+						<residence>
+							<placeName type="town">Enniscorfy</placeName>
+						</residence>
+						<occupation>gent</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-15">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Edward</forename>
+							<surname>Maisterson</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">ffernes</placeName>
+						</residence>
+						<occupation>gent</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-16">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Anthony</forename>
+							<surname>Cokeley</surname>
+						</persName>
+						<occupation>gent</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-17">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Oliver</forename>
+							<surname>Maisterson</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Clahaman</placeName>
+						</residence>
+						<occupation>gent</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-18">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Morrice</forename>
+							<surname>Cavanagh</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Rahen</placeName>
+						</residence>
+						<occupation>gentleman</occupation>
+						<occupation>Capteine of Rebells</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-19">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Humfrey</forename>
+							<surname>Cavenaghe</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Corkillimuck</placeName>
+						</residence>
+						<occupation> another of their Captaines</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-20">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Hugh</forename>
+							<addName type="generational">oge</addName>
+							<surname>ô Brian</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Tinnbrick</placeName>
+						</residence>
+						<occupation> another of their Captains</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-21">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Garrott</forename>
+							<surname type="Patronym">mc Teige</surname>
+							<surname>Brian</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Tombrick</placeName>
+						</residence>
+						<occupation> another of their Captains</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-22">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Peirce</forename>
+							<surname>Synnott</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Ballicorne</placeName>
+						</residence>
+						<occupation>gentleman</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-23">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>walter</forename>
+							<surname>Roch</surname>
+						</persName>
+						<residence> of the same </residence>
+						<occupation>gentleman</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-24">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Edward</forename>
+							<surname>Synnott</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">the Toome</placeName>
+						</residence>
+						<occupation> another Captaine</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-25">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Nicholas</forename>
+							<surname>Codd</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Cloghamon</placeName>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-26">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Edward</forename>
+							<surname>Maisterson</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Burishamon</placeName>
+						</residence>
+						<occupation>gent</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-27">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Michael</forename>
+							<surname>Maisterson</surname>
+						</persName>
+						<residence> of the same</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-28">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Peirs</forename>
+							<surname>Synnott</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Cloghamon</placeName>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-29">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Andrew</forename>
+							<surname>Quin</surname>
+						</persName>
+					</person>
+					<person sex="1" xml:id="_818114r122-30">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>John</forename>
+							<surname>O Quigly</surname>
+						</persName>
+					</person>
+					<person sex="1" xml:id="_818114r122-31">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Tho</forename>
+							<surname>Brooks</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Ballyneparke</placeName>
+						</residence>
+						<occupation>gent</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-32">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Nicholas</forename>
+							<surname>Maisterson</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">ffearnes</placeName>
+						</residence>
+						<occupation>gent</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-33">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Patrick</forename>
+							<surname>Einglish</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Cloghamon</placeName>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-34">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>william</forename>
+							<surname>mc Thomas</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Ballyboy</placeName>
+						</residence>
+						<occupation>yeoman</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-35">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Richard</forename>
+							<surname>Knowles</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Castlebeamount</placeName>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-36">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>John</forename>
+							<surname>O Knock</surname>
+						</persName>
+						<residence> of the same</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-37">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>william</forename>
+							<surname>Talbott</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Tomdufte</placeName>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-38">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Thomas</forename>
+							<surname>Codd</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Garrylough</placeName>
+						</residence>
+						<occupation>gent</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-39">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Arthur</forename>
+							<surname>Synnott</surname>
+						</persName>
+						<occupation>gent</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-40">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Georg</forename>
+							<surname>O ffarrall</surname>
+						</persName>
+						<residence>
+							<placeName type="town">Eniscorthie</placeName>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-41">
+						<persName>
+							<roleName type="Rebel"/>
+							<surname>ffarrall</surname>
+						</persName>
+					</person>
+					<person sex="1" xml:id="_818114r122-42">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Nicholas</forename>
+							<surname>Tracie</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Cloghamon</placeName>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-43">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Symon</forename>
+							<surname>Brazill</surname>
+						</persName>
+						<residence> of the same</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-44">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Tho</forename>
+							<surname>Knowles</surname>
+						</persName>
+						<residence> of the same</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-45">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Thomas</forename>
+							<surname>Maisterson</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Tomduffe</placeName>
+						</residence>
+						<occupation>gent</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-46">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>michael</forename>
+							<surname>Peppard</surname>
+						</persName>
+						<occupation>gent</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-47">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Murtagh</forename>
+							<surname>O Neale</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Ballyneparke</placeName>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-48">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Cahir</forename>
+							<surname>Cavanagh</surname>
+						</persName>
+					</person>
+					<person sex="1" xml:id="_818114r122-49">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Terlagh</forename>
+							<surname>Cavanagh</surname>
+						</persName>
+					</person>
+					<person sex="1" xml:id="_818114r122-50">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Edmund</forename>
+							<surname>Duffe</surname>
+						</persName>
+					</person>
+					<person sex="1" xml:id="_818114r122-51">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>John</forename>
+							<surname>mc william</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Ballycarne</placeName>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-52">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Owin</forename>
+							<surname>mc william</surname>
+						</persName>
+					</person>
+					<person sex="1" xml:id="_818114r122-53">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Patrick</forename>
+							<surname>mc Murtagh</surname>
+						</persName>
+					</person>
+					<person sex="1" xml:id="_818114r122-54">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>william</forename>
+							<surname>Keating</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Ballingele</placeName>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-55">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>John</forename>
+							<surname>Duffe</surname>
+						</persName>
+					</person>
+					<person sex="1" xml:id="_818114r122-56">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Redmond</forename>
+							<surname>mc Dermott</surname>
+						</persName>
+						<residence>
+							<placeName type="townland">land of Borishamon</placeName>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-57">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Callogh</forename>
+							<surname>mc william</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">the Iron Mills</placeName>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-58">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Garrott</forename>
+							<surname>mc Coll</surname>
+						</persName>
+					</person>
+					<person sex="1" xml:id="_818114r122-59">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Hugh</forename>
+							<surname type="Patronym">mc Eballogh</surname>
+							<surname>O Bryen</surname>
+						</persName>
+					</person>
+					<person sex="1" xml:id="_818114r122-60">
+						<persName>
+							<roleName type="Rebel"/>
+							<surname>O Bryen</surname>
+						</persName>
+					</person>
+					<person sex="1" xml:id="_818114r122-61">
+						<persName>
+							<roleName type="Rebel"/>
+						</persName>
+						<occupation>Collinall</occupation>
+						<persName>
+							<forename>Luke</forename>
+							<surname>Byrne</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Killyvane</placeName>
+							<region type="County">Wicklow</region>
+						</residence>
+					</person>
+					<person sex="1" xml:id="_818114r122-62">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Jasper</forename>
+							<surname>Boland</surname>
+						</persName>
+						<residence>
+							<region type="County">wexford</region>
+						</residence>
+						<occupation>Merchant</occupation>
+					</person>
+					<person sex="1" xml:id="_818114r122-63">
+						<persName>
+							<roleName type="Rebel"/>
+							<forename>Murrogh</forename>
+							<surname>ô Rowly</surname>
+						</persName>
+						<residence>
+							<placeName type="placename">Ballyneparke</placeName>
+						</residence>
+					</person>
+					<relationGrp type="personal">
+						<relation name="sibling" mutual="_818114r122-16 _818114r122-13"/>
+					</relationGrp>
+					<relationGrp type="personal">
+						<relation name="sibling" mutual="_818114r122-26 _818114r122-27"/>
+					</relationGrp>
+					<relationGrp type="personal">
+						<relation name="parent" active="_818114r122-40" passive="_818114r122-41"/>
+					</relationGrp>
+					<relationGrp type="personal">
+						<relation name="parent" active="_818114r122-57" passive="_818114r122-58"/>
+					</relationGrp>
+				</listPerson>
+			</particDesc>
+			<settingDesc>
+				<p>
+					<listPlace>
+						<place xml:id="_818114r122-1-1">
+							<placeName type="Placename">Castlebeamond</placeName>
+						</place>
+						<place xml:id="_818114r122-64">
+							<region type="County">wexford</region>
+						</place>
+						<place xml:id="_818114r122-65">
+							<region type="County">County of wexford</region>
+						</place>
+						<place xml:id="_818114r122-66">
+							<country>Realme of Ireland</country>
+						</place>
+						<place xml:id="_818144r122-67">
+							<p>neare therevnto adioyning</p>
+						</place>
+					</listPlace>
+				</p>
+			</settingDesc>
+		</profileDesc>
+		<revisionDesc>
+			<change when="2008-06-20T17:21:56" who="responsiblePeople.xml#RP2">Markup
+				Edited</change>
+		</revisionDesc>
+	</teiHeader>
+	<!-- @corresp on <text> indicates that this transcription corresponds with the msItem identified in the msDesc file with this id. -->
+	<text corresp="msDesc.xml#id818114r122">
+		<body>
+			<div type="deposition">
+				<pb n="114r" pagenum="942"/>
+				<p> Nathaniell HewettLate of Castlebeamount in the county of wexford Esquire sworne
+					and examined deposeth and sayth That since the begining of the present Rebellion
+					and by meanes thereof vizt on or about the <del>first</del><add
+						place="interlinear">xvth</add> day of November now last past 1641 Hee this
+					deponent perceiveing the Rebells to wax very strong &amp; doe many owtrages,
+					&amp; fearing the danger of himself his wiffe &amp; children: &amp;
+					intending to doe the best hee could to saue his goodes: Did therefore committ
+					&amp; deliuer the most part thereof vnto vnto one Lysaghe Mc Morroghe ô
+					Brianof Turnerstowne in the said Countie gentleman to be by him kept in saffetie
+					&amp; to be restored And then this deponent with his wife <del>one</del>
+					<add place="interlinear">2</add> frends and a foot boy Went from his howse at
+					Castlebeamond aforesaid to wexford &amp; left behynd them a Nurse &amp;
+					2 very yonge Children: whom the said Lysaghe mc Morroghe Brian promissed to
+					keepe: But quickly after <note type="marginalia">A</note> the said lysaghe did
+					not only deny to releeve <del>y</del> this deponent <del>with</del> with
+					anything or to send him <del>or</del> or part with any of his goodes but turned
+					the Nurse &amp; children out a dores &amp; would not giue them any
+					succour at all, And then the said Lysagh Mc Moroghe ô Brian seized on all this
+					deponents said goods soe left with him and tooke them to himself &amp; wente
+					into Rebellion And further saith that all this deponents <add
+						place="interlinear">said</add> goods consisting of Cattle corne
+					howsholdgoods <del>sw</del> horses Swyne Powltry <del>and</del> provision
+					&amp; other things necessary for howsekeepeing being worth one thowsand
+					Powndes the Least, were <del>by t</del> taken away from him vizt the most part
+					thereof by the said Lysagh Mc Morroghe ô Brian , and the rest by other Rebells
+					within the County of wexford And further sajth That hee this deponent, by meanes
+					of the present Rebellion is deprived robbed and hath lost the proffitt and
+					benefite of his office and place of Clarke of the Markett which cost him the
+					sume of Eight hundreth Pownds and now 
+				<pb n="114v" pagenum="943"/> it is never
+					like to bee worth any thing againe, and the benefite of a lease which he had for
+					31 yeres at Castlebeamount which was clerely worth ffifty <del>worth</del>
+					Powndes per annum <del>which</del> &amp; now worth nothing but his interest
+					therein when the Rebellion began was worth CCCl li. And this deponent <add
+						place="interlinear">by meanes of the Rebellion</add> is deprived of
+					&amp; feareth he shall Loose seuerall debts and sumes of money duly oweing
+					vnto him by divers persons within the Realme of Ireland : Many of which are
+					absolute Rebells and the rest are soe Robbed &amp; dispoyled by the Rebells
+					that they are not able to make satisfaccion amounting in all to the some of Nyne
+					hundreth Nynetie seven Powndes ster: Soe that the deponents present losses by
+					meanes of the present Rebellion doe in all amount to the sume of Three thowsand
+					one hundreth ffortie seven powndes sterlinge And further saith that the parties
+					that stand soe indebted vnto him this deponent and which doe carry armes with
+					for &amp; amongst the Rebells against the Kinges Maiesty &amp; the
+					lojall subiects are theis that follow vizt Brian Mc Mahone of<space quantity="2"
+						unit="chars"/>in the <note type="marginalia">A</note> Countie of Monoghan
+					John Grace of <del>Cowrestoune</del>
+					<add place="interlinear">Cowrstowne</add>
+					<add place="interlinear">Esquire</add> and Edmund Grace of Tullaghe in the
+					County of Catherlaghe gentleman Sir Morgan Cavenaghe of<space unit="chars"
+						quantity="1"/> in the Countie of Catherlaghe Knighte Conn Conner <add
+						place="interlinear">late</add> of the Cittie <del>in the County</del> of
+					Dublin gentleman (whoe is alreadie hanged for his Rebellion) . Leonard Synnott
+					of Ballilea – in the Countie of wexford gent Beverley Britton<note
+						type="marginalia">B</note> of Balleneparke in the Countie of wexford Esquire
+					John English<del>
+						<gap reason="illegible"/>
+					</del> of Enescorfye in the County of wexford yeoman And further sajth that the
+					other parties Rebells that Robbed this deponent of part of his goodes are theis
+					that follow vizt the said Leonard Synnott Robert Cleere of Castlebeamont <note
+						type="relationship">aforesaid this deponents</note>
+					<add place="interlinear">late</add> servant , and others that he cannot name And
+					further sayth That theis parties hereafter mencioned are alsoe actors in the
+					present Rebellion against the Kings Maiesty &amp; his lojall subiects
+						<del>are</del> vizt Peirce Butler<note type="marginalia">C</note> of
+					Clonkeere <del>knight</del>
+					<add place="interlinear">Esquire</add> Dudley Coakley of<space unit="chars"
+						quantity="1"/> nere Enescorphy in the Countie of wexford Walter Lacie of
+					Enniscorfy gent 
+				<pb n="115r" pagenum="944"/> Edward Maisterson offfernes gent Anthony Cokeley gent 
+				    <note type="marginalia">A.</note> brother to
+					the said dudley Cokeley Oliver Maisterson of Clahaman gent Morrice Cavanagh of
+					Rahen gentleman Capteine of Rebells Humfrey Cavenaghe of Corkillimuck another of
+					their Captaines Hugh oge ô Brian of Tinnbrick another of their Captains Garrott
+					mc Teige Brian of<space quantity="1" unit="chars"/> nere Tombrick another of
+					their Captains Peirce Synnott of Ballicorne gentleman walter Roch of the same
+					gentleman <note type="marginalia">B.</note> Edward Synnott of the Toome another
+					Captaine Nicholas Codd of Cloghamon , Edward Maisterson of Burishamon gent
+					Michael Maisterson of the same his brother, Peirs Synnott of Cloghamon Andrew
+					Quin &amp; John O Quigly of the same; Tho Brooks of Ballyneparke gent ,
+					Nicholas Maisterson of ffearnes gent Patrick Einglish of Cloghamon; william mc
+						<note type="marginalia">C</note> Thomas of Ballyboy yeoman Richard Knowles
+					of Castlebeamount &amp; John O Knock of the same william Talbott of Tomdufte
+					Thomas Codd of Garrylough gent Arthur Synnott gent neare therevnto adioyning
+						<del>with a great maney more</del> Georg O ffarrall of Eniscorthie &amp;
+					ffarrall his sonne of the same , Nicholas Tracie of Cloghamon Symon <note
+						type="marginalia">D</note> Brazill of the same Tho Knowles of the same ,
+					Thomas Maisterson of Tomduffe gent michael Peppard of the same gent Murtagh O
+					Neale of Ballyneparke <del>ge</del> Cahir Cavanagh &amp; Terlagh Cavanagh of
+					the same &amp; Edmund Duffe of the same John mc william of Ballycarne Owin
+					mc william of the same &amp; Patrick mc Murtagh<del>&amp; will</del> of
+					the same; william Keating of Ballingele <note type="marginalia">E</note> John
+					Duffe late of the same Redmond mc Dermottwho lately lived the land of Borishamon
+						with<del>in</del> Callogh mc william of the Iron Mills &amp; Garrott mc
+					Coll his sonne dwelling neare vnto him Hugh mc Eballogh O Bryendwelling also
+					neare therevnto &amp;<space unit="chars" quantity="1"/> O Bryen his younger
+					brother: Collinall Luke Byrne of Killyvane in Com <del>w<unclear
+							reason="illegible"> </unclear></del> wickloe Jasper Boland of wexford
+					Merchant <note type="marginalia">ff.</note> Murrogh ô Rowly of Ballyneparke and
+					further <del>I doe <add place="interlinear">
+							<gap reason="illegible"/>
+
+						</add></del>
+					<add place="interlinear">the deponent</add> beeleveth that all the <add
+						place="interlinear">now</add> in the County of wexford are in rebellion
+						<del>whose names to townes nam<supplied reason="gap">es</supplied> I hee
+						knows not</del>. </p>
+				<closer>
+					<signed>
+						<name type="abbreviated">Nat: Hewett</name>
+					</signed>
+					<date when="1642-10-27">Jur xxvijo oct 1642</date>
+					<signed>
+						<roleName type="Commissioner"/>
+						<name type="abbreviated">Joh Watson:</name>
+					</signed>
+					<signed>
+						<roleName type="Commissioner"/>
+						<name type="abbreviated">Will: Aldrich</name>
+					</signed>
+				</closer>
+			</div>
+		</body>
+		<back>
+			<pb n="115v" pagenum="945"/>
+			<div type="endorsement">
+				<p><gap/> Wexford o <name type="person" ref="_818114r122-1">Mr Nathaniell
+						Hewett</name>
+					<date when="1642-10-27">Jur xxvijo October</date> Intw 1642 Cert fact <date
+						when="1642-11-15">15: Nov.</date></p>
+			</div>
+		</back>
+	</text>
+</TEI>
