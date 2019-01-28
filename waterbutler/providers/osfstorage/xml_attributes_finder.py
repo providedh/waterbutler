@@ -1,6 +1,6 @@
 import re
 
-from io import BytesIO
+from io import StringIO
 from lxml import etree
 
 
@@ -13,9 +13,8 @@ class XMLAttributesFinder:
 
     def find_xml_attributes(self, text):
         self.text_utf_8 = text
-        self.text_binary = self.text_utf_8.encode('utf-8')
 
-        self.tree = etree.parse(BytesIO(self.text_binary))
+        self.tree = etree.parse(StringIO(self.text_utf_8))
 
         root_tag = self.__get_root_tag(self.tree)
         prefix = self.__get_prefix()

@@ -1,5 +1,7 @@
 import io
+import re
 
+from .entities_decoder import EntitiesDecoder
 from .migrator_tei import MigratorTEI
 from .migrator_csv import MigratorCSV
 from .migrator_tsv import MigratorTSV
@@ -35,7 +37,6 @@ class TeiHandler(BaseStream):
 
         try:
             encoding_finder = EncodingFinder()
-
             self.__encoding = encoding_finder.find_encoding(self.__text_binary)
 
         except Exception as ex:
@@ -46,8 +47,12 @@ class TeiHandler(BaseStream):
         else:
             self.__text_utf_8 = self.__convert_to_utf_8(self.__text_binary, self.__encoding)
 
+            entities_decoder = EntitiesDecoder()
+            text_utf_8_without_entities = entities_decoder.remove_non_xml_entities(self.__text_utf_8)
+            text_binary_without_entities = text_utf_8_without_entities.encode(self.__encoding)
+
             file_type_detector = FileTypeFinder()
-            self.__file_type = file_type_detector.check_if_xml(self.__text_binary)
+            self.__file_type = file_type_detector.check_if_xml(text_binary_without_entities)
 
             if self.__file_type == FileType.OTHER:
                 self.__file_type = file_type_detector.check_if_csv_or_tsv(self.__text_utf_8)
@@ -58,6 +63,9 @@ class TeiHandler(BaseStream):
                 if encoding_read_from_xml != self.__encoding:
                     self.__text_utf_8 = self.__convert_to_utf_8(self.__text_binary, encoding_read_from_xml)
                     self.__encoding = "utf-8"
+
+                self.__text_utf_8 = entities_decoder.decode_non_xml_entities(self.__text_utf_8)
+                self.__text_utf_8 = self.__remove_encoding_declaration(self.__text_utf_8)
 
                 xml_type_detector = XMLTypeFinder()
                 self.__xml_type, self.__prefixed = xml_type_detector.find_xml_type(self.__text_utf_8)
@@ -91,6 +99,20 @@ class TeiHandler(BaseStream):
 
         return text_in_unicode
 
+    def __remove_encoding_declaration(self, text):
+        first_line = text.splitlines()[0]
+
+        regex = r'encoding=".*?"'
+        match = re.search(regex, first_line)
+
+        if match:
+            encoding_declaration = match.group()
+
+            text = text.replace(" " + encoding_declaration, '')
+            text = text.replace(" ?>", "?>")
+
+        return text
+
     def __standardize_new_line_symbol(self, text):
         text_standardized = text.replace('\r\n', '\n')
 
@@ -113,7 +135,7 @@ class TeiHandler(BaseStream):
 
     def migrate(self):
         if not self.__recognized:
-            raise Exception("File recognition needed. Use recognize() method first.")
+            raise Exception("File recognition needed. Use \"recognize()\" method first.")
 
         elif not self.__migrate:
             raise Exception("No migration needed.")
