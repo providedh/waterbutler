@@ -61,7 +61,6 @@ class EntitiesDecoder:
         return text
 
     def remove_non_xml_entities(self, text):
-        # for entity in re.findall('&(?:[a-zA-Z][a-z0-9]+);', text):
         for entity in re.findall('&(?:[a-zA-Z][a-zA-Z0-9]+);', text):
             if entity in self.xml_entities:
                 continue

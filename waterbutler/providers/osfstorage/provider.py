@@ -353,7 +353,7 @@ class OSFStorageProvider(provider.BaseProvider):
             raise exceptions.UploadFailedError('Upload failed, please try again.') from exc
 
         tei_handler = tei.TeiHandler(local_pending_path)
-        migration = tei_handler.recognize()
+        migration, is_tei_p5_unprefixed = tei_handler.recognize()
 
         if migration:
             tei_handler.migrate()
@@ -409,6 +409,8 @@ class OSFStorageProvider(provider.BaseProvider):
         # http://bytes.com/topic/python/answers/41652-errno-18-invalid-cross-device-link-using-os-rename#post157964
         shutil.move(local_pending_path, local_complete_path)
 
+        metadata.update({'is_tei_p5_unprefixed': is_tei_p5_unprefixed})
+
         async with self.signed_request(
             'POST',
             self.build_url(path.parent.identifier, 'children'),
@@ -436,6 +438,8 @@ class OSFStorageProvider(provider.BaseProvider):
             data = await response.json()
 
         if migration:
+            migrated_metadata.update({'is_tei_p5_unprefixed': tei_handler.is_migrated()})
+
             async with self.signed_request(
                 'POST',
                 self.build_url(path.parent.identifier, 'children'),
