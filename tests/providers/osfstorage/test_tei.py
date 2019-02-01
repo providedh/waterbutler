@@ -25,7 +25,7 @@ def test_recognize__correct_file_uploaded__true(input_file_name):
     file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(file_path)
-    output = tei_handler.recognize()
+    output, _ = tei_handler.recognize()
 
     assert output is True
 
@@ -42,7 +42,7 @@ def test_recognize__incorrect_file_uplopaded__false(input_file_name):
     file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(file_path)
-    output = tei_handler.recognize()
+    output, _ = tei_handler.recognize()
 
     assert output is False
 
@@ -58,7 +58,7 @@ def test_recognize__non_text_file_uploaded__exception(input_file_name):
     file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(file_path)
-    output = tei_handler.recognize()
+    output, _ = tei_handler.recognize()
 
     assert output is False
 
@@ -75,9 +75,53 @@ def test_recognize__unprefixed_tei_p5_file_uplopaded__false(input_file_name):
     file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(file_path)
-    output = tei_handler.recognize()
+    output, _ = tei_handler.recognize()
 
     assert output is False
+
+
+test_data_recognize_second_value__unprefixed_tei_p5_file_uploaded__true = [
+    "818114r122 - TEI Markup.xml",
+    "Py.1.unprefixed.xml",
+]
+
+
+@pytest.mark.parametrize("input_file_name", test_data_recognize_second_value__unprefixed_tei_p5_file_uploaded__true)
+def test_recognize_second_value__unprefixed_tei_p5_file_uploaded__true(input_file_name):
+    dirname = os.path.dirname(__file__)
+    file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+
+    tei_handler = TeiHandler(file_path)
+    _, is_tei_p5_unprefixed = tei_handler.recognize()
+
+    assert is_tei_p5_unprefixed is True
+
+
+test_data_recognize_second_value__unprefixed_tei_p5_file_uploaded__false = [
+    "Py.1.xml",
+    "Py.1.encoding.xml",
+    "Py.1.encoding.windows-1250.xml",
+    "Pn.1.xml",
+    "Pn.2.xml",
+    "T100013.xml",
+    "T100014.xml",
+    "T100015.xml",
+    "T100016.xml",
+    "T100017.xml",
+    "CREDITOR_short.TXT",
+    "CREDITOR_T_short.TXT",
+]
+
+
+@pytest.mark.parametrize("input_file_name", test_data_recognize_second_value__unprefixed_tei_p5_file_uploaded__false)
+def test_recognize_second_value__unprefixed_tei_p5_file_uploaded__false(input_file_name):
+    dirname = os.path.dirname(__file__)
+    file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+
+    tei_handler = TeiHandler(file_path)
+    _, is_tei_p5_unprefixed = tei_handler.recognize()
+
+    assert is_tei_p5_unprefixed is False
 
 
 test_data_recognize__missing_entity_in_dictionaries = [

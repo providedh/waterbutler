@@ -29,8 +29,11 @@ class TeiHandler(BaseStream):
         self.__prefixed = False
 
         self.__recognized = False
+        self.__migrated = False
         self.__migrate = False
         self.__message = ""
+
+        self.__is_tei_p5_unprefixed = False
 
     def recognize(self):
         self.__load_text_binary()
@@ -42,7 +45,7 @@ class TeiHandler(BaseStream):
         except Exception as ex:
             self.__message = ex
 
-            return self.__migrate
+            return self.__migrate, self.__is_tei_p5_unprefixed
 
         else:
             self.__text_utf_8 = self.__convert_to_utf_8(self.__text_binary, self.__encoding)
@@ -73,9 +76,10 @@ class TeiHandler(BaseStream):
             self.__text_utf_8 = self.__standardize_new_line_symbol(self.__text_utf_8)
 
             self.__migrate = self.__make_decision()
+            self.__is_tei_p5_unprefixed = self.__check_if_tei_p5_unprefixed()
             self.__recognized = True
 
-            return self.__migrate
+            return self.__migrate, self.__is_tei_p5_unprefixed
 
     def __load_text_binary(self):
         try:
@@ -133,6 +137,12 @@ class TeiHandler(BaseStream):
         else:
             return False
 
+    def __check_if_tei_p5_unprefixed(self):
+        if self.__file_type == FileType.XML and self.__xml_type == XMLType.TEI_P5 and not self.__prefixed:
+            return True
+        else:
+            return False
+
     def migrate(self):
         if not self.__recognized:
             raise Exception("File recognition needed. Use \"recognize()\" method first.")
@@ -157,6 +167,7 @@ class TeiHandler(BaseStream):
 
         self.text.seek(io.SEEK_SET)
         self.__prepare_message()
+        self.__migrated = True
 
     def __prepare_message(self):
         message = "Successful migration."
@@ -179,3 +190,6 @@ class TeiHandler(BaseStream):
 
     def get_text(self):
         return self.text.getvalue()
+
+    def is_migrated(self):
+        return self.__migrated

@@ -58,9 +58,13 @@ class XMLAttributesFinder:
             return prefix
 
     def __is_tei_p5_ns_schema(self):
-        regex = r'xmlns:.*?="http://www.tei-c.org/ns/1.0"'
-        match = re.search(regex, self.text_utf_8)
-        if match:
+        regex_prefixed = r'xmlns:.*?="http://www.tei-c.org/ns/1.0"'
+        regex_unprefixed = r'xmlns="http://www.tei-c.org/ns/1.0"'
+
+        match_prefixed = re.search(regex_prefixed, self.text_utf_8)
+        match_unprefixed = re.search(regex_unprefixed, self.text_utf_8)
+
+        if match_prefixed or match_unprefixed:
             return True
         else:
             return False
