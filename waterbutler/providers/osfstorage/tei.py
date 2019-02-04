@@ -1,14 +1,14 @@
 import io
 import re
 
-from .entities_decoder import EntitiesDecoder
+from bs4 import UnicodeDammit
 from .migrator_tei import MigratorTEI
 from .migrator_csv import MigratorCSV
 from .migrator_tsv import MigratorTSV
-from .recognized_types import FileType, XMLType
 from .xml_type_finder import XMLTypeFinder
-from .encoding_finder import EncodingFinder
 from .file_type_finder import FileTypeFinder
+from .entities_decoder import EntitiesDecoder
+from .recognized_types import FileType, XMLType
 from waterbutler.core.streams.base import BaseStream
 
 
@@ -39,8 +39,11 @@ class TeiHandler(BaseStream):
         self.__load_text_binary()
 
         try:
-            encoding_finder = EncodingFinder()
-            self.__encoding = encoding_finder.find_encoding(self.__text_binary)
+            recognize_results = UnicodeDammit(self.__text_binary)
+            self.__encoding = recognize_results.original_encoding
+
+            if not self.__encoding:
+                raise Exception("Text encoding not found.")
 
         except Exception as ex:
             self.__message = ex
@@ -48,25 +51,19 @@ class TeiHandler(BaseStream):
             return self.__migrate, self.__is_tei_p5_unprefixed
 
         else:
-            self.__text_utf_8 = self.__convert_to_utf_8(self.__text_binary, self.__encoding)
+            self.__text_utf_8 = recognize_results.unicode_markup
 
             entities_decoder = EntitiesDecoder()
             text_utf_8_without_entities = entities_decoder.remove_non_xml_entities(self.__text_utf_8)
             text_binary_without_entities = text_utf_8_without_entities.encode(self.__encoding)
 
-            file_type_detector = FileTypeFinder()
-            self.__file_type = file_type_detector.check_if_xml(text_binary_without_entities)
+            file_type_finder = FileTypeFinder()
+            self.__file_type = file_type_finder.check_if_xml(text_binary_without_entities)
 
             if self.__file_type == FileType.OTHER:
-                self.__file_type = file_type_detector.check_if_csv_or_tsv(self.__text_utf_8)
+                self.__file_type = file_type_finder.check_if_csv_or_tsv(self.__text_utf_8)
 
             if self.__file_type == FileType.XML:
-                encoding_read_from_xml = encoding_finder.read_encoding_from_xml(self.__text_utf_8)
-
-                if encoding_read_from_xml != self.__encoding:
-                    self.__text_utf_8 = self.__convert_to_utf_8(self.__text_binary, encoding_read_from_xml)
-                    self.__encoding = "utf-8"
-
                 self.__text_utf_8 = entities_decoder.decode_non_xml_entities(self.__text_utf_8)
                 self.__text_utf_8 = self.__remove_encoding_declaration(self.__text_utf_8)
 
@@ -97,11 +94,6 @@ class TeiHandler(BaseStream):
         except Exception as exc:
             self.error = exc
             return FileType.OTHER
-
-    def __convert_to_utf_8(self, binary, encoding):
-        text_in_unicode = binary.decode(encoding)
-
-        return text_in_unicode
 
     def __remove_encoding_declaration(self, text):
         first_line = text.splitlines()[0]
