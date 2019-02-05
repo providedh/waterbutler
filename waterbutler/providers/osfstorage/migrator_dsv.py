@@ -1,6 +1,8 @@
 import io
 import csv
 
+from xml.sax.saxutils import escape
+
 
 class MigratorDSV:
     def __init__(self):
@@ -12,7 +14,8 @@ class MigratorDSV:
         tei_p5_beginning = self.__create_tei_p5_begining()
         text_in_xml.write(tei_p5_beginning)
 
-        text_converted = self.__convert_dsv_to_tei_p5_table(text)
+        text_escaped = self.__escape_xml_entities(text)
+        text_converted = self.__convert_dsv_to_tei_p5_table(text_escaped)
         text_in_xml.write(text_converted)
 
         tei_p5_end = self.__create_tei_p5_end()
@@ -21,6 +24,11 @@ class MigratorDSV:
         text_after_migration = text_in_xml.getvalue()
 
         return text_after_migration
+
+    def __escape_xml_entities(self, text):
+        text_escaped = escape(text)
+
+        return text_escaped
 
     def __create_tei_p5_begining(self):
         tei_p5_begining = (

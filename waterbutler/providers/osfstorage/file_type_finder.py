@@ -20,7 +20,7 @@ class FileTypeFinder:
             return FileType.XML
 
         except etree.XMLSyntaxError as err:
-            logger.debug("checking if xml: {}".format(err))
+            logger.info("checking if xml: {}".format(err))
 
             return FileType.OTHER
 
@@ -39,6 +39,6 @@ class FileTypeFinder:
                 return FileType.TSV
 
         except Exception as ex:
-            logger.debug("checking if csv or tsv: {}".format(ex))
+            logger.info("checking if csv or tsv: {}".format(ex))
 
             return FileType.OTHER
