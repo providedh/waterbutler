@@ -1,5 +1,6 @@
 import io
 import re
+import logging
 
 from bs4 import UnicodeDammit
 from .migrator_tei import MigratorTEI
@@ -10,6 +11,9 @@ from .file_type_finder import FileTypeFinder
 from .entities_decoder import EntitiesDecoder
 from .recognized_types import FileType, XMLType
 from waterbutler.core.streams.base import BaseStream
+
+
+logger = logging.getLogger(__name__)
 
 
 class TeiHandler(BaseStream):
@@ -43,10 +47,10 @@ class TeiHandler(BaseStream):
             self.__encoding = recognize_results.original_encoding
 
             if not self.__encoding:
-                raise Exception("Text encoding not found.")
+                raise Exception("Text encoding not recognized.")
 
         except Exception as ex:
-            self.__message = ex
+            logger.info("Text encoding searching: {}".format(ex))
 
             return self.__migrate, self.__is_tei_p5_unprefixed
 
@@ -162,9 +166,40 @@ class TeiHandler(BaseStream):
         self.__migrated = True
 
     def __prepare_message(self):
-        message = "Successful migration."
+        prefixed = "prefixed " if self.__prefixed else ""
+
+        file_type = {
+            FileType.XML: "XML ",
+            FileType.CSV: "CSV ",
+            FileType.TSV: "TSV ",
+            FileType.OTHER: "",
+        }
+
+        xml_type = {
+            XMLType.TEI_P4: "TEI P4 ",
+            XMLType.TEI_P5: "TEI P5 ",
+            XMLType.OTHER: "",
+        }
+
+        message = ""
+
+        if self.__file_type == FileType.XML and self.__xml_type == XMLType.TEI_P5 and not self.__prefixed:
+            pass
+        else:
+            message += "Migrated file format from {0}{1}{2}to unprefixed TEI P5 XML.".format(prefixed,
+                                                                                             xml_type[self.__xml_type],
+                                                                                             file_type[self.__file_type])
+
+        if self.__encoding != "utf-8":
+            if message:
+                message += " "
+
+            message += "Changed file encoding from {0} to UTF-8.".format(self.__encoding)
 
         self.__message = message
+
+    def get_message(self):
+        return self.__message
 
     def close(self):
         self.text.close()

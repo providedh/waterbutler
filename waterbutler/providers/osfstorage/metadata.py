@@ -107,6 +107,7 @@ class OsfStorageFileMetadata(BaseOsfStorageItemMetadata, metadata.BaseFileMetada
                 'md5': self.raw['md5'],
                 'sha256': self.raw['sha256']
             },
+            'migrationMessage': self.raw.get('migration_message', None),
         }
 
 

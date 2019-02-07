@@ -257,3 +257,29 @@ def test_migrate__missing_instruction_for_language_correction__exception(input_f
     message = er.value.args[0]
 
     assert message == "Unknown language format: \"asdfg\". Add new instruction to 'CorrectorLanguage' class"
+
+
+test_data_get_migration_message__migration_performed__message_string = [
+    ("CREDITOR_short.TXT", "Migrated file format from CSV to unprefixed TEI P5 XML. Changed file encoding from ascii to UTF-8."),
+    ("CREDITOR_T_short.TXT", "Migrated file format from TSV to unprefixed TEI P5 XML. Changed file encoding from ascii to UTF-8."),
+    ("Pn.1.xml", "Migrated file format from prefixed TEI P5 XML to unprefixed TEI P5 XML."),
+    ("Py.1.encoding.windows-1250.xml", "Migrated file format from prefixed TEI P5 XML to unprefixed TEI P5 XML. Changed file encoding from windows-1250 to UTF-8."),
+    ("Py.1.unprefixed.encoding.windows-1250.xml", "Changed file encoding from windows-1250 to UTF-8."),
+    ("T100013.xml", "Migrated file format from TEI P4 XML to unprefixed TEI P5 XML. Changed file encoding from iso-8859-1 to UTF-8."),
+]
+
+
+@pytest.mark.parametrize("input_file_name, expected_message",
+                         test_data_get_migration_message__migration_performed__message_string)
+def test_get_migration_message__migration_performed__message_string(input_file_name, expected_message):
+    dirname = os.path.dirname(__file__)
+    input_file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+
+    tei_handler = TeiHandler(input_file_path)
+
+    tei_handler.recognize()
+    tei_handler.migrate()
+
+    message = tei_handler.get_message()
+
+    assert message == expected_message

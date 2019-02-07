@@ -33,7 +33,8 @@ class TestFileMetadata:
                 'sha256': '043be9ff919762f0dc36fff0222cd90c753ce28b39feb52112be9360c476ef88'
             },
             'version': 1,
-            'latestVersionSeen': None
+            'latestVersionSeen': None,
+            'migrationMessage': None
         }
 
         assert file_metadata_object.extra == extra_expected

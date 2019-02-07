@@ -522,6 +522,7 @@ class OSFStorageProvider(provider.BaseProvider):
                 'checkout': migrated_data['data']['checkout'],
                 'modified': migrated_data['data']['modified'],
                 'modified_utc': utils.normalize_datetime(migrated_data['data']['modified']),
+                'migration_message': tei_handler.get_message(),
             })
 
         if migration:
