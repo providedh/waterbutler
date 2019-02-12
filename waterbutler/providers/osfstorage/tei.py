@@ -12,7 +12,6 @@ from .entities_decoder import EntitiesDecoder
 from .recognized_types import FileType, XMLType
 from waterbutler.core.streams.base import BaseStream
 
-
 logger = logging.getLogger(__name__)
 
 
@@ -119,25 +118,11 @@ class TeiHandler(BaseStream):
         return text_standardized
 
     def __make_decision(self):
-        if (self.__file_type == FileType.XML and self.__xml_type == XMLType.TEI_P5 and
-                self.__encoding != 'utf-8'):
-            return True
-        elif self.__file_type == FileType.XML and self.__xml_type == XMLType.TEI_P5 and self.__prefixed:
-            return True
-        elif self.__file_type == FileType.XML and self.__xml_type == XMLType.TEI_P4:
-            return True
-        elif self.__file_type == FileType.CSV:
-            return True
-        elif self.__file_type == FileType.TSV:
-            return True
-        else:
-            return False
+        return self.__file_type in (FileType.CSV, FileType.TSV) or self.__file_type == FileType.XML and (
+                self.__encoding != 'utf-8' or self.__prefixed or self.__xml_type == XMLType.TEI_P4)
 
     def __check_if_tei_p5_unprefixed(self):
-        if self.__file_type == FileType.XML and self.__xml_type == XMLType.TEI_P5 and not self.__prefixed:
-            return True
-        else:
-            return False
+        return self.__file_type == FileType.XML and self.__xml_type == XMLType.TEI_P5 and not self.__prefixed
 
     def migrate(self):
         if not self.__recognized:
@@ -188,7 +173,8 @@ class TeiHandler(BaseStream):
         else:
             message += "Migrated file format from {0}{1}{2}to unprefixed TEI P5 XML.".format(prefixed,
                                                                                              xml_type[self.__xml_type],
-                                                                                             file_type[self.__file_type])
+                                                                                             file_type[
+                                                                                                 self.__file_type])
 
         if self.__encoding != "utf-8":
             if message:
