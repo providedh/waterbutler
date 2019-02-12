@@ -5,6 +5,7 @@ import shutil
 import hashlib
 import logging
 import tempfile
+import re
 
 from celery import chord
 
@@ -372,6 +373,8 @@ class OSFStorageProvider(provider.BaseProvider):
             except Exception as exc:
                 raise exceptions.UploadFailedError('Upload failed, please try again.') from exc
 
+            migrated_contents = tei_handler.get_text()
+
         complete_name = stream.writers['sha256'].hexdigest
         local_complete_dir = tempfile.mkdtemp(dir=settings.FILE_PATH_COMPLETE)
         local_complete_path = os.path.join(local_complete_dir, complete_name)
@@ -411,6 +414,14 @@ class OSFStorageProvider(provider.BaseProvider):
 
         metadata.update({'is_tei_p5_unprefixed': is_tei_p5_unprefixed})
 
+        contents = ""
+        if is_tei_p5_unprefixed:
+            with open(local_complete_path) as F:
+                contents = ' '.join(F.read().split())
+                match = re.findall("<body>.*?</body>", contents)[0]
+                contents = ' '.join(re.sub("<.*?>", "", match).split())
+
+
         async with self.signed_request(
             'POST',
             self.build_url(path.parent.identifier, 'children'),
@@ -420,6 +431,7 @@ class OSFStorageProvider(provider.BaseProvider):
                 'user': self.auth['id'],
                 'settings': self.settings['storage'],
                 'metadata': metadata,
+                "contents": contents,
                 'hashes': {
                     'md5': stream.writers['md5'].hexdigest,
                     'sha1': stream.writers['sha1'].hexdigest,
@@ -440,6 +452,10 @@ class OSFStorageProvider(provider.BaseProvider):
         if migration:
             migrated_metadata.update({'is_tei_p5_unprefixed': tei_handler.is_migrated()})
 
+            contents = ' '.join(migrated_contents.split())
+            match = re.findall("<body>.*?</body>", contents)[0]
+            contents = ' '.join(re.sub("<.*?>", "", match).split())
+
             async with self.signed_request(
                 'POST',
                 self.build_url(path.parent.identifier, 'children'),
@@ -449,6 +465,7 @@ class OSFStorageProvider(provider.BaseProvider):
                     'user': self.auth['id'],
                     'settings': self.settings['storage'],
                     'metadata': migrated_metadata,
+                    "contents": contents,
                     'hashes': {
                         'md5': md5,
                         'sha1': sha1,
