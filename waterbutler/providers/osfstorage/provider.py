@@ -421,7 +421,6 @@ class OSFStorageProvider(provider.BaseProvider):
                 match = re.findall("<body>.*?</body>", contents)[0]
                 contents = ' '.join(re.sub("<.*?>", "", match).split())
 
-
         async with self.signed_request(
             'POST',
             self.build_url(path.parent.identifier, 'children'),

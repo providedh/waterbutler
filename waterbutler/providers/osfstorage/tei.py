@@ -119,7 +119,7 @@ class TeiHandler(BaseStream):
 
     def __make_decision(self):
         return self.__file_type in (FileType.CSV, FileType.TSV) or self.__file_type == FileType.XML and (
-                self.__encoding != 'utf-8' or self.__prefixed or self.__xml_type == XMLType.TEI_P4)
+            self.__encoding != 'utf-8' or self.__prefixed or self.__xml_type == XMLType.TEI_P4)
 
     def __check_if_tei_p5_unprefixed(self):
         return self.__file_type == FileType.XML and self.__xml_type == XMLType.TEI_P5 and not self.__prefixed
