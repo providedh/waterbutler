@@ -5,7 +5,6 @@ import shutil
 import hashlib
 import logging
 import tempfile
-import re
 
 from celery import chord
 
@@ -25,6 +24,7 @@ from waterbutler.providers.osfstorage.tasks import utils as task_utils
 from waterbutler.providers.osfstorage.metadata import OsfStorageFileMetadata
 from waterbutler.providers.osfstorage.metadata import OsfStorageFolderMetadata
 from waterbutler.providers.osfstorage.metadata import OsfStorageRevisionMetadata
+from waterbutler.providers.osfstorage.content_extractor import ContentExtractor
 
 logger = logging.getLogger(__name__)
 
@@ -417,10 +417,7 @@ class OSFStorageProvider(provider.BaseProvider):
         contents = ""
         if is_tei_p5_unprefixed:
             with open(local_complete_path) as F:
-                contents = ' '.join(F.read().split())
-                match = re.findall("<body>.*?</body>", contents)[0]
-                contents = ' '.join(re.sub("<.*?>", "", match).split())
-
+                contents = ContentExtractor.tei_contents_to_text(F.read())
 
         async with self.signed_request(
             'POST',
@@ -452,9 +449,7 @@ class OSFStorageProvider(provider.BaseProvider):
         if migration:
             migrated_metadata.update({'is_tei_p5_unprefixed': tei_handler.is_migrated()})
 
-            contents = ' '.join(migrated_contents.split())
-            match = re.findall("<body>.*?</body>", contents)[0]
-            contents = ' '.join(re.sub("<.*?>", "", match).split())
+            contents = ContentExtractor.tei_contents_to_text(migrated_contents)
 
             async with self.signed_request(
                 'POST',
