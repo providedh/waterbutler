@@ -415,7 +415,7 @@ class OSFStorageProvider(provider.BaseProvider):
         metadata.update({'is_tei_p5_unprefixed': is_tei_p5_unprefixed})
 
         contents = ""
-        if is_tei_p5_unprefixed:
+        if not migration:
             with open(local_complete_path) as F:
                 contents = ContentExtractor.tei_contents_to_text(F.read())
 
