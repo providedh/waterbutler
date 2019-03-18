@@ -141,8 +141,9 @@ def test_recognize__missing_entity_in_dictionaries__exception(input_file_name):
 
     message = er.value.args[0]
 
-    assert message == "Missing character \"fMedrun\" in \"custom_entities.py\" dictionary. " \
-                      "Add this character to \"custom_entities.py\" dictionary"
+    assert message == "Missing entity \"fMedrun\" in \"custom_entities_to_char.py\" and " \
+                      "\"custom_entities_to_entities.py\" dictionary. Add this entity to " \
+                      "\"custom_entities_to_char.py\" or \"custom_entities_to_entities.py\" dictionary"
 
 
 test_data_migrate = [
@@ -234,7 +235,7 @@ def test_migrate__missing_instruction_for_date_correction__exception(input_file_
 
     message = er.value.args[0]
 
-    assert message == "Unknown date format: \"38-01-01\". Add new instruction to 'CorrectorDate' class"
+    assert message == "Unknown date format: \"999999999-01-01\". Add new instruction to 'CorrectorDate' class"
 
 
 test_data_migrate__missing_instruction_for_language_correction = [

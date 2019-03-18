@@ -1,6 +1,7 @@
 import re
 
-from .custom_entities import name2codepoint as ce
+from .custom_entities_to_entities import name2name as cee
+from .custom_entities_to_char import name2codepoint as cec
 from html.entities import name2codepoint as he, html5 as h5e
 
 
@@ -11,7 +12,8 @@ class EntitiesDecoder:
     def decode_non_xml_entities(self, text):
         text = self.__decode_html_entities(text)
         text = self.__decode_html5_entities(text)
-        text = self.__decode_custom_entities(text)
+        text = self.__decode_custom_entities_to_entities(text)
+        text = self.__decode_custom_entities_to_char(text)
 
         return text
 
@@ -44,7 +46,7 @@ class EntitiesDecoder:
 
         return text
 
-    def __decode_custom_entities(self, text):
+    def __decode_custom_entities_to_entities(self, text):
         for entity in re.findall('&(?:[a-zA-Z][a-zA-Z0-9]+);', text):
             if entity in self.xml_entities:
                 continue
@@ -53,10 +55,26 @@ class EntitiesDecoder:
             entity = entity.replace(';', '')
 
             try:
-                text = text.replace('&%s;' % entity, chr(ce[entity]))
+                text = text.replace('&%s;' % entity, cee[entity])
             except KeyError:
-                raise KeyError("Missing character \"{}\" in \"custom_entities.py\" dictionary. "
-                               "Add this character to \"custom_entities.py\" dictionary".format(entity))
+                pass
+
+        return text
+
+    def __decode_custom_entities_to_char(self, text):
+        for entity in re.findall('&(?:[a-zA-Z][a-zA-Z0-9]+);', text):
+            if entity in self.xml_entities:
+                continue
+
+            entity = entity.replace('&', '')
+            entity = entity.replace(';', '')
+
+            try:
+                text = text.replace('&%s;' % entity, chr(cec[entity]))
+            except KeyError:
+                raise KeyError("Missing entity \"{}\" in \"custom_entities_to_char.py\" and "
+                               "\"custom_entities_to_entities.py\" dictionary. Add this entity to "
+                               "\"custom_entities_to_char.py\" or \"custom_entities_to_entities.py\" dictionary".format(entity))
 
         return text
 
