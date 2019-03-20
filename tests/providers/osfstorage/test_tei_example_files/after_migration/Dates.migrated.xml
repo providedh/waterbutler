@@ -1,0 +1,80 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Dates">
+  <teiHeader/>
+  <text n="Dates">
+    <body>
+      <date when-custom="">without value</date>
+      <date when="1111-11-11">1111-11-11</date>
+      <date when="0862" when-custom="862">862</date>
+      <date when="0721" when-custom="721DMC">721DMC</date>
+      <date when="0851" when-custom="?851">?851</date>
+      <date notBefore="0583" notBefore-custom="583">583</date>
+      <date notAfter="0595" notAfter-custom="595">595</date>
+      <date from="0612" from-custom="612" to="0666" to-custom="666">612 - 666</date>
+      <date when="0916-05-25" when-custom="916-05-25">916-05-25</date>
+      <date when="0878-10-29" when-custom="astronomical:878-10-29">astronomical:878-10-29</date>
+      <date from="1107-04-14" to="1107-04-21" when-custom="1107-04-14/1107-04-21">1107-04-14/1107-04-21</date>
+      <date when="0921-12-17" when-custom="astronomical:921-12-17(?)">astronomical:921-12-17(?)</date>
+      <date when="1023-01-24" when-custom="astronomical:1023-01-24">astronomical:1023-01-24</date>
+      <date when="0056" when-custom="56">56</date>
+      <date when-custom="4186.0">4186.0</date>
+      <date when-custom="1">1</date>
+      <date when-custom="AM 5016">AM 5016</date>
+      <date when="1570-06-23" when-custom="1570-6-23">1570-6-23</date>
+      <date when="1413-12-24" when-custom="12-24-1413">12-24-1413</date>
+      <date when-custom="06-03-1461">06-03-1461</date>
+      <date when="0676-09" when-custom="676-09">676-09</date>
+      <date when-custom="1121-02-9">1121-02-9</date>
+      <date from="0762-01-15" to="0763-12-25" when-custom="astronomical:762-01-15/763-12-25">astronomical:762-01-15/763-12-25</date>
+      <date when-custom="astronomical:77-12-04">astronomical:77-12-04</date>
+      <date when-custom="astronomical:11-12-04">astronomical:11-12-04</date>
+      <date when="0077-12-15" when-custom="astronomical:77-12-15">astronomical:77-12-15</date>
+      <date when="0077-12-15" when-custom="astronomical:77-15-12">astronomical:77-15-12</date>
+      <date from="1107-04-14" to="1107-04-21" when-custom="1107-04-14/21">1107-04-14/21</date>
+      <date when="0908-09-13" when-custom="908-9-13">908-9-13</date>
+      <date when-custom="1282-02-012">1282-02-012</date>
+      <date when="1261-09-29" when-custom="1261-09-29:Michaelmas">1261-09-29:Michaelmas</date>
+      <date when-custom="05-03">05-03</date>
+      <date when="0077-03" when-custom="77-03">77-03</date>
+      <date when="0077-03" when-custom="03-77">03-77</date>
+      <date when-custom="13-77">13-77</date>
+      <date when="5016" when-custom="M5016">M5016</date>
+      <date when-custom="862-09-9">862-09-9</date>
+      <date when-custom="-09-12">-09-12</date>
+      <date when-custom="1.Aug-31.Oct">1.Aug-31.Oct</date>
+      <date when-custom="1-05">1-05</date>
+      <date when-custom="1-5">1-5</date>
+      <date when-custom="01-5">01-5</date>
+      <date from="0936-12-24" to="0936-12-25" when-custom="936-12-24/25">936-12-24/25</date>
+      <date when-custom="1070-12- 08">1070-12- 08</date>
+      <date when-custom="1070- 12- 08">1070- 12- 08</date>
+      <date when="1249" when-custom="1249--">1249--</date>
+      <date when-custom="157001-01">157001-01</date>
+      <date when="0099-03-15" when-custom="99-03-15">99-03-15</date>
+      <date when-custom="99-03-02">99-03-02</date>
+      <date when="0099-03-15" when-custom="99-15-03">99-15-03</date>
+      <date when-custom="99-15-13">99-15-13</date>
+      <date when="0099-03-15" when-custom="03-99-15">03-99-15</date>
+      <date when-custom="03-99-05">03-99-05</date>
+      <date when="0099-05-13" when-custom="13-99-05">13-99-05</date>
+      <date when-custom="13-99-15">13-99-15</date>
+      <date when="0099-03-15" when-custom="03-15-99">03-15-99</date>
+      <date when-custom="03-02-99">03-02-99</date>
+      <date when="0099-02-13" when-custom="13-02-99">13-02-99</date>
+      <date when-custom="13-15-99">13-15-99</date>
+      <date when="1591-11" when-custom="1591- 11">1591- 11</date>
+      <date when="1591-11" when-custom="11 -  1591">11 -  1591</date>
+      <date when-custom="-10">-10</date>
+      <date when-custom="40 BC">40 BC</date>
+      <date when-custom="40 B.C.">40 B.C.</date>
+      <date when="0047" when-custom="47 A.D.">47 A.D.</date>
+      <date when-custom="03.01">03.01</date>
+      <date when-custom="yyyy-12-07">yyyy-12-07</date>
+      <date when-custom="1234-12-07/1235-12-07">1234-12-07/1235-12-07</date>
+      <date from="1234-12-13" to="1234-12-15" when-custom="1234-12-13/12-15">1234-12-13/12-15</date>
+      <date when-custom="1234-12-13/12-55">1234-12-13/12-55</date>
+      <date when-custom="1234-12-13/55">1234-12-13/55</date>
+      <date when-custom="1234-12-13/07">1234-12-13/07</date>
+      <date when-custom="15">15</date>
+    </body>
+  </text>
+</TEI>
