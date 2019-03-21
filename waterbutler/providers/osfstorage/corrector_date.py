@@ -12,11 +12,8 @@ class CorrectorDate(AbstractCorrector):
 
         # TODO: refactor
         if "AM" in attribute_value or "B.C." in attribute_value or "BC" in attribute_value:
-            wrong_date = attribute_value
-            wrong_date = wrong_date.replace('"', '')
-
-            old_declaration = attribute_name + '="' + wrong_date + '"'
-            new_declaration = attribute_name + '-custom="' + wrong_date + '"'
+            old_declaration = attribute_name + '=' + attribute_value
+            new_declaration = attribute_name + '-custom=' + attribute_value
 
             return old_declaration, new_declaration
 
@@ -26,61 +23,21 @@ class CorrectorDate(AbstractCorrector):
             match = re.match(r'"\D*?([\d]{1,4})-([\d]{1,4})-([\d]{1,4})/([\d]{1,4})-([\d]{1,4})-([\d]{1,4})\D*?"',
                              attribute_value_without_space)
 
-            values_1 = [
-                int(match.group(1)),
-                int(match.group(2)),
-                int(match.group(3))
-            ]
+            date_1 = self.recognize_date_parts(match.group(1), match.group(2), match.group(3))
+            date_2 = self.recognize_date_parts(match.group(4), match.group(5), match.group(6))
 
-            year_candidate_1 = []
-            month_candidate_1 = []
-            day_candidate_1 = []
+            if date_1['y'] and date_1['m'] and date_1['d'] and date_2['y'] and date_2['m'] and date_2['d']:
+                old_declaration = attribute_name + '=' + attribute_value
 
-            for value in values_1:
-                if value > 31:
-                    year_candidate_1.append(value)
-                elif value > 12:
-                    day_candidate_1.append(value)
-                else:
-                    month_candidate_1.append(value)
-
-            values_2 = [
-                int(match.group(4)),
-                int(match.group(5)),
-                int(match.group(6))
-            ]
-
-            year_candidate_2 = []
-            month_candidate_2 = []
-            day_candidate_2 = []
-
-            for value in values_2:
-                if value > 31:
-                    year_candidate_2.append(value)
-                elif value > 12:
-                    day_candidate_2.append(value)
-                else:
-                    month_candidate_2.append(value)
-
-            if (len(year_candidate_1) == len(month_candidate_1) == len(day_candidate_1) ==
-                    len(year_candidate_2) == len(month_candidate_2) == len(day_candidate_2) == 1):
-                wrong_date = attribute_value
-                wrong_date = wrong_date.replace('"', '')
-
-                old_declaration = attribute_name + '="' + wrong_date + '"'
-
-                new_declaration = 'from="{:04d}-{:02d}-{:02d}" to="{:04d}-{:02d}-{:02d}" {}-custom="{}"'.format(
-                    year_candidate_1[0], month_candidate_1[0], day_candidate_1[0], year_candidate_2[0],
-                    month_candidate_2[0], day_candidate_2[0], attribute_name, wrong_date)
+                new_declaration = 'from="{:04d}-{:02d}-{:02d}" to="{:04d}-{:02d}-{:02d}" {}-custom={}'.format(
+                    date_1['y'], date_1['m'], date_1['d'], date_2['y'], date_2['m'], date_2['d'],
+                    attribute_name, attribute_value)
 
                 return old_declaration, new_declaration
 
             else:
-                wrong_date = attribute_value
-                wrong_date = wrong_date.replace('"', '')
-
-                old_declaration = attribute_name + '="' + wrong_date + '"'
-                new_declaration = attribute_name + '-custom="' + wrong_date + '"'
+                old_declaration = attribute_name + '=' + attribute_value
+                new_declaration = attribute_name + '-custom=' + attribute_value
 
                 return old_declaration, new_declaration
 
@@ -90,60 +47,20 @@ class CorrectorDate(AbstractCorrector):
             match = re.match(r'"\D*?([\d]{1,4})-([\d]{1,4})-([\d]{1,4})/([\d]{1,4})-([\d]{1,4})\D*?"',
                              attribute_value_without_space)
 
-            values_1 = [
-                int(match.group(1)),
-                int(match.group(2)),
-                int(match.group(3))
-            ]
+            date_1 = self.recognize_date_parts(match.group(1), match.group(2), match.group(3))
+            date_2 = self.recognize_date_parts(match.group(4), match.group(5))
 
-            year_candidate_1 = []
-            month_candidate_1 = []
-            day_candidate_1 = []
+            if date_1['y'] and date_1['m'] and date_1['d'] and date_2['m'] and date_2['d']:
+                old_declaration = attribute_name + '=' + attribute_value
 
-            for value in values_1:
-                if value > 31:
-                    year_candidate_1.append(value)
-                elif value > 12:
-                    day_candidate_1.append(value)
-                else:
-                    month_candidate_1.append(value)
-
-            values_2 = [
-                int(match.group(4)),
-                int(match.group(5))
-            ]
-
-            year_candidate_2 = []
-            month_candidate_2 = []
-            day_candidate_2 = []
-
-            for value in values_2:
-                if value > 31:
-                    year_candidate_2.append(value)
-                elif value > 12:
-                    day_candidate_2.append(value)
-                else:
-                    month_candidate_2.append(value)
-
-            if (len(year_candidate_1) == len(month_candidate_1) == len(day_candidate_1) ==
-                    len(month_candidate_2) == len(day_candidate_2) == 1):
-                wrong_date = attribute_value
-                wrong_date = wrong_date.replace('"', '')
-
-                old_declaration = attribute_name + '="' + wrong_date + '"'
-
-                new_declaration = 'from="{0:04d}-{1:02d}-{2:02d}" to="{0:04d}-{3:02d}-{4:02d}" {5}-custom="{6}"'.format(
-                    year_candidate_1[0], month_candidate_1[0], day_candidate_1[0], month_candidate_2[0],
-                    day_candidate_2[0], attribute_name, wrong_date)
+                new_declaration = 'from="{0:04d}-{1:02d}-{2:02d}" to="{0:04d}-{3:02d}-{4:02d}" {5}-custom={6}'.format(
+                    date_1['y'], date_1['m'], date_1['d'], date_2['m'], date_2['d'], attribute_name, attribute_value)
 
                 return old_declaration, new_declaration
 
             else:
-                wrong_date = attribute_value
-                wrong_date = wrong_date.replace('"', '')
-
-                old_declaration = attribute_name + '="' + wrong_date + '"'
-                new_declaration = attribute_name + '-custom="' + wrong_date + '"'
+                old_declaration = attribute_name + '=' + attribute_value
+                new_declaration = attribute_name + '-custom=' + attribute_value
 
                 return old_declaration, new_declaration
 
@@ -153,58 +70,20 @@ class CorrectorDate(AbstractCorrector):
             match = re.match(r'"\D*?([\d]{1,4})-([\d]{1,4})-([\d]{1,4})/([\d]{1,4})\D*?"',
                              attribute_value_without_space)
 
-            values_1 = [
-                int(match.group(1)),
-                int(match.group(2)),
-                int(match.group(3))
-            ]
+            date_1 = self.recognize_date_parts(match.group(1), match.group(2), match.group(3))
+            date_2 = self.recognize_date_parts(match.group(4))
 
-            year_candidate_1 = []
-            month_candidate_1 = []
-            day_candidate_1 = []
+            if date_1['y'] and date_1['m'] and date_1['d'] and date_2['d']:
+                old_declaration = attribute_name + '=' + attribute_value
 
-            for value in values_1:
-                if value > 31:
-                    year_candidate_1.append(value)
-                elif value > 12:
-                    day_candidate_1.append(value)
-                else:
-                    month_candidate_1.append(value)
-
-            values_2 = [
-                int(match.group(4)),
-            ]
-
-            year_candidate_2 = []
-            month_candidate_2 = []
-            day_candidate_2 = []
-
-            for value in values_2:
-                if value > 31:
-                    year_candidate_2.append(value)
-                elif value > 12:
-                    day_candidate_2.append(value)
-                else:
-                    month_candidate_2.append(value)
-
-            if len(year_candidate_1) == len(month_candidate_1) == len(day_candidate_1) == len(day_candidate_2) == 1:
-                wrong_date = attribute_value
-                wrong_date = wrong_date.replace('"', '')
-
-                old_declaration = attribute_name + '="' + wrong_date + '"'
-
-                new_declaration = 'from="{0:04d}-{1:02d}-{2:02d}" to="{0:04d}-{1:02d}-{3:02d}" {4}-custom="{5}"'.format(
-                    year_candidate_1[0], month_candidate_1[0], day_candidate_1[0], day_candidate_2[0],
-                    attribute_name, wrong_date)
+                new_declaration = 'from="{0:04d}-{1:02d}-{2:02d}" to="{0:04d}-{1:02d}-{3:02d}" {4}-custom={5}'.format(
+                    date_1['y'], date_1['m'], date_1['d'], date_2['d'], attribute_name, attribute_value)
 
                 return old_declaration, new_declaration
 
             else:
-                wrong_date = attribute_value
-                wrong_date = wrong_date.replace('"', '')
-
-                old_declaration = attribute_name + '="' + wrong_date + '"'
-                new_declaration = attribute_name + '-custom="' + wrong_date + '"'
+                old_declaration = attribute_name + '=' + attribute_value
+                new_declaration = attribute_name + '-custom=' + attribute_value
 
                 return old_declaration, new_declaration
 
@@ -212,36 +91,14 @@ class CorrectorDate(AbstractCorrector):
         elif re.match(r'"\D*?([\d]{1,4})-([\d]{1,4})-([\d]{1,4})\D*?"', attribute_value_without_space):
             match = re.match(r'"\D*?([\d]{1,4})-([\d]{1,4})-([\d]{1,4})\D*?"', attribute_value_without_space)
 
-            values = [
-                int(match.group(1)),
-                int(match.group(2)),
-                int(match.group(3))
-            ]
+            date = self.recognize_date_parts(match.group(1), match.group(2), match.group(3))
 
-            year_candidate = []
-            month_candidate = []
-            day_candidate = []
-
-            for value in values:
-                if value > 31:
-                    year_candidate.append(value)
-                elif value > 12:
-                    day_candidate.append(value)
-                else:
-                    month_candidate.append(value)
-
-            if len(year_candidate) == len(month_candidate) == len(day_candidate) == 1:
-                wrong_date = attribute_value
-                wrong_date = wrong_date.replace('"', '')
-
-                correct_date = "{:04d}-{:02d}-{:02d}".format(year_candidate[0], month_candidate[0], day_candidate[0])
+            if date['y'] and date['m'] and date['d']:
+                correct_date = "{:04d}-{:02d}-{:02d}".format(date['y'], date['m'], date['d'])
 
             else:
-                wrong_date = attribute_value
-                wrong_date = wrong_date.replace('"', '')
-
-                old_declaration = attribute_name + '="' + wrong_date + '"'
-                new_declaration = attribute_name + '-custom="' + wrong_date + '"'
+                old_declaration = attribute_name + '=' + attribute_value
+                new_declaration = attribute_name + '-custom=' + attribute_value
 
                 return old_declaration, new_declaration
 
@@ -249,35 +106,13 @@ class CorrectorDate(AbstractCorrector):
         elif re.match(r'"\D*?([\d]{1,4})-([\d]{1,4})\D*?"', attribute_value_without_space):
             match = re.match(r'"\D*?([\d]{1,4})-([\d]{1,4})\D*?"', attribute_value_without_space)
 
-            values = [
-                int(match.group(1)),
-                int(match.group(2)),
-            ]
+            date = self.recognize_date_parts(match.group(1), match.group(2))
 
-            year_candidate = []
-            month_candidate = []
-            day_candidate = []
-
-            for value in values:
-                if value > 31:
-                    year_candidate.append(value)
-                elif value > 12:
-                    day_candidate.append(value)
-                else:
-                    month_candidate.append(value)
-
-            if len(year_candidate) == len(month_candidate) == 1:
-                wrong_date = attribute_value
-                wrong_date = wrong_date.replace('"', '')
-
-                correct_date = "{:04d}-{:02d}".format(year_candidate[0], month_candidate[0])
-
+            if date['y'] and date['m']:
+                correct_date = "{:04d}-{:02d}".format(date['y'], date['m'])
             else:
-                wrong_date = attribute_value
-                wrong_date = wrong_date.replace('"', '')
-
-                old_declaration = attribute_name + '="' + wrong_date + '"'
-                new_declaration = attribute_name + '-custom="' + wrong_date + '"'
+                old_declaration = attribute_name + '=' + attribute_value
+                new_declaration = attribute_name + '-custom=' + attribute_value
 
                 return old_declaration, new_declaration
 
@@ -285,51 +120,57 @@ class CorrectorDate(AbstractCorrector):
         elif re.match(r'"\D*?([\d]{1,4})\D*?"', attribute_value_without_space):
             match = re.match(r'"\D*?([\d]{1,4})\D*?"', attribute_value_without_space)
 
-            values = [
-                int(match.group(1)),
-            ]
+            date = self.recognize_date_parts(match.group(1))
 
-            year_candidate = []
-            month_candidate = []
-            day_candidate = []
-
-            for value in values:
-                if value > 31:
-                    year_candidate.append(value)
-                elif value > 12:
-                    day_candidate.append(value)
-                else:
-                    month_candidate.append(value)
-
-            if len(year_candidate) == 1:
-                wrong_date = attribute_value
-                wrong_date = wrong_date.replace('"', '')
-
-                correct_date = "{:04d}".format(year_candidate[0])
+            if date['y']:
+                correct_date = "{:04d}".format(date['y'])
 
             else:
-                wrong_date = attribute_value
-                wrong_date = wrong_date.replace('"', '')
-
-                old_declaration = attribute_name + '="' + wrong_date + '"'
-                new_declaration = attribute_name + '-custom="' + wrong_date + '"'
+                old_declaration = attribute_name + '=' + attribute_value
+                new_declaration = attribute_name + '-custom=' + attribute_value
 
                 return old_declaration, new_declaration
 
         else:
-            # raise ValueError("Unknown {} format: {}. Add new instruction to 'CorrectorDate' class".format(
-            #     self._corrector_type, attribute_value))
-
-            wrong_date = attribute_value
-            wrong_date = wrong_date.replace('"', '')
-
-            old_declaration = attribute_name + '="' + wrong_date + '"'
-            new_declaration = attribute_name + '-custom="' + wrong_date + '"'
+            old_declaration = attribute_name + '=' + attribute_value
+            new_declaration = attribute_name + '-custom=' + attribute_value
 
             return old_declaration, new_declaration
 
-        old_declaration = attribute_name + '="' + wrong_date + '"'
-        new_declaration = (attribute_name + '="' + correct_date + '"' + ' ' + attribute_name + '-custom="' +
-                           wrong_date + '"')
+        old_declaration = attribute_name + '=' + attribute_value
+        new_declaration = (attribute_name + '="' + correct_date + '"' + ' ' + attribute_name + '-custom=' +
+                           attribute_value)
 
         return old_declaration, new_declaration
+
+    def recognize_date_parts(self, *args):
+        year_candidates = []
+        month_candidates = []
+        day_candidates = []
+
+        for value in args:
+            value = int(value)
+
+            if value > 31:
+                year_candidates.append(value)
+            elif value > 12:
+                day_candidates.append(value)
+            else:
+                month_candidates.append(value)
+
+        date = {
+            'y': False,
+            'm': False,
+            'd': False
+        }
+
+        if len(year_candidates) == 1:
+            date['y'] = year_candidates[0]
+
+        if len(month_candidates) == 1:
+            date['m'] = month_candidates[0]
+
+        if len(day_candidates) == 1:
+            date['d'] = day_candidates[0]
+
+        return date
