@@ -159,7 +159,6 @@ test_data_migrate = [
     ("T100016.xml", "T100016.migrated.xml"),
     ("T100017.xml", "T100017.migrated.xml"),
     ("T100014.for.language.corrector.xml", "T100014.migrated.xml"),
-    ("T100017.added.date.attributes.xml", "T100017.added.date.attributes.migrated.xml"),
 ]
 
 
@@ -175,6 +174,24 @@ def test_migrate__properly_recognized_file__migrated_string(input_file_name, res
     result = tei_handler.text.getvalue()
 
     result_file_path = os.path.join(dirname, "test_tei_example_files", "after_migration", result_file_name)
+
+    with open(result_file_path, 'r') as file:
+        expected = file.read()
+
+    assert result == expected
+
+
+def test_migrate__date_conversions__migrated_string():
+    dirname = os.path.dirname(__file__)
+    input_file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", "Dates.xml")
+
+    tei_handler = TeiHandler(input_file_path)
+    tei_handler.recognize()
+    tei_handler.migrate()
+
+    result = tei_handler.text.getvalue()
+
+    result_file_path = os.path.join(dirname, "test_tei_example_files", "after_migration", "Dates.migrated.xml")
 
     with open(result_file_path, 'r') as file:
         expected = file.read()
@@ -214,28 +231,6 @@ def test_migrate__no_migration_needed__exception(input_file_name):
     message = ex.value.args[0]
 
     assert message == "No migration needed."
-
-
-test_data_migrate__missing_instruction_for_date_correction = [
-    "T100014.missing.instruction.for.date.correction.xml",
-]
-
-
-@pytest.mark.parametrize("input_file_name", test_data_migrate__missing_instruction_for_date_correction)
-def test_migrate__missing_instruction_for_date_correction__exception(input_file_name):
-    dirname = os.path.dirname(__file__)
-    input_file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
-
-    tei_handler = TeiHandler(input_file_path)
-
-    tei_handler.recognize()
-
-    with pytest.raises(ValueError) as er:
-        tei_handler.migrate()
-
-    message = er.value.args[0]
-
-    assert message == "Unknown date format: \"999999999-01-01\". Add new instruction to 'CorrectorDate' class"
 
 
 test_data_migrate__missing_instruction_for_language_correction = [
