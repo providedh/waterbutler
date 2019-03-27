@@ -10,7 +10,8 @@ class EntitiesExtractor:
     def __extract_entities_elements(cls, contents):
         parsed = et.fromstring(bytes(contents, 'UTF-8'))
         text = parsed.find("tei:text", namespaces=cls.namespaces)
-        if text is None: return []
+        if text is None:
+            return []
 
         entites_elements = dict(
             (tag, text.xpath(".//tei:{}".format(tag), namespaces=cls.namespaces))
@@ -43,7 +44,8 @@ class EntitiesExtractor:
             if subtags:
                 for tag in subtags:
                     id = getid(tag)
-                    if id: break
+                    if id:
+                        break
 
         return id[0] if id else ""
 
@@ -110,5 +112,5 @@ class EntitiesExtractor:
         return entites
 
     @staticmethod
-    def encode_entities(entities):
+    def to_json(entities):
         return json.dumps(entities)

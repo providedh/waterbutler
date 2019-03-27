@@ -422,7 +422,7 @@ class OSFStorageProvider(provider.BaseProvider):
             text = ContentExtractor.tei_contents_to_text(contents)
             entities = EntitiesExtractor.extract_entities(contents)
             EntitiesExtractor.extend_entities(entities, self.nid, path.full_path)
-            entities = EntitiesExtractor.encode_entities(entities)
+            entities = EntitiesExtractor.to_json(entities)
 
         async with self.signed_request(
             'POST',
@@ -459,7 +459,7 @@ class OSFStorageProvider(provider.BaseProvider):
             text = ContentExtractor.tei_contents_to_text(migrated_contents)
             entities = EntitiesExtractor.extract_entities(migrated_contents)
             EntitiesExtractor.extend_entities(entities, self.nid, path.full_path)
-            entities = EntitiesExtractor.encode_entities(entities)
+            entities = EntitiesExtractor.to_json(entities)
 
             async with self.signed_request(
                 'POST',
