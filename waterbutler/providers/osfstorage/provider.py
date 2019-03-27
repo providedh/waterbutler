@@ -18,6 +18,7 @@ from waterbutler.core.utils import RequestHandlerContext
 
 from waterbutler.providers.osfstorage import settings
 from waterbutler.providers.osfstorage import tei
+from waterbutler.providers.osfstorage.entities_extractor import EntitiesExtractor
 from waterbutler.providers.osfstorage.tasks import backup
 from waterbutler.providers.osfstorage.tasks import parity
 from waterbutler.providers.osfstorage.tasks import utils as task_utils
@@ -414,10 +415,14 @@ class OSFStorageProvider(provider.BaseProvider):
 
         metadata.update({'is_tei_p5_unprefixed': is_tei_p5_unprefixed})
 
-        contents = ""
+        text, contents, entities = "", "", ""
         if not migration and is_tei_p5_unprefixed:
             with open(local_complete_path) as F:
-                contents = ContentExtractor.tei_contents_to_text(F.read())
+                contents = F.read()
+            text = ContentExtractor.tei_contents_to_text(contents)
+            entities = EntitiesExtractor.extract_entities(contents)
+            EntitiesExtractor.extend_entities(entities, self.nid, path.full_path)
+            entities = EntitiesExtractor.encode_entities(entities)
 
         async with self.signed_request(
             'POST',
@@ -428,7 +433,9 @@ class OSFStorageProvider(provider.BaseProvider):
                 'user': self.auth['id'],
                 'settings': self.settings['storage'],
                 'metadata': metadata,
-                "contents": contents,
+                'text': text,
+                'contents': contents,
+                'entities': entities,
                 'hashes': {
                     'md5': stream.writers['md5'].hexdigest,
                     'sha1': stream.writers['sha1'].hexdigest,
@@ -449,7 +456,10 @@ class OSFStorageProvider(provider.BaseProvider):
         if migration:
             migrated_metadata.update({'is_tei_p5_unprefixed': tei_handler.is_migrated()})
 
-            contents = ContentExtractor.tei_contents_to_text(migrated_contents)
+            text = ContentExtractor.tei_contents_to_text(migrated_contents)
+            entities = EntitiesExtractor.extract_entities(migrated_contents)
+            EntitiesExtractor.extend_entities(entities, self.nid, path.full_path)
+            entities = EntitiesExtractor.encode_entities(entities)
 
             async with self.signed_request(
                 'POST',
@@ -460,7 +470,9 @@ class OSFStorageProvider(provider.BaseProvider):
                     'user': self.auth['id'],
                     'settings': self.settings['storage'],
                     'metadata': migrated_metadata,
-                    "contents": contents,
+                    'text': text,
+                    'contents': migrated_contents,
+                    'entities': entities,
                     'hashes': {
                         'md5': md5,
                         'sha1': sha1,
