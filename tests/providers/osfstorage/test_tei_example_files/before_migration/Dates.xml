@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<TEI.2 id="Dates">
+  <teiHeader>
+  </teiHeader>
+  <text n="Dates">
+    <body>
+      <date value="">without value</date>
+      <date value="1111-11-11">1111-11-11</date>
+      <date value="862">862</date>
+      <date value="721DMC">721DMC</date>
+      <date value="?851">?851</date>
+      <date notBefore="583">583</date>
+      <date notAfter="595">595</date>
+      <date from="612" to="666">612 - 666</date>
+      <date value="916-05-25">916-05-25</date>
+      <date value="astronomical:878-10-29">astronomical:878-10-29</date>
+      <date value="1107-04-14/1107-04-21">1107-04-14/1107-04-21</date>
+      <date value="astronomical:921-12-17(?)">astronomical:921-12-17(?)</date>
+      <date value="astronomical:1023-01-24">astronomical:1023-01-24</date>
+      <date value="56">56</date>
+      <date value="4186.0">4186.0</date>
+      <date value="1">1</date>
+      <date value="AM 5016">AM 5016</date>
+      <date value="1570-6-23">1570-6-23</date>
+      <date value="12-24-1413">12-24-1413</date>
+      <date value="06-03-1461">06-03-1461</date>
+      <date value="676-09">676-09</date>
+      <date value="1121-02-9">1121-02-9</date>
+      <date value="astronomical:762-01-15/763-12-25">astronomical:762-01-15/763-12-25</date>
+      <date value="astronomical:77-12-04">astronomical:77-12-04</date>
+      <date value="astronomical:11-12-04">astronomical:11-12-04</date>
+      <date value="astronomical:77-12-15">astronomical:77-12-15</date>
+      <date value="astronomical:77-15-12">astronomical:77-15-12</date>
+      <date value="1107-04-14/21">1107-04-14/21</date>
+      <date value="908-9-13">908-9-13</date>
+      <date value="1282-02-012">1282-02-012</date>
+      <date value="1261-09-29:Michaelmas">1261-09-29:Michaelmas</date>
+      <date value="05-03">05-03</date>
+      <date value="77-03">77-03</date>
+      <date value="03-77">03-77</date>
+      <date value="13-77">13-77</date>
+      <date value="M5016">M5016</date>
+      <date value="862-09-9">862-09-9</date>
+      <date value="-09-12">-09-12</date>
+      <date value="1.Aug-31.Oct">1.Aug-31.Oct</date>
+      <date value="1-05">1-05</date>
+      <date value="1-5">1-5</date>
+      <date value="01-5">01-5</date>
+      <date value="936-12-24/25">936-12-24/25</date>
+      <date value="1070-12- 08">1070-12- 08</date>
+      <date value="1070- 12- 08">1070- 12- 08</date>
+      <date value="1249--">1249--</date>
+      <date value="157001-01">157001-01</date>
+      <date value="99-03-15">99-03-15</date>
+      <date value="99-03-02">99-03-02</date>
+      <date value="99-15-03">99-15-03</date>
+      <date value="99-15-13">99-15-13</date>
+      <date value="03-99-15">03-99-15</date>
+      <date value="03-99-05">03-99-05</date>
+      <date value="13-99-05">13-99-05</date>
+      <date value="13-99-15">13-99-15</date>
+      <date value="03-15-99">03-15-99</date>
+      <date value="03-02-99">03-02-99</date>
+      <date value="13-02-99">13-02-99</date>
+      <date value="13-15-99">13-15-99</date>
+      <date value="1591- 11">1591- 11</date>
+      <date value="11 -  1591">11 -  1591</date>
+      <date value="-10">-10</date>
+      <date value="40 BC">40 BC</date>
+      <date value="40 B.C.">40 B.C.</date>
+      <date value="47 A.D.">47 A.D.</date>
+      <date value="03.01">03.01</date>
+      <date value="yyyy-12-07">yyyy-12-07</date>
+      <date value="1234-12-07/1235-12-07">1234-12-07/1235-12-07</date>
+      <date value="1234-12-13/12-15">1234-12-13/12-15</date>
+      <date value="1234-12-13/12-55">1234-12-13/12-55</date>
+      <date value="1234-12-13/55">1234-12-13/55</date>
+      <date value="1234-12-13/07">1234-12-13/07</date>
+      <date value="15">15</date>
+    </body>
+  </text>
+</TEI.2>
