@@ -4,24 +4,31 @@ from lxml import etree as et
 
 class EntitiesExtractor:
     tags = ('person', 'place', 'org', 'event')
-    namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
+    namespaces = {'tei': 'http://www.tei-c.org/ns/1.0', 'xml': 'http://www.w3.org/XML/1998/namespace'}
 
     @classmethod
-    def __extract_entities_elements(cls, contents):
-        parsed = et.fromstring(bytes(contents, 'UTF-8'))
-        text = parsed.find("tei:text", namespaces=cls.namespaces)
-        if text is None:
-            return []
-
+    def extract_entities_elements(cls, parsed_et):
         entites_elements = dict(
-            (tag, text.xpath(".//tei:{}".format(tag), namespaces=cls.namespaces))
-            for tag in cls.tags)
+            (tag, parsed_et.xpath(".//tei:{}".format(tag), namespaces=cls.namespaces))
+            for tag in ('place', 'org', 'event'))
+
+        list_persons = parsed_et.findall(".//tei:listPerson", namespaces=cls.namespaces)
+        list_persons = [listp for listp in list_persons if 'PROVIDEDH Annotators' not in listp.attrib.values()]
+        text = parsed_et.find(".//tei:text", namespaces=cls.namespaces)
+        persons = text.findall(".//tei:person", namespaces=cls.namespaces) if not list_persons else []
+
+        for list_p in list_persons:
+            persons.extend(list_p.findall(".//tei:person", namespaces=cls.namespaces))
+        entites_elements['person'] = persons
 
         return entites_elements
 
     @classmethod
     def extract_entities(cls, contents):
-        entites_elements = cls.__extract_entities_elements(contents)
+        if not contents:
+            return []
+        parsed_et = et.fromstring(bytes(contents, 'UTF-8'))
+        entites_elements = cls.extract_entities_elements(parsed_et)
         result = []
         for tag, elements in entites_elements.items():
             result.extend(cls.__process_tags(tag, elements))
@@ -36,10 +43,10 @@ class EntitiesExtractor:
     @classmethod
     def __extract_tag_id(cls, element):
         def getid(element):
-            return [element.attrib[i].strip() for i in element.attrib if i[-2:] == 'id']
+            return element.attrib.get("{{{}}}id".format(cls.namespaces['xml']))
 
         id = getid(element)
-        if not id:
+        if id is None:
             subtags = cls.__list_subtags(element)
             if subtags:
                 for tag in subtags:
@@ -47,17 +54,18 @@ class EntitiesExtractor:
                     if id:
                         break
 
-        return id[0] if id else ""
+        return id if id is not None else ""
 
     @classmethod
     def __process_person_tags(cls, elements):
         def process_person_tag(element):
             id = cls.__extract_tag_id(element)
+            text = element.text.strip()
             name = cls.__extract_subtag_text(element, 'name')
             forename = cls.__extract_subtag_text(element, 'forename')
             surname = cls.__extract_subtag_text(element, 'surname')
 
-            name = name or "{} {}".format(forename, surname)
+            name = name or text or "{} {}".format(forename, surname)
             return {'tag': 'person', 'id': id, 'name': name, 'forename': forename, 'surname': surname}
 
         return map(process_person_tag, elements)
@@ -70,9 +78,18 @@ class EntitiesExtractor:
     def __process_place_tags(cls, elements):
         def process_place_tag(element):
             id = cls.__extract_tag_id(element)
-            name = cls.__extract_subtag_text(element, 'placeName')
-            name = name or element.text.strip()
-            return {'tag': 'place', 'id': id, 'name': name}
+            subtags = ('placeName', 'placename', 'p', 'region', 'country')
+            subtags_text = dict(zip(
+                subtags,
+                (cls.__extract_subtag_text(element, subtag) for subtag in subtags)
+            ))
+            return {'tag': 'place',
+                    'id': id,
+                    'name': subtags_text['placeName'] or subtags_text['placename'] or element.text.strip(),
+                    'desc': subtags_text['p'],
+                    'region': subtags_text['region'],
+                    'country': subtags_text['country']
+                    }
 
         return map(process_place_tag, elements)
 

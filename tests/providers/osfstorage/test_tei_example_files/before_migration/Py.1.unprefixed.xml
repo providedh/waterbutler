@@ -44,7 +44,9 @@
         <body>
             <pb n="1" facs="Py.1/1_1392_14v_PyZ1_1.tif"/>
             <div type="original">
-                <p xml:lang="lat-med">Sandiuogius Mocronoski recepit ad dominum Vincencium Nakelski:</p>
+                <p xml:lang="lat-med">Sandiuogius Mocronoski recepit ad dominum Vincencium
+                    <person>Nakelski:</person>
+                </p>
                 <note xml:id="l1">L. 235.</note>
             </div>
             <div type="transliteration">

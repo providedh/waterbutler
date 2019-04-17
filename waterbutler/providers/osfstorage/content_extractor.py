@@ -7,9 +7,10 @@ class ContentExtractor:
 
     @classmethod
     def tei_contents_to_text(cls, contents):
-        text = et.fromstring(bytes(contents, 'UTF-8')).find('tei:text', namespaces=cls.namespaces)
-        if text:
-            text = str(et.tostring(text), 'UTF-8')
-            return ' '.join(re.sub("<.*?>", "", text).split())
-        else:
+        if not contents:
             return ""
+        text = et.fromstring(bytes(contents, 'UTF-8')).find('tei:text', namespaces=cls.namespaces)
+        if text is None:
+            return ""
+        text = str(et.tostring(text), 'UTF-8')
+        return ' '.join(re.sub("<.*?>", "", text).split())

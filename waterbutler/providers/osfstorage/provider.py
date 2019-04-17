@@ -19,6 +19,7 @@ from waterbutler.core.utils import RequestHandlerContext
 from waterbutler.providers.osfstorage import settings
 from waterbutler.providers.osfstorage import tei
 from waterbutler.providers.osfstorage.entities_extractor import EntitiesExtractor
+from waterbutler.providers.osfstorage.ids_filler import IDsFiller
 from waterbutler.providers.osfstorage.tasks import backup
 from waterbutler.providers.osfstorage.tasks import parity
 from waterbutler.providers.osfstorage.tasks import utils as task_utils
@@ -354,12 +355,24 @@ class OSFStorageProvider(provider.BaseProvider):
                 raise exceptions.UploadFailedError('Upload failed, please try again.') from os_exc
             raise exceptions.UploadFailedError('Upload failed, please try again.') from exc
 
+        text, contents, entities = "", "", ""
+        is_id_filled = False
         tei_handler = tei.TeiHandler(local_pending_path)
         migration, is_tei_p5_unprefixed = tei_handler.recognize()
 
         if migration:
             tei_handler.migrate()
+            tei_handler = IDsFiller(tei_handler, path.name)
+            is_id_filled = tei_handler.process()
+        elif is_tei_p5_unprefixed:
+            with open(local_pending_path) as F:
+                contents = F.read()
+            tei_handler = IDsFiller(contents, path.name)
+            is_id_filled = tei_handler.process()
 
+        file_changed = migration or is_id_filled
+
+        if file_changed:
             md5 = hashlib.md5(tei_handler.text.getvalue().encode('utf-8')).hexdigest()
             sha1 = hashlib.sha1(tei_handler.text.getvalue().encode('utf-8')).hexdigest()
             sha256 = hashlib.sha256(tei_handler.text.getvalue().encode('utf-8')).hexdigest()
@@ -392,7 +405,7 @@ class OSFStorageProvider(provider.BaseProvider):
 
         metadata = metadata.serialized()
 
-        if migration:
+        if file_changed:
             migrated_complete_name = sha256
             migrated_remote_complete_path = await provider.validate_path('/' + migrated_complete_name)
 
@@ -414,15 +427,7 @@ class OSFStorageProvider(provider.BaseProvider):
         shutil.move(local_pending_path, local_complete_path)
 
         metadata.update({'is_tei_p5_unprefixed': is_tei_p5_unprefixed})
-
-        text, contents, entities = "", "", ""
-        if not migration and is_tei_p5_unprefixed:
-            with open(local_complete_path) as F:
-                contents = F.read()
-            text = ContentExtractor.tei_contents_to_text(contents)
-            entities = EntitiesExtractor.extract_entities(contents)
-            EntitiesExtractor.extend_entities(entities, self.nid, path.full_path)
-            entities = EntitiesExtractor.to_json(entities)
+        text, entities = await self.extract_text_and_entities(contents, path)
 
         async with self.signed_request(
             'POST',
@@ -453,13 +458,9 @@ class OSFStorageProvider(provider.BaseProvider):
             created = response.status == 201
             data = await response.json()
 
-        if migration:
-            migrated_metadata.update({'is_tei_p5_unprefixed': tei_handler.is_migrated()})
-
-            text = ContentExtractor.tei_contents_to_text(migrated_contents)
-            entities = EntitiesExtractor.extract_entities(migrated_contents)
-            EntitiesExtractor.extend_entities(entities, self.nid, path.full_path)
-            entities = EntitiesExtractor.to_json(entities)
+        if file_changed:
+            migrated_metadata.update({'is_tei_p5_unprefixed': True})
+            text, entities = await self.extract_text_and_entities(migrated_contents, path)
 
             async with self.signed_request(
                 'POST',
@@ -535,7 +536,7 @@ class OSFStorageProvider(provider.BaseProvider):
             'modified_utc': utils.normalize_datetime(data['data']['modified']),
         })
 
-        if migration:
+        if file_changed:
             migrated_metadata.update({
                 'name': name,
                 'md5': migrated_data['data']['md5'],
@@ -549,12 +550,21 @@ class OSFStorageProvider(provider.BaseProvider):
                 'migration_message': tei_handler.get_message(),
             })
 
-        if migration:
+        if file_changed:
             path._parts[-1]._id = migrated_metadata['path'].strip('/')
             return OsfStorageFileMetadata(migrated_metadata, str(path)), created
         else:
             path._parts[-1]._id = metadata['path'].strip('/')
             return OsfStorageFileMetadata(metadata, str(path)), created
+
+    async def extract_text_and_entities(self, contents, path):
+        if len(contents) == 0:
+            return "", None
+        text = ContentExtractor.tei_contents_to_text(contents)
+        entities = EntitiesExtractor.extract_entities(contents)
+        EntitiesExtractor.extend_entities(entities, self.nid, path.full_path)
+        entities = EntitiesExtractor.to_json(entities)
+        return text, entities
 
     async def delete(self, path, confirm_delete=0, **kwargs):
         """Delete file, folder, or provider root contents
