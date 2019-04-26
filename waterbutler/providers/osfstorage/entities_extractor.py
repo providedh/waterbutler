@@ -60,7 +60,7 @@ class EntitiesExtractor:
     def __process_person_tags(cls, elements):
         def process_person_tag(element):
             id = cls.__extract_tag_id(element)
-            text = element.text.strip()
+            text = element.text.strip() if element.text is not None else ""
             name = cls.__extract_subtag_text(element, 'name')
             forename = cls.__extract_subtag_text(element, 'forename')
             surname = cls.__extract_subtag_text(element, 'surname')
