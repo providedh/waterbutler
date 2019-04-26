@@ -85,7 +85,8 @@ class EntitiesExtractor:
             ))
             return {'tag': 'place',
                     'id': id,
-                    'name': subtags_text['placeName'] or subtags_text['placename'] or element.text.strip(),
+                    'name': subtags_text['placeName'] or subtags_text[
+                        'placename'] or element.text.strip() if element.text is not None else "",
                     'desc': subtags_text['p'],
                     'region': subtags_text['region'],
                     'country': subtags_text['country']
@@ -98,7 +99,7 @@ class EntitiesExtractor:
         def process_org_tag(element):
             id = cls.__extract_tag_id(element)
             name = cls.__extract_subtag_text(element, 'orgName')
-            name = name or element.text.strip()
+            name = name or element.text.strip() if element.text is not None else ""
             return {'tag': 'place', 'id': id, 'name': name}
 
         return map(process_org_tag, elements)
@@ -107,7 +108,7 @@ class EntitiesExtractor:
     def __process_event_tags(cls, elements):
         def process_event_tag(element):
             id = cls.__extract_tag_id(element)
-            name = element.text.strip()
+            name = element.text.strip() if element.text is not None else ""
             return {'tag': 'place', 'id': id, 'name': name}
 
         return map(process_event_tag, elements)
