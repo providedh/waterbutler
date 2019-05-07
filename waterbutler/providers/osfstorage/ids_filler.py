@@ -23,7 +23,7 @@ class IDsFiller(BaseStream):
 
         self.text = io.StringIO()
         self._parsed = et.fromstring(bytes(self.__contents, 'UTF-8'))
-        self.filename = filename
+        self.filename = filename[:-4] if filename[-4:] == ".xml" else filename
 
     def __fill_tags(self):
         grouped_tags = EntitiesExtractor.extract_entities_elements(self._parsed)
