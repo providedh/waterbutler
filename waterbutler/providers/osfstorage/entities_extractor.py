@@ -126,7 +126,7 @@ class EntitiesExtractor:
     def extend_entities(entites, project, path):
         for entity in entites:
             entity['project'] = project
-            entity['path'] = path
+            entity['filepath'] = path
         return entites
 
     @staticmethod
