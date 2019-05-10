@@ -22,8 +22,9 @@ class IDsFiller(BaseStream):
             self.__message = ""
 
         self.text = io.StringIO()
-        self._parsed = et.fromstring(bytes(self.__contents, 'UTF-8'))
-        self.filename = filename[:-4] if filename[-4:] == ".xml" else filename
+        self._parsed = et.fromstring(bytes(self.__contents, 'utf-8'))
+        filename = filename[:-4] if filename[-4:] == ".xml" else filename
+        self.filename = filename.replace(' ', '_')
 
     def __fill_tags(self):
         grouped_tags = EntitiesExtractor.extract_entities_elements(self._parsed)
@@ -35,8 +36,7 @@ class IDsFiller(BaseStream):
                 if element.attrib.get("{{{}}}id".format(self._namespaces['xml'])) is None:
                     modified = True
                     self._maxid[tag] += 1
-                    element.attrib['{{{}}}id'.format(self._namespaces['xml'])] = "{}{}-{}".format(tag, self.filename,
-                                                                                                  self._maxid[tag])
+                    element.attrib['{{{}}}id'.format(self._namespaces['xml'])] = "{}{}-{}".format(tag, self.filename, self._maxid[tag])
         return modified
 
     def __find_max_ids(self):
@@ -49,7 +49,7 @@ class IDsFiller(BaseStream):
     def process(self):
         self.__find_max_ids()
         if self.__fill_tags():
-            self.text = io.StringIO(et.tostring(self._parsed, pretty_print=True).decode('utf-8'))
+            self.text = io.StringIO(et.tostring(self._parsed, pretty_print=True, encoding='utf-8').decode('utf-8'))
             self.text.seek(io.SEEK_SET)
             self.__message += "Filled in missing ids of entities in file."
             return True

@@ -131,4 +131,4 @@ class EntitiesExtractor:
 
     @staticmethod
     def to_json(entities):
-        return json.dumps(entities)
+        return json.dumps(entities, ensure_ascii=False)
