@@ -3,6 +3,8 @@ import pytest
 
 from waterbutler.providers.osfstorage.tei import TeiHandler
 
+DIRNAME = os.path.dirname(__file__)
+
 test_data_recognize__correct_file_uploaded = [
     "Py.1.xml",
     "Py.1.encoding.xml",
@@ -21,8 +23,7 @@ test_data_recognize__correct_file_uploaded = [
 
 @pytest.mark.parametrize("input_file_name", test_data_recognize__correct_file_uploaded)
 def test_recognize__correct_file_uploaded__true(input_file_name):
-    dirname = os.path.dirname(__file__)
-    file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+    file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(file_path)
     output, _ = tei_handler.recognize()
@@ -38,8 +39,7 @@ test_data_recognize__incorrect_text_file_uploaded = [
 
 @pytest.mark.parametrize("input_file_name", test_data_recognize__incorrect_text_file_uploaded)
 def test_recognize__incorrect_file_uplopaded__false(input_file_name):
-    dirname = os.path.dirname(__file__)
-    file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+    file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(file_path)
     output, _ = tei_handler.recognize()
@@ -54,8 +54,7 @@ test_data_recognize__non_text_file_uploaded = [
 
 @pytest.mark.parametrize("input_file_name", test_data_recognize__non_text_file_uploaded)
 def test_recognize__non_text_file_uploaded__exception(input_file_name):
-    dirname = os.path.dirname(__file__)
-    file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+    file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(file_path)
     output, _ = tei_handler.recognize()
@@ -71,13 +70,27 @@ test_data_recognize__unprefixed_tei_p5_file_uploaded = [
 
 @pytest.mark.parametrize("input_file_name", test_data_recognize__unprefixed_tei_p5_file_uploaded)
 def test_recognize__unprefixed_tei_p5_file_uplopaded__false(input_file_name):
-    dirname = os.path.dirname(__file__)
-    file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+    file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(file_path)
     output, _ = tei_handler.recognize()
 
     assert output is False
+
+
+test_data_recognize__cr_lf_codes_in_file = [
+    "dep_809107r058_tei.with.cr.lf.xml",
+]
+
+
+@pytest.mark.parametrize("input_file_name", test_data_recognize__cr_lf_codes_in_file)
+def test_recognize__cr_lf_codes_in_file__true(input_file_name):
+    file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
+
+    tei_handler = TeiHandler(file_path)
+    output, _ = tei_handler.recognize()
+
+    assert output is True
 
 
 test_data_recognize_second_value__unprefixed_tei_p5_file_uploaded__true = [
@@ -88,8 +101,7 @@ test_data_recognize_second_value__unprefixed_tei_p5_file_uploaded__true = [
 
 @pytest.mark.parametrize("input_file_name", test_data_recognize_second_value__unprefixed_tei_p5_file_uploaded__true)
 def test_recognize_second_value__unprefixed_tei_p5_file_uploaded__true(input_file_name):
-    dirname = os.path.dirname(__file__)
-    file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+    file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(file_path)
     _, is_tei_p5_unprefixed = tei_handler.recognize()
@@ -115,8 +127,7 @@ test_data_recognize_second_value__unprefixed_tei_p5_file_uploaded__false = [
 
 @pytest.mark.parametrize("input_file_name", test_data_recognize_second_value__unprefixed_tei_p5_file_uploaded__false)
 def test_recognize_second_value__unprefixed_tei_p5_file_uploaded__false(input_file_name):
-    dirname = os.path.dirname(__file__)
-    file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+    file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(file_path)
     _, is_tei_p5_unprefixed = tei_handler.recognize()
@@ -131,8 +142,7 @@ test_data_recognize__missing_entity_in_dictionaries = [
 
 @pytest.mark.parametrize("input_file_name", test_data_recognize__missing_entity_in_dictionaries)
 def test_recognize__missing_entity_in_dictionaries__exception(input_file_name):
-    dirname = os.path.dirname(__file__)
-    input_file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+    input_file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(input_file_path)
 
@@ -164,8 +174,7 @@ test_data_migrate = [
 
 @pytest.mark.parametrize("input_file_name, result_file_name", test_data_migrate)
 def test_migrate__properly_recognized_file__migrated_string(input_file_name, result_file_name):
-    dirname = os.path.dirname(__file__)
-    input_file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+    input_file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(input_file_path)
     tei_handler.recognize()
@@ -173,7 +182,7 @@ def test_migrate__properly_recognized_file__migrated_string(input_file_name, res
 
     result = tei_handler.text.getvalue()
 
-    result_file_path = os.path.join(dirname, "test_tei_example_files", "after_migration", result_file_name)
+    result_file_path = os.path.join(DIRNAME, "test_tei_example_files", "after_migration", result_file_name)
 
     with open(result_file_path, 'r') as file:
         expected = file.read()
@@ -182,8 +191,7 @@ def test_migrate__properly_recognized_file__migrated_string(input_file_name, res
 
 
 def test_migrate__date_conversions__migrated_string():
-    dirname = os.path.dirname(__file__)
-    input_file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", "Dates.xml")
+    input_file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", "Dates.xml")
 
     tei_handler = TeiHandler(input_file_path)
     tei_handler.recognize()
@@ -191,7 +199,25 @@ def test_migrate__date_conversions__migrated_string():
 
     result = tei_handler.text.getvalue()
 
-    result_file_path = os.path.join(dirname, "test_tei_example_files", "after_migration", "Dates.migrated.xml")
+    result_file_path = os.path.join(DIRNAME, "test_tei_example_files", "after_migration", "Dates.migrated.xml")
+
+    with open(result_file_path, 'r') as file:
+        expected = file.read()
+
+    assert result == expected
+
+def test_migrate__cr_lf_codes_in_file__migrated_string():
+    input_file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration",
+                                   "dep_809107r058_tei.with.cr.lf.xml")
+
+    tei_handler = TeiHandler(input_file_path)
+    tei_handler.recognize()
+    tei_handler.migrate()
+
+    result = tei_handler.text.getvalue()
+
+    result_file_path = os.path.join(DIRNAME, "test_tei_example_files", "after_migration",
+                                    "dep_809107r058_tei.with.cr.lf.migrated.xml")
 
     with open(result_file_path, 'r') as file:
         expected = file.read()
@@ -219,8 +245,7 @@ test_data_migrate__no_migration_needed = [
 
 @pytest.mark.parametrize("input_file_name", test_data_migrate__no_migration_needed)
 def test_migrate__no_migration_needed__exception(input_file_name):
-    dirname = os.path.dirname(__file__)
-    input_file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+    input_file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(input_file_path)
     tei_handler.recognize()
@@ -240,8 +265,7 @@ test_data_migrate__missing_instruction_for_language_correction = [
 
 @pytest.mark.parametrize("input_file_name", test_data_migrate__missing_instruction_for_language_correction)
 def test_migrate__missing_instruction_for_language_correction__exception(input_file_name):
-    dirname = os.path.dirname(__file__)
-    input_file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+    input_file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(input_file_path)
 
@@ -262,14 +286,14 @@ test_data_get_migration_message__migration_performed__message_string = [
     ("Py.1.encoding.windows-1250.xml", "Migrated file format from prefixed TEI P5 XML to unprefixed TEI P5 XML. Changed file encoding from windows-1250 to UTF-8."),
     ("Py.1.unprefixed.encoding.windows-1250.xml", "Changed file encoding from windows-1250 to UTF-8."),
     ("T100013.xml", "Migrated file format from TEI P4 XML to unprefixed TEI P5 XML. Changed file encoding from iso-8859-1 to UTF-8."),
+    ("dep_809107r058_tei.with.cr.lf.xml", "Changed CR/LF character codes to <lb/> tags."),
 ]
 
 
 @pytest.mark.parametrize("input_file_name, expected_message",
                          test_data_get_migration_message__migration_performed__message_string)
 def test_get_migration_message__migration_performed__message_string(input_file_name, expected_message):
-    dirname = os.path.dirname(__file__)
-    input_file_path = os.path.join(dirname, "test_tei_example_files", "before_migration", input_file_name)
+    input_file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(input_file_path)
 

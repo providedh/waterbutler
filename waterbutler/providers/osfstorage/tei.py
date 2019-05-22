@@ -11,6 +11,7 @@ from .file_type_finder import FileTypeFinder
 from .entities_decoder import EntitiesDecoder
 from .recognized_types import FileType, XMLType
 from waterbutler.core.streams.base import BaseStream
+from .white_chars_corrector import WhiteCharsCorrector
 
 logger = logging.getLogger(__name__)
 
@@ -30,6 +31,8 @@ class TeiHandler(BaseStream):
         self.__file_type = FileType.OTHER
         self.__xml_type = XMLType.OTHER
         self.__prefixed = False
+
+        self.__cr_lf_codes = False
 
         self.__recognized = False
         self.__migrated = False
@@ -70,10 +73,16 @@ class TeiHandler(BaseStream):
                 self.__text_utf_8 = entities_decoder.decode_non_xml_entities(self.__text_utf_8)
                 self.__text_utf_8 = self.__remove_encoding_declaration(self.__text_utf_8)
 
-                xml_type_detector = XMLTypeFinder()
-                self.__xml_type, self.__prefixed = xml_type_detector.find_xml_type(self.__text_utf_8)
+                xml_type_finder = XMLTypeFinder()
+                self.__xml_type, self.__prefixed = xml_type_finder.find_xml_type(self.__text_utf_8)
 
             self.__text_utf_8 = self.__standardize_new_line_symbol(self.__text_utf_8)
+
+            file_types_to_correction = [FileType.XML, FileType.CSV, FileType.TSV]
+
+            if self.__file_type in file_types_to_correction:
+                white_chars_corrector = WhiteCharsCorrector()
+                self.__cr_lf_codes = white_chars_corrector.check_if_cr_lf_codes(self.__text_utf_8)
 
             self.__migrate = self.__make_decision()
             self.__is_tei_p5_unprefixed = self.__check_if_tei_p5_unprefixed()
@@ -129,6 +138,8 @@ class TeiHandler(BaseStream):
             return True
         elif self.__file_type == FileType.TSV:
             return True
+        elif self.__cr_lf_codes:
+            return True
         else:
             return False
 
@@ -145,21 +156,25 @@ class TeiHandler(BaseStream):
         elif not self.__migrate:
             raise Exception("No migration needed.")
 
+        migrated_text = self.__text_utf_8
+
         if self.__file_type == FileType.XML:
             migrator_tei = MigratorTEI()
-            migrated_text = migrator_tei.migrate(self.__text_utf_8, self.__xml_type)
-            self.text.write(migrated_text)
+            migrated_text = migrator_tei.migrate(migrated_text, self.__xml_type)
 
         elif self.__file_type == FileType.CSV:
             migrator_csv = MigratorCSV()
-            migrated_text = migrator_csv.migrate(self.__text_utf_8)
-            self.text.write(migrated_text)
+            migrated_text = migrator_csv.migrate(migrated_text)
 
         elif self.__file_type == FileType.TSV:
             migrator_tsv = MigratorTSV()
-            migrated_text = migrator_tsv.migrate(self.__text_utf_8)
-            self.text.write(migrated_text)
+            migrated_text = migrator_tsv.migrate(migrated_text)
 
+        if self.__cr_lf_codes:
+            wrong_white_chars_finder = WhiteCharsCorrector()
+            migrated_text = wrong_white_chars_finder.replace_cr_lf_codes(migrated_text)
+
+        self.text.write(migrated_text)
         self.text.seek(io.SEEK_SET)
         self.__prepare_message()
         self.__migrated = True
@@ -194,6 +209,12 @@ class TeiHandler(BaseStream):
                 message += " "
 
             message += "Changed file encoding from {0} to UTF-8.".format(self.__encoding)
+
+        if self.__cr_lf_codes:
+            if message:
+                message += " "
+
+            message += "Changed CR/LF character codes to <lb/> tags."
 
         self.__message = message
 
