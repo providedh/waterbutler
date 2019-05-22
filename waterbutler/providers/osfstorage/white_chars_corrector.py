@@ -1,5 +1,6 @@
 
 CR_LF_CODES = ['&#xa;', '&#xd;', '&#10;', '&#13;']
+NON_UNIX_NEWLINES = ['\r', '\r\n']
 
 
 class WhiteCharsCorrector:
@@ -19,3 +20,16 @@ class WhiteCharsCorrector:
             text_corrected = text_corrected.replace(code, '<lb/>')
 
         return text_corrected
+
+    def check_if_non_unix_newlines(self, text):
+        for newline in NON_UNIX_NEWLINES:
+            if newline in text:
+                return True
+
+        return False
+
+    def normalize_newlines(self, text):
+        text_in_lines = text.splitlines()
+        text_normalized = '\n'.join(text_in_lines)
+
+        return text_normalized

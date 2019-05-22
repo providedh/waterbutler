@@ -17,7 +17,7 @@ from waterbutler.core.path import WaterButlerPath
 from waterbutler.core.utils import RequestHandlerContext
 
 from waterbutler.providers.osfstorage import settings
-from waterbutler.providers.osfstorage import tei
+from waterbutler.providers.osfstorage.tei_handler import TeiHandler
 from waterbutler.providers.osfstorage.entities_extractor import EntitiesExtractor
 from waterbutler.providers.osfstorage.ids_filler import IDsFiller
 from waterbutler.providers.osfstorage.tasks import backup
@@ -357,7 +357,7 @@ class OSFStorageProvider(provider.BaseProvider):
 
         text, contents, entities = "", "", ""
         is_id_filled = False
-        tei_handler = tei.TeiHandler(local_pending_path)
+        tei_handler = TeiHandler(local_pending_path)
         migration, is_tei_p5_unprefixed = tei_handler.recognize()
 
         if migration:

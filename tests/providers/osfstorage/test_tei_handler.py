@@ -1,7 +1,7 @@
 import os
 import pytest
 
-from waterbutler.providers.osfstorage.tei import TeiHandler
+from waterbutler.providers.osfstorage.tei_handler import TeiHandler
 
 DIRNAME = os.path.dirname(__file__)
 
@@ -63,7 +63,6 @@ def test_recognize__non_text_file_uploaded__exception(input_file_name):
 
 
 test_data_recognize__unprefixed_tei_p5_file_uploaded = [
-    "818114r122 - TEI Markup.xml",
     "Py.1.unprefixed.xml",
 ]
 
@@ -85,6 +84,21 @@ test_data_recognize__cr_lf_codes_in_file = [
 
 @pytest.mark.parametrize("input_file_name", test_data_recognize__cr_lf_codes_in_file)
 def test_recognize__cr_lf_codes_in_file__true(input_file_name):
+    file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
+
+    tei_handler = TeiHandler(file_path)
+    output, _ = tei_handler.recognize()
+
+    assert output is True
+
+
+test_data_recognize__non_unix_new_line_chars = [
+    "818114r122 - TEI Markup.xml",
+]
+
+
+@pytest.mark.parametrize("input_file_name", test_data_recognize__non_unix_new_line_chars)
+def test_recognize__non_unix_new_line_chars__true(input_file_name):
     file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration", input_file_name)
 
     tei_handler = TeiHandler(file_path)
@@ -206,6 +220,7 @@ def test_migrate__date_conversions__migrated_string():
 
     assert result == expected
 
+
 def test_migrate__cr_lf_codes_in_file__migrated_string():
     input_file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration",
                                    "dep_809107r058_tei.with.cr.lf.xml")
@@ -218,6 +233,25 @@ def test_migrate__cr_lf_codes_in_file__migrated_string():
 
     result_file_path = os.path.join(DIRNAME, "test_tei_example_files", "after_migration",
                                     "dep_809107r058_tei.with.cr.lf.migrated.xml")
+
+    with open(result_file_path, 'r') as file:
+        expected = file.read()
+
+    assert result == expected
+
+
+def test_migrate__non_unix_new_line_chars__migrated_string():
+    input_file_path = os.path.join(DIRNAME, "test_tei_example_files", "before_migration",
+                                   "818114r122 - TEI Markup.xml")
+
+    tei_handler = TeiHandler(input_file_path)
+    tei_handler.recognize()
+    tei_handler.migrate()
+
+    result = tei_handler.text.getvalue()
+
+    result_file_path = os.path.join(DIRNAME, "test_tei_example_files", "after_migration",
+                                    "818114r122 - TEI Markup.migrated.xml")
 
     with open(result_file_path, 'r') as file:
         expected = file.read()
@@ -238,7 +272,6 @@ def test_migrate__no_recognition_performed__exception():
 
 test_data_migrate__no_migration_needed = [
     "Py.1.corrupted.xml",
-    "818114r122 - TEI Markup.xml",
     "Py.1.unprefixed.xml",
 ]
 
@@ -283,7 +316,7 @@ test_data_get_migration_message__migration_performed__message_string = [
     ("CREDITOR_short.TXT", "Migrated file format from CSV to unprefixed TEI P5 XML. Changed file encoding from ascii to UTF-8."),
     ("CREDITOR_T_short.TXT", "Migrated file format from TSV to unprefixed TEI P5 XML. Changed file encoding from ascii to UTF-8."),
     ("Pn.1.xml", "Migrated file format from prefixed TEI P5 XML to unprefixed TEI P5 XML."),
-    ("Py.1.encoding.windows-1250.xml", "Migrated file format from prefixed TEI P5 XML to unprefixed TEI P5 XML. Changed file encoding from windows-1250 to UTF-8."),
+    ("Py.1.encoding.windows-1250.xml", "Migrated file format from prefixed TEI P5 XML to unprefixed TEI P5 XML. Changed file encoding from windows-1250 to UTF-8. Normalized new line characters."),
     ("Py.1.unprefixed.encoding.windows-1250.xml", "Changed file encoding from windows-1250 to UTF-8."),
     ("T100013.xml", "Migrated file format from TEI P4 XML to unprefixed TEI P5 XML. Changed file encoding from iso-8859-1 to UTF-8."),
     ("dep_809107r058_tei.with.cr.lf.xml", "Changed CR/LF character codes to <lb/> tags."),

@@ -33,6 +33,7 @@ class TeiHandler(BaseStream):
         self.__prefixed = False
 
         self.__cr_lf_codes = False
+        self.__non_unix_newline_chars = False
 
         self.__recognized = False
         self.__migrated = False
@@ -76,13 +77,12 @@ class TeiHandler(BaseStream):
                 xml_type_finder = XMLTypeFinder()
                 self.__xml_type, self.__prefixed = xml_type_finder.find_xml_type(self.__text_utf_8)
 
-            self.__text_utf_8 = self.__standardize_new_line_symbol(self.__text_utf_8)
-
             file_types_to_correction = [FileType.XML, FileType.CSV, FileType.TSV]
 
             if self.__file_type in file_types_to_correction:
                 white_chars_corrector = WhiteCharsCorrector()
                 self.__cr_lf_codes = white_chars_corrector.check_if_cr_lf_codes(self.__text_utf_8)
+                self.__non_unix_newline_chars = white_chars_corrector.check_if_non_unix_newlines(self.__text_utf_8)
 
             self.__migrate = self.__make_decision()
             self.__is_tei_p5_unprefixed = self.__check_if_tei_p5_unprefixed()
@@ -121,11 +121,6 @@ class TeiHandler(BaseStream):
 
         return text
 
-    def __standardize_new_line_symbol(self, text):
-        text_standardized = text.replace('\r\n', '\n')
-
-        return text_standardized
-
     def __make_decision(self):
         if (self.__file_type == FileType.XML and self.__xml_type == XMLType.TEI_P5 and
                 self.__encoding != 'utf-8'):
@@ -139,6 +134,8 @@ class TeiHandler(BaseStream):
         elif self.__file_type == FileType.TSV:
             return True
         elif self.__cr_lf_codes:
+            return True
+        elif self.__non_unix_newline_chars:
             return True
         else:
             return False
@@ -171,8 +168,12 @@ class TeiHandler(BaseStream):
             migrated_text = migrator_tsv.migrate(migrated_text)
 
         if self.__cr_lf_codes:
-            wrong_white_chars_finder = WhiteCharsCorrector()
-            migrated_text = wrong_white_chars_finder.replace_cr_lf_codes(migrated_text)
+            white_chars_corrector = WhiteCharsCorrector()
+            migrated_text = white_chars_corrector.replace_cr_lf_codes(migrated_text)
+
+        if self.__non_unix_newline_chars:
+            white_chars_corrector = WhiteCharsCorrector()
+            migrated_text = white_chars_corrector.normalize_newlines(migrated_text)
 
         self.text.write(migrated_text)
         self.text.seek(io.SEEK_SET)
@@ -215,6 +216,12 @@ class TeiHandler(BaseStream):
                 message += " "
 
             message += "Changed CR/LF character codes to <lb/> tags."
+
+        if self.__non_unix_newline_chars:
+            if message:
+                message += " "
+
+            message += "Normalized new line characters."
 
         self.__message = message
 

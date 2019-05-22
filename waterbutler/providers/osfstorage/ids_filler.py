@@ -4,7 +4,7 @@ from lxml import etree as et
 
 from waterbutler.core.streams import BaseStream
 from waterbutler.providers.osfstorage.entities_extractor import EntitiesExtractor
-from waterbutler.providers.osfstorage.tei import TeiHandler
+from waterbutler.providers.osfstorage.tei_handler import TeiHandler
 
 
 class IDsFiller(BaseStream):
@@ -51,6 +51,10 @@ class IDsFiller(BaseStream):
         if self.__fill_tags():
             self.text = io.StringIO(et.tostring(self._parsed, pretty_print=True, encoding='utf-8').decode('utf-8'))
             self.text.seek(io.SEEK_SET)
+
+            if self.__message:
+                self.__message += " "
+
             self.__message += "Filled in missing ids of entities in file."
             return True
         else:
