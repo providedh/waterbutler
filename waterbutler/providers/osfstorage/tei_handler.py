@@ -175,6 +175,8 @@ class TeiHandler(BaseStream):
             white_chars_corrector = WhiteCharsCorrector()
             migrated_text = white_chars_corrector.normalize_newlines(migrated_text)
 
+        migrated_text = self.__remove_encoding_declaration(migrated_text)
+
         self.text.write(migrated_text)
         self.text.seek(io.SEEK_SET)
         self.__prepare_message()

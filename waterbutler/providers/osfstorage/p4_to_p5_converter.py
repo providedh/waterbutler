@@ -74,7 +74,19 @@ class P4ToP5Converter:
         transform = et.XSLT(xslt)
         new_dom = transform(dom)
 
-        text = et.tostring(new_dom, pretty_print=True, encoding="unicode")
+        text = et.tostring(new_dom, xml_declaration=True, encoding='utf-8').decode('utf-8')
+        text = self.__normalize_xml_declaration_quotes(text)
+
+        return text
+
+    def __normalize_xml_declaration_quotes(self, text):
+        text_in_lines = text.splitlines()
+
+        first_line = text_in_lines[0]
+        first_line = first_line.replace('\'', '"')
+
+        lines_to_join = [first_line] + text_in_lines[1:]
+        text = '\n'.join(lines_to_join)
 
         return text
 
